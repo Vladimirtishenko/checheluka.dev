@@ -64,27 +64,6 @@ let config = [{
     plugins: [
         new ExtractTextPlugin("[name].min.css")
     ]
-}, {
-    name: 'jade',
-    entry: {
-        index: "./public/jade/index.jade"
-    },
-    exclude: '/node_modules/',
-    output: {
-        path: './',
-        filename: '[name].html'
-    },
-    module: {
-       loaders: [
-            { 
-                test: /\.jade$/, 
-                loader: 'jade' 
-            }
-        ]
-    },
-    plugins: [
-        new HtmlWebpackPlugin("[name].html");
-    ]
 }];
 
 
