@@ -18,5 +18,5 @@ gulp.task('jade', function() {
 
 
 gulp.task('watch', function() {
-    gulp.watch("./public/jade/*.jade", ['jade']);
+    gulp.watch("./public/jade/**/*.jade", ['jade']);
 });
