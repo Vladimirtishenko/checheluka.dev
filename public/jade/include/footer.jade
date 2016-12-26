@@ -26,15 +26,19 @@
 						input(class="che-footer__accordeon-fake" id="che-social" type="checkbox")
 						label(class="che-footer__accordeon-img" for="che-social")
 						.che-footer__item-link
-							a(href="") Партнёрская программа
-							a(href="") Архивы фото
-							a(href="") Разработчикам / API
+							.che-footer__social
+								a.che-footer__social-fb(href="")
+								a.che-footer__social-ins(href="")
+								a.che-footer__social-vk(href="")
+								a.che-footer__social-o(href="")
 
 					.che-footer__item.col-xl-3.col-lg-3.col-md-3.col-sm-12.col-xs-12
 						h2.che-footer__title подписаться на рассылку
 						input(class="che-footer__accordeon-fake" id="che-follow" type="checkbox")
 						label(class="che-footer__accordeon-img" for="che-follow")
 						.che-footer__item-link
-							a(href="") Партнёрская программа
-							a(href="") Архивы фото
-							a(href="") Разработчикам / API
+							.input-group
+								input.form-control(type='text', placeholder='')
+								span.input-group-btn
+									button.btn.btn-default-black(type='button') OK
+

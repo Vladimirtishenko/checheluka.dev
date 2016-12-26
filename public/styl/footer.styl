@@ -36,6 +36,35 @@
 .che-footer__accordeon-fake
 	display none
 	
+.che-footer__social a 
+	width 45px
+	height 45px
+	display inline-block
+	margin-right 4px
+	background-image url('../img/sprite_chechelyka.png')
+	&:last-child
+		margin-right 0px
+
+.che-footer__social-fb 
+	background-position -50px 0
+	&:hover
+		background-position -50px -45px
+	
+.che-footer__social-ins 
+	background-position -105px 0
+	&:hover
+		background-position -105px -45px
+	
+.che-footer__social-vk 
+	background-position -160px 0
+	&:hover
+		background-position -160px -45px
+	
+.che-footer__social-o 
+	background-position -215px 0
+	&:hover
+		background-position -215px -45px
+	
 @media (min-width: 768px) and (max-width: 991px)
 	.che-footer__item-link
 		height 0px
@@ -78,6 +107,10 @@
 	.che-footer__accordeon-fake:checked + .che-footer__accordeon-img + .che-footer__item-link
 		height auto
 		padding-top 15px
+		
+	.che-footer__accordeon-fake:checked + .che-footer__accordeon-img + .che-footer__item-link:last-child 
+		height auto
+		padding-top 25px
 		
 @media (max-width: 768px)
 	.che-footer__inner
