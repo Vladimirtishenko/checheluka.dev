@@ -1,41 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:700&subset=cyrillic');
+
 @font-face
    font-family RobotoRegular
    font-style normal
    src url('../fonts/Roboto-Regular.ttf')
-   
+
 @font-face
    font-family RobotoLight
    font-style normal
    src url('../fonts/Roboto-Light.ttf')
-   
+
 @font-face
    font-family RobotoThin
    font-style normal
    src url('../fonts/Roboto-Thin.ttf')
-   
+
 .form-control
-	height 45px
-	border-radius 2px
-	border none
-	outline none 
-	box-shadow none
-	&:hover, &:active, &:focus
-		outline none 
-		box-shadow none
-	
+    height 45px
+    border-radius 2px
+    border none
+    outline none
+    box-shadow none
+    &:hover, &:active, &:focus
+        outline none
+        box-shadow none
+
 .btn
-	height 45px
-	font-family RobotoRegular
-	font-size 14px
-	padding 0 15px
-	&:hover, &:active, &:focus
-		outline none 
-		box-shadow none
-		border none
-	
+    height 45px
+    font-family RobotoRegular
+    font-size 14px
+    padding 0 15px
+    &:hover, &:active, &:focus
+        outline none i
+        box-shadow none
+
 .btn-default-black
-	background #000
-	color #fff
-	&:hover 
-		background fblue
-		color #fff
+    background #000
+    color #fff
+    &:hover
+        background fblue
+        color #fff
+
+button, a, input, textarea, select
+    outline none i
+    box-shadow none i
+
+input[type="number"]::-webkit-outer-spin-button
+input[type="number"]::-webkit-inner-spin-button
+    -webkit-appearance none
+    margin 0
+
+input[type="number"]
+    -moz-appearance textfield

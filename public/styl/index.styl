@@ -1,15 +1,75 @@
 .che-main
-	margin 30px auto 10px
-	
+    margin 30px auto 10px
+
 .che-main__block
-	min-height 100px
-	background lgrey
-	margin-bottom 30px
-	width 100%
-	
+    background lgrey
+    margin-bottom 30px
+    width 100%
+    position relative
+
 .che-flexible
-	display flex
-	
+    display flex
+    flex-wrap wrap
+    align-items center
+
 .che-flexible__child
-	display flex
-	flex-wrap wrap
+    display flex
+    flex-wrap wrap
+    align-items center
+
+.che-main__block-tilte-container
+    position absolute
+    top 0
+    left 0
+    height 100%
+    width: 100%
+    &:after
+        content ""
+        display inline-block
+        vertical-align middle
+        height 100%
+
+.che-main__block-title
+    padding 10px 10px 10px 30px
+    width 80%
+    vertical-align middle
+    display inline-block
+    background rgba(0, 0, 0, 0.43)
+    color white
+    font-weight 700
+    text-transform uppercase
+    font-size 26px
+    font-family 'Open Sans', sans-serif
+    height 105px
+    line-height 30px
+    &:after
+        content ""
+        display inline-block
+        vertical-align middle
+        height 100%
+
+.che-main__block-title-display-inline-block
+    vertical-align middle
+    display inline-block
+    max-width 95%
+
+.che-main__block-title.sale
+    font-size 60px
+
+@media (max-width: 991px)
+    .che-main__block .img-responsive
+        min-width 100%
+        width auto
+
+    .che-main__block-tilte-container:after
+        vertical-align bottom
+
+    .che-main__block-title,
+    .che-main__block-title.sale
+        padding 5px 5px 5px 15px
+        vertical-align bottom
+        font-size 18px
+        height 45px
+        width 100%
+        max-width 220px
+        line-height normal

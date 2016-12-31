@@ -1,0 +1,427 @@
+.filters-panel .che-flexible
+    padding 10px 0
+    justify-content space-between
+
+.filters-panel .che-flexible__child
+    margin-bottom 15px
+
+.filters-panel__images_count>span
+    display inline-block
+    font-size 12px
+    text-align right
+    width 45px
+    font-family RobotoLight
+
+.filters-panel__images_count button
+    width 45px
+    height 45px
+    background none
+    border 1px solid lgrey
+    padding 0
+
+.filters-panel__images_count select
+    appearance none
+    width 45px
+    height 45px
+    text-align center
+    font-family RobotoRegular
+    font-size 18px
+    background none
+    border 1px solid lgrey
+    padding 0
+    text-align-last center
+    margin-left 10px
+    border-radius 0
+
+.filters-panel__veiw>span
+    display inline-block
+    font-size 12px
+    text-align right
+    width 45px
+    font-family RobotoLight
+
+.filters-panel__veiw button
+    width 45px
+    height 45px
+    background none
+    border 1px solid lgrey
+    padding 0
+    margin-left 10px
+    background-repeat no-repeat
+    background-position center center
+
+.filters-panel__veiw .fullzise
+    background-image url(../img/icon_view_1.png)
+
+.filters-panel__veiw .halfsize
+    background-image url(../img/icon_view_2.png)
+
+.filters-panel__veiw .thirdsize
+    background-image url(../img/icon_view_3.png)
+
+.filters-panel__divider
+    width 100%
+
+.filters-panel__price>span
+    display inline-block
+    font-size 12px
+    text-align right
+    width 45px
+    font-family RobotoLight
+
+.filters-panel__price button
+    width 45px
+    height 45px
+    background none
+    border 1px solid lgrey
+    font-family RobotoLight
+    font-size 12px
+    padding 0
+    margin-left 10px
+    background-repeat no-repeat
+    background-position center center
+
+.filters-panel__price button span
+    display block
+
+.filters-panel__price .filters-panel__price__clear
+    width 25px
+    height 25px
+    background-image url(../img/icon_sort_clear.png)
+
+.filters-panel__price-type>span
+    display inline-block
+    font-size 12px
+    text-align right
+    width 45px
+    font-family RobotoLight
+
+.filters-panel__price-type button
+    width 45px
+    height 45px
+    background none
+    border 1px solid lgrey
+    font-family RobotoLight
+    font-size 12px
+    padding 0
+    margin-left 10px
+
+.filters-panel__sizes>span
+    display inline-block
+    font-size 12px
+    text-align right
+    width 65px
+    font-family RobotoLight
+
+.filters-panel__sizes button
+    width 45px
+    height 45px
+    background none
+    border 1px solid lgrey
+    padding 0
+    margin-left 10px
+    background-position center center
+    background-repeat no-repeat
+    background-image url(../img/icon_ruler.png)
+
+.catalog-sidebar
+    margin-bottom 30px
+
+.catalog-sidebar__item
+    padding 15px
+    background #f1e8f0
+
+.catalog-sidebar__item + .catalog-sidebar__item
+    margin-top 1px
+
+.catalog-sidebar__accordeon-fake
+    position absolute
+    opacity 0
+    clip rect(0, 0, 0, 0)
+
+.catalog-sidebar__item-hidden
+    height 0
+    overflow hidden
+    display none
+    margin-top 15px
+
+.catalog-sidebar__accordeon-fake:checked + .catalog-sidebar__accordeon-img + .catalog-sidebar__item-hidden
+    height auto
+    display block
+
+.catalog-sidebar__accordeon-img
+    width 100%
+    font-family RobotoRegular
+    color #000
+    position relative
+    cursor pointer
+    &:after
+        content ""
+        position absolute
+        display block
+        width 9px
+        height 9px
+        border-left 1px solid dgrey
+        border-bottom 1px solid dgrey
+        right 3px
+        top 3px
+        transform rotate(-135deg)
+
+.catalog-sidebar__accordeon-img:hover
+    color reds
+
+.catalog-sidebar__accordeon-fake:checked + .catalog-sidebar__accordeon-img:after
+    transform rotate(-45deg)
+
+.catalog-sidebar__accordeon-img span
+    font-family RobotoLight
+    color lgrey
+    margin-left 5px
+
+.catalog-sidebar__item-hidden input[type="checkbox"]
+    position absolute
+    opacity 0
+    clip rect(0, 0, 0, 0)
+
+.catalog-sidebar__item-hidden input[type="checkbox"]+label
+    padding 0 0 0 20px
+    font-family RobotoLight
+    color dgrey
+    position relative
+    cursor pointer
+
+.catalog-sidebar__item-hidden input[type="checkbox"]+label:hover
+    color reds
+
+.catalog-sidebar__item-hidden input[type="checkbox"]+label:before
+    content ""
+    display block
+    width 15px
+    height 15px
+    border 1px solid lgrey
+    top 0
+    left 0
+    position absolute
+
+.catalog-sidebar__item-hidden input[type="checkbox"]:checked+label:before
+    border-color #1aafec
+    background #1aafec
+
+.catalog-sidebar__item-hidden input[type="checkbox"]+label:after
+    content ""
+    display block
+    width: 11px;
+    height: 6px;
+    border-left 1px solid #fff
+    border-bottom 1px solid #fff
+    top: 3px;
+    left: 2px;
+    position absolute
+    transform rotate(-50deg)
+    opacity 0
+
+.catalog-sidebar__item-hidden input[type="checkbox"]:checked+label:after
+    opacity 1
+
+.catalog-sidebar__item-hidden input[type="checkbox"]+label span
+    color lgrey
+    margin-left 5px
+
+.my_input_group
+    padding-top 5px
+    padding-bottom 5px
+
+.catalog-sidebar-price-limit-container .che-flexible__child
+    justify-content flex-start
+
+.catalog-sidebar-price-limit-container .che-flexible__child + .che-flexible__child
+    justify-content flex-end
+
+.catalog-sidebar-price-limit-container .che-flexible__child label
+    margin-right 10px
+    padding 10px 0
+
+#catalog-sidebar__price-lowest,
+#catalog-sidebar__price-highest
+    width 60px
+    border 1px solid lgrey
+    text-align center
+
+#catalog-sidebar__price-confirm
+    width 100%
+    background none
+    color black
+    border-color black
+    text-transform uppercase
+    margin-top 10px
+
+#catalog-sidebar__reset-all
+    background fblue
+    width 100%
+    margin-top 15px
+    text-transform uppercase
+    border-color fblue
+
+.catalog-sidebar__selected-categories
+    padding 15px
+
+.catalog-sidebar__selected-categories__remove
+    border none
+    background none
+    width 15px
+    height 15px
+    position relative
+    cursor pointer
+    margin-right 6px
+
+.catalog-sidebar__selected-categories__remove:before,
+.catalog-sidebar__selected-categories__remove:after
+    content ""
+    position absolute
+    display block
+    top 50%
+    left 0
+    width 100%
+    border-bottom 1px solid dgrey
+    transform rotate(45deg)
+
+.catalog-sidebar__selected-categories__remove:after
+    transform rotate(-45deg)
+
+.catalog-sidebar__selected-categories__remove:hover:before,
+.catalog-sidebar__selected-categories__remove:hover:after
+    border-color reds
+
+.catalog-blocks-container__block
+    position relative
+    overflow hidden
+    max-width 263px
+    margin 0 auto 30px
+
+.catalog-blocks-container__block__wishlist
+    position absolute
+    top 10px
+    right 10px
+    width 35px
+    height 31px
+    border none
+    background url(../img/button_wishlist.png)
+    filter grayscale() brightness(265%)
+    &:hover
+        filter none
+
+.catalog-blocks-container__block__bottom
+    position absolute
+    width 100%
+    background rgba(51, 51, 51, 0.9)
+    bottom 0
+    left 0
+    padding 15px
+    color white
+    justify-content space-between
+    text-align center
+    transition transform 1s ease
+
+.catalog-blocks-container__block:hover .catalog-blocks-container__block__bottom
+    transform translateY(100%)
+
+.catalog-blocks-container__block__title
+    width 100%
+    text-transform uppercase
+    margin-bottom 15px
+    font-size
+    font-family RobotoRegular
+
+.catalog-blocks-container__block__rozn
+    font-family RobotoLight
+    font-size 14px
+
+.catalog-blocks-container__block__opt
+    font-family RobotoLight
+    font-size 14px
+
+.catalog-blocks-container__block__opt b
+    font-size 16px
+    font-family Roboto
+    font-weight 700
+
+.catalog-blocks-container__block__opt b a
+    text-transform uppercase
+    text-decoration underline
+    font-size 14px
+
+.catalog-blocks-container__block__hover-container
+    position absolute
+    width 100%
+    background rgba(51, 51, 51, 0.9)
+    bottom 0
+    left 0
+    padding 15px
+    color white
+    justify-content space-between
+    text-align center
+    transform translateY(100%)
+    transition transform 1s ease
+
+.catalog-blocks-container__block:hover .catalog-blocks-container__block__hover-container
+    transform translateY(0)
+
+.catalog-blocks-container__block__hover-container .my_input_group
+    width calc(50% - 6px)
+    &:nth-child(odd)
+        margin-right 6px
+    &:nth-child(even)
+        margin-left 6px
+
+.catalog-blocks-container__block__hover-container .my_input_group label
+    width 100%
+    border 1px solid white
+    justify-content space-between
+
+.catalog-blocks-container__block__hover-container .my_input_group label span
+    font-family RobotoLight
+    font-size 12px
+    width calc(100% - 45px)
+
+.catalog-blocks-container__block__size
+    appearance none
+    width 45px
+    height 45px
+    text-align center
+    font-family RobotoRegular
+    border-radius 0
+    font-size 18px
+    background white
+    color black
+    border 1px solid white
+    margin -1px -1px -1px 0
+    padding 0
+    text-align-last center
+    &:focus
+        border-color black
+        background dgrey
+        color white
+
+.catalog-blocks-container__block__quantity
+    width 45px
+    height 45px
+    text-align center
+    font-family RobotoRegular
+    border-radius 0
+    font-size 18px
+    background white
+    color black
+    border 1px solid white
+    margin -1px -1px -1px 0
+    padding 0
+    &:focus
+        border-color black
+        background dgrey
+        color white
+
+.catalog-blocks-container__block__details
+    width 100%
+    padding 0
+    text-transform uppercase
+    align-content center
+    justify-content center
