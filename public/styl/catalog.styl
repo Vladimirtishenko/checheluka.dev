@@ -1,32 +1,32 @@
-.filters-panel .che-flexible
-    padding 10px 0
-    justify-content space-between
+.filters-panel
+    padding 10px 0 0
 
-.filters-panel .che-flexible__child
-    margin-bottom 15px
+.filters-panel__block
+    margin-bottom 10px
 
 .filters-panel__images_count>span
     display inline-block
     font-size 12px
     text-align right
     width 45px
-    font-family RobotoLight
+    font-family RobotoLight, sans-serif
 
-.filters-panel__images_count button
+.filters-panel__btn-square
     width 45px
     height 45px
     background none
     border 1px solid lgrey
     padding 0
+    background-repeat no-repeat
+    background-position center center
 
 .filters-panel__images_count select
     appearance none
     width 45px
     height 45px
     text-align center
-    font-family RobotoRegular
+    font-family RobotoRegular, sans-serif
     font-size 18px
-    background none
     border 1px solid lgrey
     padding 0
     text-align-last center
@@ -38,17 +38,10 @@
     font-size 12px
     text-align right
     width 45px
-    font-family RobotoLight
+    font-family RobotoLight, sans-serif
 
-.filters-panel__veiw button
-    width 45px
-    height 45px
-    background none
-    border 1px solid lgrey
-    padding 0
+.filters-panel__veiw .filters-panel__btn-square
     margin-left 10px
-    background-repeat no-repeat
-    background-position center center
 
 .filters-panel__veiw .fullzise
     background-image url(../img/icon_view_1.png)
@@ -59,29 +52,19 @@
 .filters-panel__veiw .thirdsize
     background-image url(../img/icon_view_3.png)
 
-.filters-panel__divider
-    width 100%
-
 .filters-panel__price>span
     display inline-block
     font-size 12px
     text-align right
     width 45px
-    font-family RobotoLight
+    font-family RobotoLight, sans-serif
 
-.filters-panel__price button
-    width 45px
-    height 45px
-    background none
-    border 1px solid lgrey
-    font-family RobotoLight
+.filters-panel__price .filters-panel__btn-square
+    font-family RobotoLight, sans-serif
     font-size 12px
-    padding 0
     margin-left 10px
-    background-repeat no-repeat
-    background-position center center
 
-.filters-panel__price button span
+.filters-panel__price .filters-panel__btn-square span
     display block
 
 .filters-panel__price .filters-panel__price__clear
@@ -94,16 +77,11 @@
     font-size 12px
     text-align right
     width 45px
-    font-family RobotoLight
+    font-family RobotoLight, sans-serif
 
-.filters-panel__price-type button
-    width 45px
-    height 45px
-    background none
-    border 1px solid lgrey
-    font-family RobotoLight
+.filters-panel__price-type .filters-panel__btn-square
+    font-family RobotoLight, sans-serif
     font-size 12px
-    padding 0
     margin-left 10px
 
 .filters-panel__sizes>span
@@ -111,17 +89,10 @@
     font-size 12px
     text-align right
     width 65px
-    font-family RobotoLight
+    font-family RobotoLight, sans-serif
 
-.filters-panel__sizes button
-    width 45px
-    height 45px
-    background none
-    border 1px solid lgrey
-    padding 0
+.filters-panel__sizes .filters-panel__btn-square
     margin-left 10px
-    background-position center center
-    background-repeat no-repeat
     background-image url(../img/icon_ruler.png)
 
 .catalog-sidebar
@@ -151,7 +122,7 @@
 
 .catalog-sidebar__accordeon-img
     width 100%
-    font-family RobotoRegular
+    font-family RobotoRegular, sans-serif
     color #000
     position relative
     cursor pointer
@@ -174,7 +145,7 @@
     transform rotate(-45deg)
 
 .catalog-sidebar__accordeon-img span
-    font-family RobotoLight
+    font-family RobotoLight, sans-serif
     color lgrey
     margin-left 5px
 
@@ -185,7 +156,7 @@
 
 .catalog-sidebar__item-hidden input[type="checkbox"]+label
     padding 0 0 0 20px
-    font-family RobotoLight
+    font-family RobotoLight, sans-serif
     color dgrey
     position relative
     cursor pointer
@@ -249,18 +220,11 @@
 
 #catalog-sidebar__price-confirm
     width 100%
-    background none
-    color black
-    border-color black
-    text-transform uppercase
     margin-top 10px
 
 #catalog-sidebar__reset-all
-    background fblue
     width 100%
     margin-top 15px
-    text-transform uppercase
-    border-color fblue
 
 .catalog-sidebar__selected-categories
     padding 15px
@@ -316,33 +280,38 @@
     background rgba(51, 51, 51, 0.9)
     bottom 0
     left 0
-    padding 15px
     color white
-    justify-content space-between
     text-align center
-    transition transform 1s ease
+    transform translateY(125px)
+    transition ease 1s transform
 
 .catalog-blocks-container__block:hover .catalog-blocks-container__block__bottom
-    transform translateY(100%)
+    transform translateY(0)
+
+.catalog-blocks-container__block__bottom-inner-container
+    padding 15px
+
+.catalog-blocks-container__block__bottom-inner-container + .catalog-blocks-container__block__bottom-inner-container
+    padding-top 0
 
 .catalog-blocks-container__block__title
     width 100%
     text-transform uppercase
     margin-bottom 15px
-    font-size
-    font-family RobotoRegular
+    font-size 16px
+    font-family RobotoRegular, sans-serif
 
 .catalog-blocks-container__block__rozn
-    font-family RobotoLight
+    font-family RobotoLight, sans-serif
     font-size 14px
 
 .catalog-blocks-container__block__opt
-    font-family RobotoLight
+    font-family RobotoLight, sans-serif
     font-size 14px
 
 .catalog-blocks-container__block__opt b
     font-size 16px
-    font-family Roboto
+    font-family Roboto, sans-serif
     font-weight 700
 
 .catalog-blocks-container__block__opt b a
@@ -350,36 +319,19 @@
     text-decoration underline
     font-size 14px
 
-.catalog-blocks-container__block__hover-container
-    position absolute
-    width 100%
-    background rgba(51, 51, 51, 0.9)
-    bottom 0
-    left 0
-    padding 15px
-    color white
-    justify-content space-between
-    text-align center
-    transform translateY(100%)
-    transition transform 1s ease
-
-.catalog-blocks-container__block:hover .catalog-blocks-container__block__hover-container
-    transform translateY(0)
-
-.catalog-blocks-container__block__hover-container .my_input_group
+.catalog-blocks-container__block__bottom-inner-container .my_input_group
     width calc(50% - 6px)
     &:nth-child(odd)
         margin-right 6px
     &:nth-child(even)
         margin-left 6px
 
-.catalog-blocks-container__block__hover-container .my_input_group label
+.catalog-blocks-container__block__bottom-inner-container .my_input_group label
     width 100%
     border 1px solid white
-    justify-content space-between
 
-.catalog-blocks-container__block__hover-container .my_input_group label span
-    font-family RobotoLight
+.catalog-blocks-container__block__bottom-inner-container .my_input_group label span
+    font-family RobotoLight, sans-serif
     font-size 12px
     width calc(100% - 45px)
 
@@ -388,7 +340,7 @@
     width 45px
     height 45px
     text-align center
-    font-family RobotoRegular
+    font-family RobotoRegular, sans-serif
     border-radius 0
     font-size 18px
     background white
@@ -406,7 +358,7 @@
     width 45px
     height 45px
     text-align center
-    font-family RobotoRegular
+    font-family RobotoRegular, sans-serif
     border-radius 0
     font-size 18px
     background white
@@ -422,6 +374,71 @@
 .catalog-blocks-container__block__details
     width 100%
     padding 0
-    text-transform uppercase
-    align-content center
-    justify-content center
+
+.pagination-container
+    margin-right -10px
+    display inline-block;
+
+.pagination-container__backward
+.pagination-container__pages
+.pagination-container__forward
+.pagination-container__custom-page
+    flex-wrap nowrap
+    margin-bottom 15px
+    margin-right 10px
+
+.pagination-container__first-button
+.pagination-container__prev-button
+.pagination-container__next-button
+.pagination-container__last-button
+    height 45px
+    background none
+    overflow hidden
+    &:before
+        content ""
+        display block
+        width 10px
+        height 10px
+        transform rotate(45deg);
+        border-left 1px solid #9a9a9a
+        border-bottom 1px solid #9a9a9a
+    &:hover:before, &:hover:after
+        border-color reds
+
+.pagination-container__first-button
+.pagination-container__last-button
+    &:after
+        content ""
+        display block
+        width 10px
+        height 10px
+        transform rotate(45deg);
+        border-left 1px solid #9a9a9a
+        border-bottom 1px solid #9a9a9a
+
+.pagination-container__next-button
+.pagination-container__last-button
+    &:before, &:after
+        transform rotate(-135deg);
+
+.pagination-container__number-button
+    height 45px
+    width 45px
+    color #9a9a9a
+    background none
+    padding 0
+    &:hover
+        color reds
+    &.active
+        color reds
+        border 1px solid reds
+
+.pagination-container__custom-page-input
+    width 45px
+    border 1px solid #9a9a9a
+    text-align center
+    border-radius 0
+    margin-right 10px
+
+.pagination-container__custom-page-button
+    padding 0 20px

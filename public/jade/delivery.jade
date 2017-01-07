@@ -1,0 +1,78 @@
+extends layout/layout.jade
+
+block content
+    ul.side-menu.list-unstyled
+        li.side-menu__list-item
+            a(href="#").che-flexible
+                span.side-menu__list-item-title ДОБАВИТЬ ОТЗЫВ
+                span.side-menu__list-item-icon.side-menu__list-item-icon_speech
+        li.side-menu__list-item
+             a(href="#").che-flexible
+                span.side-menu__list-item-title ОНЛАЙН ПОМОЩЬ
+                span.side-menu__list-item-icon.side-menu__list-item-icon_question
+        li.side-menu__list-item
+            a(href="#").che-flexible
+                span.side-menu__list-item-title ВИШЛИСТ
+                span.side-menu__list-item-icon.side-menu__list-item-icon_heart
+        li.side-menu__list-item
+            a(href="#").che-flexible
+                span.side-menu__list-item-title КОРЗИНА
+                span.side-menu__list-item-icon.side-menu__list-item-icon_cart
+
+    .container
+        .che-main
+            .row
+                .delivery-col.col-xs-12.col-md-6
+                    .delivery-col__inner_container
+                        .delivery-col__title.delivery-col__title-payment
+                            span оплата
+                        .delivery-col__inner-col.col-xs-12.col-md-6
+                            .row
+                                ul.list-unstyled.delivery-col__list
+                                    li.delivery-col__list-item На расчетный счет
+                                    li.delivery-col__list-item На карту Сбербанка
+                                    li.delivery-col__list-item Денежный перевод
+                                    li.delivery-col__list-item Золотая корона
+                                    li.delivery-col__list-item Western Union
+
+                        .delivery-col__inner-col.col-xs-12.col-md-6
+                            .row
+                                ul.list-unstyled.delivery-col__list
+                                    li.delivery-col__list-item Юнистрим
+                                    li.delivery-col__list-item Колибри
+                                    li.delivery-col__list-item Контакт
+                                    li.delivery-col__list-item Удобным для Вас способом
+
+                .delivery-col.col-xs-12.col-md-6
+                    .delivery-col__inner_container
+                        .delivery-col__title.delivery-col__title-delivery
+                            span доставка
+                        .delivery-col__inner-col.col-xs-12.col-md-6
+                            .row
+                                ul.list-unstyled.delivery-col__list
+                                    li.delivery-col__list-item
+                                        a(href="#") ТК ПЭК
+                                    li.delivery-col__list-item
+                                        a(href="#") Желдорэкспедиция
+                                    li.delivery-col__list-item
+                                        a(href="#") Деловые линии
+                                    li.delivery-col__list-item
+                                        a(href="#") Байкал сервис
+                                    li.delivery-col__list-item
+                                        a(href="#") КИТ
+                                    li.delivery-col__list-item
+                                        a(href="#") DPD
+
+                        .delivery-col__inner-col.col-xs-12.col-md-6
+                            .row
+                                ul.list-unstyled.delivery-col__list
+                                    li.delivery-col__list-item
+                                        a(href="#") СДЭК
+                                        .delivery-col__list-item-hint АВИА доставка по нашему спец тарифу, уточняйте стоимость у менеджеров
+                                    li.delivery-col__list-item
+                                        a(href="#") Почта России
+                                    li.delivery-col__list-item Другой транспортной компанией удобной для Вас
+
+                        .clearfix
+
+                        .delivery-col__text Доставку оплачивает получатель по тарифам выбранной Вами транспортной компании!

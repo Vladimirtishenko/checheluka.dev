@@ -1,0 +1,116 @@
+extends layout/layout.jade
+
+block content
+    .filters-panel.filters-panel__product
+        .container
+            .che-flexible
+                .filters-panel__block.filters-panel__return
+                    button.btn.btn-default-dark.btn-transparent Вернуться
+
+                .che-flexible.filters-panel__panel-right
+                    .filters-panel__block.filters-panel__price-type.che-flexible__child
+                        span Цена:
+                        button.filters-panel__btn-square.btn-transparent опт
+                        button.filters-panel__btn-square.btn-transparent розн.
+
+                    .filters-panel__block.filters-panel__sizes.che-flexible__child
+                        span Размерная таблица:
+                        button.filters-panel__btn-square.btn-transparent
+
+    .container
+        .che-main
+            .row
+                .product-left-colummn.col-xs-12.col-sm-6.col-md-4
+                    .tumbnails__container
+                        .main-tumbnail__container
+                            img.main-tumbnail.img-responsive(src="public/img/product_img_1.jpg", alt="")
+
+                            .main-tumbnail__bottom
+                                button.btn.btn-default-light.btn-transparent-light На весь экран
+
+                        .additional-tumbnails__container.che-flexible
+                            .additional-tumbnail
+                                img.img-responsive(src="./public/img/product_img_1.jpg", alt="")
+                            .additional-tumbnail
+                                img.img-responsive(src="./public/img/product_img_1.jpg", alt="")
+                            .additional-tumbnail
+                                img.img-responsive(src="./public/img/product_img_1.jpg", alt="")
+
+
+                .product-right-colummn.col-xs-12.col-sm-6.col-md-8
+                    .row
+                        .product-title.col-xs-12 Платье SbS 71193
+
+                        .product-options-block.col-xs-12.col-md-6.col-lg-5
+                            .product-options-block__top
+                                .product-options-block__price-rozn Розн. цена:
+                                    =" "
+                                    b 2500 руб.
+
+                                .product-options-block__price-opt Опт. цена:
+                                    =" "
+                                    b
+                                        a(href="#") узнать
+
+                            .product-options-block__bottom
+                                .my_input_group
+                                    label.che-flexible
+                                        span Цвет
+                                        select.product-options-block__color.form-control
+                                            option медное золото
+                                            option серый
+                                            option темносерый
+
+                                .che-flexible
+                                    .my_input_group
+                                        label.che-flexible
+                                            span Размер
+                                            select.product-options-block__size.form-control
+                                                option X
+                                                option M
+                                                option L
+                                                option XL
+
+                                    .my_input_group
+                                        label.che-flexible__child
+                                            span Кол-во
+                                            input.product-options-block__quantity.form-control(type="number" value="1" pattern="[0-9]*" inputmode="numeric")
+
+                                .my_input_group.clearfix
+                                    button.btn.btn-default-dark.btn-success.col-xs-12 Купить
+
+                                .my_input_group.clearfix
+                                    button.btn.btn-default-dark.btn-info.col-xs-12 Добавить в Список желаний
+
+                        .catalog-sidebar.col-xs-12.col-md-6.col-lg-offset-1
+                            .catalog-sidebar__item
+                                input(class="catalog-sidebar__accordeon-fake" id="product-sidebar-sizes" type="checkbox")
+                                label(class="catalog-sidebar__accordeon-img" for="product-sidebar-sizes") Размеры:
+                                .catalog-sidebar__item-hidden
+                                    .catalog-sidebar__product-info S, M, L, XL
+
+                            .catalog-sidebar__item
+                                input(class="catalog-sidebar__accordeon-fake" id="product-sidebar-cloth" type="checkbox")
+                                label(class="catalog-sidebar__accordeon-img" for="product-sidebar-cloth") Ткань:
+                                .catalog-sidebar__item-hidden
+                                    .catalog-sidebar__product-info экозамш
+
+                            .catalog-sidebar__item
+                                input(class="catalog-sidebar__accordeon-fake" id="product-sidebar-length" type="checkbox")
+                                label(class="catalog-sidebar__accordeon-img" for="product-sidebar-length") Длина изделия:
+                                .catalog-sidebar__item-hidden
+
+                            .catalog-sidebar__item
+                                input(class="catalog-sidebar__accordeon-fake" id="product-sidebar-color" type="checkbox")
+                                label(class="catalog-sidebar__accordeon-img" for="product-sidebar-color") Цвет:
+                                .catalog-sidebar__item-hidden
+                                    .catalog-sidebar__product-info медное золото, серый, темносерый
+
+                            .catalog-sidebar__item
+                                input(class="catalog-sidebar__accordeon-fake" id="product-sidebar-composition" type="checkbox")
+                                label(class="catalog-sidebar__accordeon-img" for="product-sidebar-composition") Состав:
+                                .catalog-sidebar__item-hidden
+
+                .product-description.col-xs-12.col-md-8.pull-right
+                    .product-description__title Детали:
+                    .product-description__text Великолепное женское платье выполнено по последним технологиям...  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus mollitia, nisi ipsum nesciunt rerum dolores minus omnis exercitationem asperiores doloremque numquam ab quo perspiciatis, voluptate similique suscipit cupiditate facere qui.

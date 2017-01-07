@@ -4,17 +4,18 @@
             .che-menu__inner.col-xl-12.col-lg-12.col-md-12.col-sm-12.col-xs-12
                 input(type="checkbox" id="che-menu__changed" class="che-menu__mobile-hide")
                 label(for="che-menu__changed").che-menu__list-button-mobile
-                ul.che-menu__list
-                    li.che-menu__item
-                        a(href="").che-active Главная
-                    li.che-menu__item
-                        a(href="") Каталог
-                    li.che-menu__item
-                        a(href="") Отзывы
-                    li.che-menu__item
-                        a(href="") Оплата и доставка
-                    li.che-menu__item
-                        a(href="") Контакты
+                .che-menu__list
+                    ul.che-menu__list-inner
+                        li.che-menu__item
+                            a(href="/").che-active Главная
+                        li.che-menu__item
+                            a(href="catalog.html") Каталог
+                        li.che-menu__item
+                            a(href="feedback.html") Отзывы
+                        li.che-menu__item
+                            a(href="delivery.html") Оплата и доставка
+                        li.che-menu__item
+                            a(href="contacts.html") Контакты
                 .che-search.col-xs-12.col-sm-4.col-lg-3
                     form.che-search__form(action="")
                         input.form-control(type='text', placeholder='Поиск...')

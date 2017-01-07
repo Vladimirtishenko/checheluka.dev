@@ -1,0 +1,94 @@
+.delivery-col
+    margin-top 20px
+    margin-bottom 40px
+
+.delivery-col__inner_container
+    margin 0 auto
+    max-width 320px
+
+.delivery-col__inner-col + .delivery-col__inner-col
+    margin-top 15px
+
+@media screen and (min-width: 992px)
+    .delivery-col__inner_container
+        max-width none
+
+    .delivery-col__inner-col + .delivery-col__inner-col
+        margin-top 0
+
+.delivery-col__title
+    text-transform uppercase
+    color #000
+    font-family Roboto, sans-serif
+    font-weight 600
+    text-align center
+    margin-bottom 35px
+    font-size 24px
+
+.delivery-col__title span
+    position relative
+    &:before
+        content ""
+        display block
+        position absolute
+        top -16px
+        right -52px
+        width 79px
+        height 71px
+        background-position left center
+        background-repeat no-repeat
+        z-index -1
+
+.delivery-col__title-payment span:before
+    background-image url(../img/icon_payment.png)
+
+.delivery-col__title-delivery span:before
+    background-image url(../img/icon_delivery.png)
+
+.delivery-col__list-item
+    position relative
+    padding-left 20px
+    padding-right 30px
+    font-family RobotoLight, sans-serif
+    color #000
+    font-size 16px
+    line-height normal
+    &:before
+        content ""
+        position absolute
+        display block
+        width 10px
+        height 10px
+        border 4px solid fblue
+        left 0
+        top 5px
+
+.delivery-col__list-item + .delivery-col__list-item
+    margin-top 15px
+
+.delivery-col__list-item a
+    font-family RobotoLight, sans-serif
+    color #000
+    font-size 16px
+    line-height normal
+    text-decoration underline
+    &:hover
+        color fblue
+
+.delivery-col__list-item-hint
+    margin-left -20px
+    margin-top 5px
+    padding 10px
+    font-family RobotoLight, sans-serif
+    font-size 14px
+    color #2e2d2d
+    background #f1e8f0
+
+.delivery-col__text
+    margin-top 35px
+    font-family RobotoRegular, sans-serif
+    font-size 14px
+    line-height normal
+    background dgrey
+    color #fff
+    padding 10px 20px

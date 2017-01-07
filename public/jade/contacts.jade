@@ -1,0 +1,90 @@
+extends layout/layout.jade
+
+block content
+    .container
+        .contacts-title контакты Компании
+    .contact-info
+        .container
+            .row
+                .col-xs-12.col-md-6
+                    .row
+                        .contact-info__block.col-xs-12.col-sm-6
+                            .contact-info__block-icon.contact-info__block-icon-address
+                            .contact-info__block-text.che-flexible
+                                .contact-info__block-text-line ООО “Чечелюка”
+                                .contact-info__block-text-line г.&nbsp;Белгород, ул.&nbsp;Новая&nbsp;2&#8209;а, офис&nbsp;N14
+
+                        .contact-info__block.col-xs-12.col-sm-6
+                            .contact-info__block-icon.contact-info__block-icon-phone
+                            .contact-info__block-text.che-flexible
+                                .contact-info__block-text-line +7&nbsp;(495)&nbsp;777&nbsp;31&nbsp;9
+                                .contact-info__block-text-line +7&nbsp;(980)&nbsp;393&nbsp;25&nbsp;95
+
+                .col-xs-12.col-md-6
+                    .row
+                        .contact-info__block.col-xs-12.col-sm-6
+                            .contact-info__block-icon.contact-info__block-icon-email
+                            .contact-info__block-text.che-flexible
+                                .contact-info__block-text-line belgorod@chechelyka.com
+
+                        .contact-info__block.col-xs-12.col-sm-6
+                            .contact-info__block-icon.contact-info__block-icon-skype
+                            .contact-info__block-text.che-flexible
+                                .contact-info__block-text-line chechelyka
+
+    .contact-persons
+        .contact-persons__container-lg.clearfix
+            .col-xs-12.col-lg-6
+                .row.contact-persons__row
+                    .contact-persons__container-sm.contact-persons__container-md.clearfix
+                        .contact-persons__block.col-xs-12.col-sm-6
+                            .contact-persons__block-title Генеральный директор:
+                            .contact-persons__block-name Герасименко Сергей Александрович
+                            .contact-persons__block-content
+                                .contact-persons__block-text-line
+                                    b Тел:
+                                    =" "
+                                    span.contact-persons__info +7&nbsp;(905)&nbsp;672&nbsp;90&nbsp;52
+                                .contact-persons__block-text-line
+                                    b Email:
+                                    =" "
+                                    span.contact-persons__info-underlined gerasimenko@chechelyka.com
+                        .contact-persons__block.col-xs-12.col-sm-6
+                            .contact-persons__block-title Администратор:
+                            .contact-persons__block-name Ольга Кизилова
+                            .contact-persons__block-content
+                                .contact-persons__block-text-line
+                                    b Тел:
+                                    =" "
+                                    span.contact-persons__info +7&nbsp;(980)&nbsp;393&nbsp;25&nbsp;95
+                                .contact-persons__block-text-line
+                                    b Email:
+                                    =" "
+                                    span.contact-persons__info-underlined kizilova@chechelyka.com
+
+            .col-xs-12.col-lg-6
+                .row.contact-persons__row
+                    .contact-persons__container-sm.contact-persons__container-md.clearfix
+                        .contact-persons__block.col-xs-12.col-sm-6
+                            .contact-persons__block-title Отдел продаж:
+                            .contact-persons__block-name Татьяна Белоусова
+                            .contact-persons__block-content
+                                .contact-persons__block-text-line
+                                    b Тел:
+                                    =" "
+                                    span.contact-persons__info +7&nbsp;(915)&nbsp;572&nbsp;12&nbsp;69
+                                .contact-persons__block-text-line
+                                    b Email:
+                                    =" "
+                                    span.contact-persons__info-underlined t.belousova@chechelyka.com
+                                .contact-persons__block-text-line
+                                    b Skype:
+                                    =" "
+                                    span.contact-persons__info-underlined tatiana.belousova22
+
+                        .contact-persons__block.col-xs-12.col-sm-6
+                            .contact-persons__block-title Документы:
+                            .contact-persons__block-content
+                                button.btn.btn-default-light.btn-info Ознакомиться
+
+    .map-container

@@ -14,7 +14,7 @@
 //    width 20%
     padding-right 0
 
-.che-menu__list
+.che-menu__list-inner
     padding 0
 
 .che-menu__item
@@ -26,7 +26,8 @@
 .che-menu__item a
     text-transform uppercase
     color #000
-    font-family RobotoRegular
+    font-family Roboto, sans-serif
+    font-weight 700
     border-bottom 1px solid transparent
     padding-bottom 2px
     &:hover
@@ -74,6 +75,11 @@
     .che-menu__list
         display none
 
+    .che-menu__list-inner
+        margin 0 -15px
+        padding 0 15px
+        background #fff
+
     .che-menu__mobile-hide:checked + .che-menu__list-button-mobile
         background-position -359px 0px
 
@@ -82,7 +88,6 @@
         position absolute
         width 100%
         top 101%
-        background #fff
         z-index 1
         &:before
             width calc(100% + 30px)

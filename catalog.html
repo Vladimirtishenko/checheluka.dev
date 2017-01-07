@@ -40,18 +40,20 @@
             <div class="che-menu__inner col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
                <input type="checkbox" id="che-menu__changed" class="che-menu__mobile-hide" />
                <label for="che-menu__changed" class="che-menu__list-button-mobile"></label>
-               <ul class="che-menu__list">
-                  <li class="che-menu__item"><a href="" class="che-active">Главная</a>
-                  </li>
-                  <li class="che-menu__item"><a href="">Каталог</a>
-                  </li>
-                  <li class="che-menu__item"><a href="">Отзывы</a>
-                  </li>
-                  <li class="che-menu__item"><a href="">Оплата и доставка</a>
-                  </li>
-                  <li class="che-menu__item"><a href="">Контакты</a>
-                  </li>
-               </ul>
+               <div class="che-menu__list">
+                  <ul class="che-menu__list-inner">
+                     <li class="che-menu__item"><a href="/" class="che-active">Главная</a>
+                     </li>
+                     <li class="che-menu__item"><a href="catalog.html">Каталог</a>
+                     </li>
+                     <li class="che-menu__item"><a href="feedback.html">Отзывы</a>
+                     </li>
+                     <li class="che-menu__item"><a href="delivery.html">Оплата и доставка</a>
+                     </li>
+                     <li class="che-menu__item"><a href="contacts.html">Контакты</a>
+                     </li>
+                  </ul>
+               </div>
                <div class="che-search col-xs-12 col-sm-4 col-lg-3">
                   <form action="" class="che-search__form">
                      <input type="text" placeholder="Поиск..." class="form-control" /><span class="che-search__input-ico"></span>
@@ -64,32 +66,32 @@
    <div class="container">
       <div class="filters-panel">
          <div class="che-flexible">
-            <div class="filters-panel__images_count che-flexible__child"><span>Фото на стр.:</span>
-               <select class="form-control">
+            <div class="filters-panel__block filters-panel__images_count che-flexible__child"><span>Фото на стр.:</span>
+               <select class="form-control btn-transparent">
                   <option value="25">25</option>
                   <option value="50">50</option>
                   <option value="100">100</option>
                </select>
             </div>
-            <div class="filters-panel__veiw che-flexible__child"><span>Вид:</span>
-               <button class="fullzise"></button>
-               <button class="halfsize"></button>
-               <button class="thirdsize"></button>
+            <div class="filters-panel__block filters-panel__veiw che-flexible__child"><span>Вид:</span>
+               <button class="filters-panel__btn-square fullzise btn-transparent"></button>
+               <button class="filters-panel__btn-square halfsize btn-transparent"></button>
+               <button class="filters-panel__btn-square thirdsize btn-transparent"></button>
             </div>
-            <div class="filters-panel__divider hidden-lg hidden-md"></div>
-            <div class="filters-panel__price che-flexible__child"><span>Фильтр по цене:</span>
-               <button class="filters-panel__price__asc"><span>min</span><span>MAX</span>
+            <div class="che-flexible__divider hidden-lg hidden-md"></div>
+            <div class="filters-panel__block filters-panel__price che-flexible__child"><span>Фильтр по цене:</span>
+               <button class="filters-panel__btn-square filters-panel__price__asc btn-transparent"><span>min</span><span>MAX</span>
                </button>
-               <button class="filters-panel__price__desc"><span>MAX</span><span>min</span>
+               <button class="filters-panel__btn-square filters-panel__price__desc btn-transparent"><span>MAX</span><span>min</span>
                </button>
-               <button class="filters-panel__price__clear"></button>
+               <button class="filters-panel__btn-square filters-panel__price__clear btn-transparent"></button>
             </div>
-            <div class="filters-panel__price-type che-flexible__child"><span>Цена:</span>
-               <button>опт</button>
-               <button>розн.</button>
+            <div class="filters-panel__block filters-panel__price-type che-flexible__child"><span>Цена:</span>
+               <button class="filters-panel__btn-square btn-transparent">опт</button>
+               <button class="filters-panel__btn-square btn-transparent">розн.</button>
             </div>
-            <div class="filters-panel__sizes che-flexible__child"><span>Размерная таблица:</span>
-               <button></button>
+            <div class="filters-panel__block filters-panel__sizes che-flexible__child"><span>Размерная таблица:</span>
+               <button class="filters-panel__btn-square btn-transparent"></button>
             </div>
          </div>
       </div>
@@ -98,11 +100,12 @@
             <div class="catalog-sidebar col-xs-12 col-md-4 col-md-push-8 col-lg-3 col-lg-push-9">
                <div class="catalog-sidebar__selected-items-count">Выбрано товаров:<b>5064</b>
                </div>
-               <button id="catalog-sidebar__reset-all" class="btn btn-primary">Сбросить все</button>
+               <button id="catalog-sidebar__reset-all" class="btn btn-default-dark btn-info">Сбросить все</button>
                <div class="catalog-sidebar__selected-categories">
                   <ul class="list-unstyled">
                      <li>
-                        <button class="catalog-sidebar__selected-categories__remove"></button>Костюмы</li>
+                        <button class="catalog-sidebar__selected-categories__remove"></button><span>Костюмы</span>
+                     </li>
                   </ul>
                </div>
                <div class="catalog-sidebar__item">
@@ -290,20 +293,21 @@
                   <div class="catalog-sidebar__item-hidden">
                      <div class="row che-flexible">
                         <div class="my_input_group che-flexible__child col-xs-6">
-                           <label for="price_lowest">от</label>
+                           <label for="catalog-sidebar__price-lowest">от</label>
                            <input id="catalog-sidebar__price-lowest" type="text" value="100" />
                         </div>
                         <div class="my_input_group che-flexible__child col-xs-6">
-                           <label for="price_highest">до</label>
+                           <label for="catalog-sidebar__price-highest">до</label>
                            <input id="catalog-sidebar__price-highest" type="text" value="5000" />
                         </div>
                      </div>
-                     <button id="catalog-sidebar__price-confirm" class="btn">Ок</button>
+                     <button id="catalog-sidebar__price-confirm" class="btn btn-default-dark btn-transparent">Ок</button>
                   </div>
                </div>
                <div class="catalog-sidebar__item">
                   <input id="catalog-sidebar-color" type="checkbox" class="catalog-sidebar__accordeon-fake" />
                   <label for="catalog-sidebar-color" class="catalog-sidebar__accordeon-img">Цвет</label>
+                  <div class="catalog-sidebar__item-hidden"></div>
                </div>
                <div class="catalog-sidebar__item">
                   <input id="catalog-sidebar-size" type="checkbox" class="catalog-sidebar__accordeon-fake" />
@@ -376,72 +380,40 @@
                   </div>
                </div>
             </div>
-            <div class="catalog-blocks-container col-xs-12 col-md-8 col-md-pull-4 col-lg-9 col-lg-pull-3">
+            <div class="catalog-blocks-container col-xs-12 col-md-8 col-md-pull-4 col-lg-9 col-lg-pull-3 text-center">
                <div class="row che-flexible">
                   <div class="col-xs-12 col-sm-6 col-lg-4">
                      <div class="catalog-blocks-container__block">
                         <img src="./public/img/catalog_img_1.jpg" class="img-responsive" />
                         <button class="catalog-blocks-container__block__wishlist"></button>
-                        <div class="catalog-blocks-container__block__bottom che-flexible__child">
-                           <div class="catalog-blocks-container__block__title">платье SbS 71193</div>
-                           <div class="catalog-blocks-container__block__rozn">розн.: 2500</div>
-                           <div class="catalog-blocks-container__block__opt">опт.:<b>500</b>
+                        <div class="catalog-blocks-container__block__bottom">
+                           <div class="catalog-blocks-container__block__bottom-inner-container che-flexible">
+                              <div class="catalog-blocks-container__block__title">платье SbS 71193</div>
+                              <div class="catalog-blocks-container__block__rozn">розн.: 2500</div>
+                              <div class="catalog-blocks-container__block__opt">опт.: <b>500</b>
+                              </div>
                            </div>
-                        </div>
-                        <div class="catalog-blocks-container__block__hover-container che-flexible">
-                           <div class="my_input_group">
-                              <label class="che-flexible__child"><span>Размер</span>
-                                 <select class="catalog-blocks-container__block__size form-control">
-                                    <option>X</option>
-                                    <option>M</option>
-                                    <option>L</option>
-                                    <option>XL</option>
-                                 </select>
-                              </label>
-                           </div>
-                           <div class="my_input_group">
-                              <label class="che-flexible__child"><span>Кол-во</span>
-                                 <input type="number" value="1" pattern="[0-9]*" inputmode="numeric" class="catalog-blocks-container__block__quantity form-control" />
-                              </label>
-                           </div>
-                           <div class="my_input_group"><a href="#" class="btn btn-info catalog-blocks-container__block__details che-flexible"><span>Подробнее</span></a>
-                           </div>
-                           <div class="my_input_group">
-                              <button class="btn btn-success catalog-blocks-container__block__details">Купить</button>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-xs-12 col-sm-6 col-lg-4">
-                     <div class="catalog-blocks-container__block">
-                        <img src="./public/img/catalog_img_2.jpg" class="img-responsive" />
-                        <button class="catalog-blocks-container__block__wishlist"></button>
-                        <div class="catalog-blocks-container__block__bottom che-flexible__child">
-                           <div class="catalog-blocks-container__block__title">платье SbS 71193</div>
-                           <div class="catalog-blocks-container__block__rozn">розн.: 2500</div>
-                           <div class="catalog-blocks-container__block__opt">опт.:<b>500</b>
-                           </div>
-                        </div>
-                        <div class="catalog-blocks-container__block__hover-container che-flexible">
-                           <div class="my_input_group">
-                              <label class="che-flexible__child"><span>Размер</span>
-                                 <select class="catalog-blocks-container__block__size form-control">
-                                    <option>X</option>
-                                    <option>M</option>
-                                    <option>L</option>
-                                    <option>XL</option>
-                                 </select>
-                              </label>
-                           </div>
-                           <div class="my_input_group">
-                              <label class="che-flexible__child"><span>Кол-во</span>
-                                 <input type="number" value="1" pattern="[0-9]*" inputmode="numeric" class="catalog-blocks-container__block__quantity form-control" />
-                              </label>
-                           </div>
-                           <div class="my_input_group"><a href="#" class="btn btn-info catalog-blocks-container__block__details che-flexible"><span>Подробнее</span></a>
-                           </div>
-                           <div class="my_input_group">
-                              <button class="btn btn-success catalog-blocks-container__block__details">Купить</button>
+                           <div class="catalog-blocks-container__block__bottom-inner-container che-flexible">
+                              <div class="my_input_group">
+                                 <label class="che-flexible__child"><span>Размер</span>
+                                    <select class="catalog-blocks-container__block__size form-control">
+                                       <option>X</option>
+                                       <option>M</option>
+                                       <option>L</option>
+                                       <option>XL</option>
+                                    </select>
+                                 </label>
+                              </div>
+                              <div class="my_input_group">
+                                 <label class="che-flexible__child"><span>Кол-во</span>
+                                    <input type="number" value="1" pattern="[0-9]*" inputmode="numeric" class="catalog-blocks-container__block__quantity form-control" />
+                                 </label>
+                              </div>
+                              <div class="my_input_group"><a href="#" class="btn btn-default-light btn-info catalog-blocks-container__block__details che-flexible che-flexible-btn-cenetring"><span>Подробнее</span></a>
+                              </div>
+                              <div class="my_input_group">
+                                 <button class="btn btn-default-light btn-success catalog-blocks-container__block__details">Купить</button>
+                              </div>
                            </div>
                         </div>
                      </div>
@@ -450,66 +422,34 @@
                      <div class="catalog-blocks-container__block">
                         <img src="./public/img/catalog_img_2.jpg" class="img-responsive" />
                         <button class="catalog-blocks-container__block__wishlist"></button>
-                        <div class="catalog-blocks-container__block__bottom che-flexible__child">
-                           <div class="catalog-blocks-container__block__title">платье SbS 71193</div>
-                           <div class="catalog-blocks-container__block__rozn">розн.: 2500</div>
-                           <div class="catalog-blocks-container__block__opt">опт.:<b><a href="#">Узнать</a></b>
+                        <div class="catalog-blocks-container__block__bottom">
+                           <div class="catalog-blocks-container__block__bottom-inner-container che-flexible">
+                              <div class="catalog-blocks-container__block__title">платье SbS 71193</div>
+                              <div class="catalog-blocks-container__block__rozn">розн.: 2500</div>
+                              <div class="catalog-blocks-container__block__opt">опт.: <b>500</b>
+                              </div>
                            </div>
-                        </div>
-                        <div class="catalog-blocks-container__block__hover-container che-flexible">
-                           <div class="my_input_group">
-                              <label class="che-flexible__child"><span>Размер</span>
-                                 <select class="catalog-blocks-container__block__size form-control">
-                                    <option>X</option>
-                                    <option>M</option>
-                                    <option>L</option>
-                                    <option>XL</option>
-                                 </select>
-                              </label>
-                           </div>
-                           <div class="my_input_group">
-                              <label class="che-flexible__child"><span>Кол-во</span>
-                                 <input type="number" value="1" pattern="[0-9]*" inputmode="numeric" class="catalog-blocks-container__block__quantity form-control" />
-                              </label>
-                           </div>
-                           <div class="my_input_group"><a href="#" class="btn btn-info catalog-blocks-container__block__details che-flexible"><span>Подробнее</span></a>
-                           </div>
-                           <div class="my_input_group">
-                              <button class="btn btn-success catalog-blocks-container__block__details">Купить</button>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-xs-12 col-sm-6 col-lg-4">
-                     <div class="catalog-blocks-container__block">
-                        <img src="./public/img/catalog_img_2.jpg" class="img-responsive" />
-                        <button class="catalog-blocks-container__block__wishlist"></button>
-                        <div class="catalog-blocks-container__block__bottom che-flexible__child">
-                           <div class="catalog-blocks-container__block__title">платье SbS 71193</div>
-                           <div class="catalog-blocks-container__block__rozn">розн.: 2500</div>
-                           <div class="catalog-blocks-container__block__opt">опт.:<b><a href="#">Узнать</a></b>
-                           </div>
-                        </div>
-                        <div class="catalog-blocks-container__block__hover-container che-flexible">
-                           <div class="my_input_group">
-                              <label class="che-flexible__child"><span>Размер</span>
-                                 <select class="catalog-blocks-container__block__size form-control">
-                                    <option>X</option>
-                                    <option>M</option>
-                                    <option>L</option>
-                                    <option>XL</option>
-                                 </select>
-                              </label>
-                           </div>
-                           <div class="my_input_group">
-                              <label class="che-flexible__child"><span>Кол-во</span>
-                                 <input type="number" value="1" pattern="[0-9]*" inputmode="numeric" class="catalog-blocks-container__block__quantity form-control" />
-                              </label>
-                           </div>
-                           <div class="my_input_group"><a href="#" class="btn btn-info catalog-blocks-container__block__details che-flexible"><span>Подробнее</span></a>
-                           </div>
-                           <div class="my_input_group">
-                              <button class="btn btn-success catalog-blocks-container__block__details">Купить</button>
+                           <div class="catalog-blocks-container__block__bottom-inner-container che-flexible">
+                              <div class="my_input_group">
+                                 <label class="che-flexible__child"><span>Размер</span>
+                                    <select class="catalog-blocks-container__block__size form-control">
+                                       <option>X</option>
+                                       <option>M</option>
+                                       <option>L</option>
+                                       <option>XL</option>
+                                    </select>
+                                 </label>
+                              </div>
+                              <div class="my_input_group">
+                                 <label class="che-flexible__child"><span>Кол-во</span>
+                                    <input type="number" value="1" pattern="[0-9]*" inputmode="numeric" class="catalog-blocks-container__block__quantity form-control" />
+                                 </label>
+                              </div>
+                              <div class="my_input_group"><a href="#" class="btn btn-default-light btn-info catalog-blocks-container__block__details che-flexible che-flexible-btn-cenetring"><span>Подробнее</span></a>
+                              </div>
+                              <div class="my_input_group">
+                                 <button class="btn btn-default-light btn-success catalog-blocks-container__block__details">Купить</button>
+                              </div>
                            </div>
                         </div>
                      </div>
@@ -518,66 +458,34 @@
                      <div class="catalog-blocks-container__block">
                         <img src="./public/img/catalog_img_2.jpg" class="img-responsive" />
                         <button class="catalog-blocks-container__block__wishlist"></button>
-                        <div class="catalog-blocks-container__block__bottom che-flexible__child">
-                           <div class="catalog-blocks-container__block__title">платье SbS 71193</div>
-                           <div class="catalog-blocks-container__block__rozn">розн.: 2500</div>
-                           <div class="catalog-blocks-container__block__opt">опт.:<b><a href="#">Узнать</a></b>
+                        <div class="catalog-blocks-container__block__bottom">
+                           <div class="catalog-blocks-container__block__bottom-inner-container che-flexible">
+                              <div class="catalog-blocks-container__block__title">платье SbS 71193</div>
+                              <div class="catalog-blocks-container__block__rozn">розн.: 2500</div>
+                              <div class="catalog-blocks-container__block__opt">опт.: <b><a href="#">Узнать</a></b>
+                              </div>
                            </div>
-                        </div>
-                        <div class="catalog-blocks-container__block__hover-container che-flexible">
-                           <div class="my_input_group">
-                              <label class="che-flexible__child"><span>Размер</span>
-                                 <select class="catalog-blocks-container__block__size form-control">
-                                    <option>X</option>
-                                    <option>M</option>
-                                    <option>L</option>
-                                    <option>XL</option>
-                                 </select>
-                              </label>
-                           </div>
-                           <div class="my_input_group">
-                              <label class="che-flexible__child"><span>Кол-во</span>
-                                 <input type="number" value="1" pattern="[0-9]*" inputmode="numeric" class="catalog-blocks-container__block__quantity form-control" />
-                              </label>
-                           </div>
-                           <div class="my_input_group"><a href="#" class="btn btn-info catalog-blocks-container__block__details che-flexible"><span>Подробнее</span></a>
-                           </div>
-                           <div class="my_input_group">
-                              <button class="btn btn-success catalog-blocks-container__block__details">Купить</button>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-xs-12 col-sm-6 col-lg-4">
-                     <div class="catalog-blocks-container__block">
-                        <img src="./public/img/catalog_img_2.jpg" class="img-responsive" />
-                        <button class="catalog-blocks-container__block__wishlist"></button>
-                        <div class="catalog-blocks-container__block__bottom che-flexible__child">
-                           <div class="catalog-blocks-container__block__title">платье SbS 71193</div>
-                           <div class="catalog-blocks-container__block__rozn">розн.: 2500</div>
-                           <div class="catalog-blocks-container__block__opt">опт.:<b><a href="#">Узнать</a></b>
-                           </div>
-                        </div>
-                        <div class="catalog-blocks-container__block__hover-container che-flexible">
-                           <div class="my_input_group">
-                              <label class="che-flexible__child"><span>Размер</span>
-                                 <select class="catalog-blocks-container__block__size form-control">
-                                    <option>X</option>
-                                    <option>M</option>
-                                    <option>L</option>
-                                    <option>XL</option>
-                                 </select>
-                              </label>
-                           </div>
-                           <div class="my_input_group">
-                              <label class="che-flexible__child"><span>Кол-во</span>
-                                 <input type="number" value="1" pattern="[0-9]*" inputmode="numeric" class="catalog-blocks-container__block__quantity form-control" />
-                              </label>
-                           </div>
-                           <div class="my_input_group"><a href="#" class="btn btn-info catalog-blocks-container__block__details che-flexible"><span>Подробнее</span></a>
-                           </div>
-                           <div class="my_input_group">
-                              <button class="btn btn-success catalog-blocks-container__block__details">Купить</button>
+                           <div class="catalog-blocks-container__block__bottom-inner-container che-flexible">
+                              <div class="my_input_group">
+                                 <label class="che-flexible__child"><span>Размер</span>
+                                    <select class="catalog-blocks-container__block__size form-control">
+                                       <option>X</option>
+                                       <option>M</option>
+                                       <option>L</option>
+                                       <option>XL</option>
+                                    </select>
+                                 </label>
+                              </div>
+                              <div class="my_input_group">
+                                 <label class="che-flexible__child"><span>Кол-во</span>
+                                    <input type="number" value="1" pattern="[0-9]*" inputmode="numeric" class="catalog-blocks-container__block__quantity form-control" />
+                                 </label>
+                              </div>
+                              <div class="my_input_group"><a href="#" class="btn btn-default-light btn-info catalog-blocks-container__block__details che-flexible che-flexible-btn-cenetring"><span>Подробнее</span></a>
+                              </div>
+                              <div class="my_input_group">
+                                 <button class="btn btn-default-light btn-success catalog-blocks-container__block__details">Купить</button>
+                              </div>
                            </div>
                         </div>
                      </div>
@@ -586,66 +494,34 @@
                      <div class="catalog-blocks-container__block">
                         <img src="./public/img/catalog_img_2.jpg" class="img-responsive" />
                         <button class="catalog-blocks-container__block__wishlist"></button>
-                        <div class="catalog-blocks-container__block__bottom che-flexible__child">
-                           <div class="catalog-blocks-container__block__title">платье SbS 71193</div>
-                           <div class="catalog-blocks-container__block__rozn">розн.: 2500</div>
-                           <div class="catalog-blocks-container__block__opt">опт.:<b><a href="#">Узнать</a></b>
+                        <div class="catalog-blocks-container__block__bottom">
+                           <div class="catalog-blocks-container__block__bottom-inner-container che-flexible">
+                              <div class="catalog-blocks-container__block__title">платье SbS 71193</div>
+                              <div class="catalog-blocks-container__block__rozn">розн.: 2500</div>
+                              <div class="catalog-blocks-container__block__opt">опт.: <b><a href="#">Узнать</a></b>
+                              </div>
                            </div>
-                        </div>
-                        <div class="catalog-blocks-container__block__hover-container che-flexible">
-                           <div class="my_input_group">
-                              <label class="che-flexible__child"><span>Размер</span>
-                                 <select class="catalog-blocks-container__block__size form-control">
-                                    <option>X</option>
-                                    <option>M</option>
-                                    <option>L</option>
-                                    <option>XL</option>
-                                 </select>
-                              </label>
-                           </div>
-                           <div class="my_input_group">
-                              <label class="che-flexible__child"><span>Кол-во</span>
-                                 <input type="number" value="1" pattern="[0-9]*" inputmode="numeric" class="catalog-blocks-container__block__quantity form-control" />
-                              </label>
-                           </div>
-                           <div class="my_input_group"><a href="#" class="btn btn-info catalog-blocks-container__block__details che-flexible"><span>Подробнее</span></a>
-                           </div>
-                           <div class="my_input_group">
-                              <button class="btn btn-success catalog-blocks-container__block__details">Купить</button>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-xs-12 col-sm-6 col-lg-4">
-                     <div class="catalog-blocks-container__block">
-                        <img src="./public/img/catalog_img_2.jpg" class="img-responsive" />
-                        <button class="catalog-blocks-container__block__wishlist"></button>
-                        <div class="catalog-blocks-container__block__bottom che-flexible__child">
-                           <div class="catalog-blocks-container__block__title">платье SbS 71193</div>
-                           <div class="catalog-blocks-container__block__rozn">розн.: 2500</div>
-                           <div class="catalog-blocks-container__block__opt">опт.:<b><a href="#">Узнать</a></b>
-                           </div>
-                        </div>
-                        <div class="catalog-blocks-container__block__hover-container che-flexible">
-                           <div class="my_input_group">
-                              <label class="che-flexible__child"><span>Размер</span>
-                                 <select class="catalog-blocks-container__block__size form-control">
-                                    <option>X</option>
-                                    <option>M</option>
-                                    <option>L</option>
-                                    <option>XL</option>
-                                 </select>
-                              </label>
-                           </div>
-                           <div class="my_input_group">
-                              <label class="che-flexible__child"><span>Кол-во</span>
-                                 <input type="number" value="1" pattern="[0-9]*" inputmode="numeric" class="catalog-blocks-container__block__quantity form-control" />
-                              </label>
-                           </div>
-                           <div class="my_input_group"><a href="#" class="btn btn-info catalog-blocks-container__block__details che-flexible"><span>Подробнее</span></a>
-                           </div>
-                           <div class="my_input_group">
-                              <button class="btn btn-success catalog-blocks-container__block__details">Купить</button>
+                           <div class="catalog-blocks-container__block__bottom-inner-container che-flexible">
+                              <div class="my_input_group">
+                                 <label class="che-flexible__child"><span>Размер</span>
+                                    <select class="catalog-blocks-container__block__size form-control">
+                                       <option>X</option>
+                                       <option>M</option>
+                                       <option>L</option>
+                                       <option>XL</option>
+                                    </select>
+                                 </label>
+                              </div>
+                              <div class="my_input_group">
+                                 <label class="che-flexible__child"><span>Кол-во</span>
+                                    <input type="number" value="1" pattern="[0-9]*" inputmode="numeric" class="catalog-blocks-container__block__quantity form-control" />
+                                 </label>
+                              </div>
+                              <div class="my_input_group"><a href="#" class="btn btn-default-light btn-info catalog-blocks-container__block__details che-flexible che-flexible-btn-cenetring"><span>Подробнее</span></a>
+                              </div>
+                              <div class="my_input_group">
+                                 <button class="btn btn-default-light btn-success catalog-blocks-container__block__details">Купить</button>
+                              </div>
                            </div>
                         </div>
                      </div>
@@ -654,34 +530,202 @@
                      <div class="catalog-blocks-container__block">
                         <img src="./public/img/catalog_img_2.jpg" class="img-responsive" />
                         <button class="catalog-blocks-container__block__wishlist"></button>
-                        <div class="catalog-blocks-container__block__bottom che-flexible__child">
-                           <div class="catalog-blocks-container__block__title">платье SbS 71193</div>
-                           <div class="catalog-blocks-container__block__rozn">розн.: 2500</div>
-                           <div class="catalog-blocks-container__block__opt">опт.:<b><a href="#">Узнать</a></b>
+                        <div class="catalog-blocks-container__block__bottom">
+                           <div class="catalog-blocks-container__block__bottom-inner-container che-flexible">
+                              <div class="catalog-blocks-container__block__title">платье SbS 71193</div>
+                              <div class="catalog-blocks-container__block__rozn">розн.: 2500</div>
+                              <div class="catalog-blocks-container__block__opt">опт.: <b><a href="#">Узнать</a></b>
+                              </div>
+                           </div>
+                           <div class="catalog-blocks-container__block__bottom-inner-container che-flexible">
+                              <div class="my_input_group">
+                                 <label class="che-flexible__child"><span>Размер</span>
+                                    <select class="catalog-blocks-container__block__size form-control">
+                                       <option>X</option>
+                                       <option>M</option>
+                                       <option>L</option>
+                                       <option>XL</option>
+                                    </select>
+                                 </label>
+                              </div>
+                              <div class="my_input_group">
+                                 <label class="che-flexible__child"><span>Кол-во</span>
+                                    <input type="number" value="1" pattern="[0-9]*" inputmode="numeric" class="catalog-blocks-container__block__quantity form-control" />
+                                 </label>
+                              </div>
+                              <div class="my_input_group"><a href="#" class="btn btn-default-light btn-info catalog-blocks-container__block__details che-flexible che-flexible-btn-cenetring"><span>Подробнее</span></a>
+                              </div>
+                              <div class="my_input_group">
+                                 <button class="btn btn-default-light btn-success catalog-blocks-container__block__details">Купить</button>
+                              </div>
                            </div>
                         </div>
-                        <div class="catalog-blocks-container__block__hover-container che-flexible">
-                           <div class="my_input_group">
-                              <label class="che-flexible__child"><span>Размер</span>
-                                 <select class="catalog-blocks-container__block__size form-control">
-                                    <option>X</option>
-                                    <option>M</option>
-                                    <option>L</option>
-                                    <option>XL</option>
-                                 </select>
-                              </label>
+                     </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-6 col-lg-4">
+                     <div class="catalog-blocks-container__block">
+                        <img src="./public/img/catalog_img_2.jpg" class="img-responsive" />
+                        <button class="catalog-blocks-container__block__wishlist"></button>
+                        <div class="catalog-blocks-container__block__bottom">
+                           <div class="catalog-blocks-container__block__bottom-inner-container che-flexible">
+                              <div class="catalog-blocks-container__block__title">платье SbS 71193</div>
+                              <div class="catalog-blocks-container__block__rozn">розн.: 2500</div>
+                              <div class="catalog-blocks-container__block__opt">опт.: <b><a href="#">Узнать</a></b>
+                              </div>
                            </div>
-                           <div class="my_input_group">
-                              <label class="che-flexible__child"><span>Кол-во</span>
-                                 <input type="number" value="1" pattern="[0-9]*" inputmode="numeric" class="catalog-blocks-container__block__quantity form-control" />
-                              </label>
-                           </div>
-                           <div class="my_input_group"><a href="#" class="btn btn-info catalog-blocks-container__block__details che-flexible"><span>Подробнее</span></a>
-                           </div>
-                           <div class="my_input_group">
-                              <button class="btn btn-success catalog-blocks-container__block__details">Купить</button>
+                           <div class="catalog-blocks-container__block__bottom-inner-container che-flexible">
+                              <div class="my_input_group">
+                                 <label class="che-flexible__child"><span>Размер</span>
+                                    <select class="catalog-blocks-container__block__size form-control">
+                                       <option>X</option>
+                                       <option>M</option>
+                                       <option>L</option>
+                                       <option>XL</option>
+                                    </select>
+                                 </label>
+                              </div>
+                              <div class="my_input_group">
+                                 <label class="che-flexible__child"><span>Кол-во</span>
+                                    <input type="number" value="1" pattern="[0-9]*" inputmode="numeric" class="catalog-blocks-container__block__quantity form-control" />
+                                 </label>
+                              </div>
+                              <div class="my_input_group"><a href="#" class="btn btn-default-light btn-info catalog-blocks-container__block__details che-flexible che-flexible-btn-cenetring"><span>Подробнее</span></a>
+                              </div>
+                              <div class="my_input_group">
+                                 <button class="btn btn-default-light btn-success catalog-blocks-container__block__details">Купить</button>
+                              </div>
                            </div>
                         </div>
+                     </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-6 col-lg-4">
+                     <div class="catalog-blocks-container__block">
+                        <img src="./public/img/catalog_img_2.jpg" class="img-responsive" />
+                        <button class="catalog-blocks-container__block__wishlist"></button>
+                        <div class="catalog-blocks-container__block__bottom">
+                           <div class="catalog-blocks-container__block__bottom-inner-container che-flexible">
+                              <div class="catalog-blocks-container__block__title">платье SbS 71193</div>
+                              <div class="catalog-blocks-container__block__rozn">розн.: 2500</div>
+                              <div class="catalog-blocks-container__block__opt">опт.: <b><a href="#">Узнать</a></b>
+                              </div>
+                           </div>
+                           <div class="catalog-blocks-container__block__bottom-inner-container che-flexible">
+                              <div class="my_input_group">
+                                 <label class="che-flexible__child"><span>Размер</span>
+                                    <select class="catalog-blocks-container__block__size form-control">
+                                       <option>X</option>
+                                       <option>M</option>
+                                       <option>L</option>
+                                       <option>XL</option>
+                                    </select>
+                                 </label>
+                              </div>
+                              <div class="my_input_group">
+                                 <label class="che-flexible__child"><span>Кол-во</span>
+                                    <input type="number" value="1" pattern="[0-9]*" inputmode="numeric" class="catalog-blocks-container__block__quantity form-control" />
+                                 </label>
+                              </div>
+                              <div class="my_input_group"><a href="#" class="btn btn-default-light btn-info catalog-blocks-container__block__details che-flexible che-flexible-btn-cenetring"><span>Подробнее</span></a>
+                              </div>
+                              <div class="my_input_group">
+                                 <button class="btn btn-default-light btn-success catalog-blocks-container__block__details">Купить</button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-6 col-lg-4">
+                     <div class="catalog-blocks-container__block">
+                        <img src="./public/img/catalog_img_2.jpg" class="img-responsive" />
+                        <button class="catalog-blocks-container__block__wishlist"></button>
+                        <div class="catalog-blocks-container__block__bottom">
+                           <div class="catalog-blocks-container__block__bottom-inner-container che-flexible">
+                              <div class="catalog-blocks-container__block__title">платье SbS 71193</div>
+                              <div class="catalog-blocks-container__block__rozn">розн.: 2500</div>
+                              <div class="catalog-blocks-container__block__opt">опт.: <b><a href="#">Узнать</a></b>
+                              </div>
+                           </div>
+                           <div class="catalog-blocks-container__block__bottom-inner-container che-flexible">
+                              <div class="my_input_group">
+                                 <label class="che-flexible__child"><span>Размер</span>
+                                    <select class="catalog-blocks-container__block__size form-control">
+                                       <option>X</option>
+                                       <option>M</option>
+                                       <option>L</option>
+                                       <option>XL</option>
+                                    </select>
+                                 </label>
+                              </div>
+                              <div class="my_input_group">
+                                 <label class="che-flexible__child"><span>Кол-во</span>
+                                    <input type="number" value="1" pattern="[0-9]*" inputmode="numeric" class="catalog-blocks-container__block__quantity form-control" />
+                                 </label>
+                              </div>
+                              <div class="my_input_group"><a href="#" class="btn btn-default-light btn-info catalog-blocks-container__block__details che-flexible che-flexible-btn-cenetring"><span>Подробнее</span></a>
+                              </div>
+                              <div class="my_input_group">
+                                 <button class="btn btn-default-light btn-success catalog-blocks-container__block__details">Купить</button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-6 col-lg-4">
+                     <div class="catalog-blocks-container__block">
+                        <img src="./public/img/catalog_img_2.jpg" class="img-responsive" />
+                        <button class="catalog-blocks-container__block__wishlist"></button>
+                        <div class="catalog-blocks-container__block__bottom">
+                           <div class="catalog-blocks-container__block__bottom-inner-container che-flexible">
+                              <div class="catalog-blocks-container__block__title">платье SbS 71193</div>
+                              <div class="catalog-blocks-container__block__rozn">розн.: 2500</div>
+                              <div class="catalog-blocks-container__block__opt">опт.: <b><a href="#">Узнать</a></b>
+                              </div>
+                           </div>
+                           <div class="catalog-blocks-container__block__bottom-inner-container che-flexible">
+                              <div class="my_input_group">
+                                 <label class="che-flexible__child"><span>Размер</span>
+                                    <select class="catalog-blocks-container__block__size form-control">
+                                       <option>X</option>
+                                       <option>M</option>
+                                       <option>L</option>
+                                       <option>XL</option>
+                                    </select>
+                                 </label>
+                              </div>
+                              <div class="my_input_group">
+                                 <label class="che-flexible__child"><span>Кол-во</span>
+                                    <input type="number" value="1" pattern="[0-9]*" inputmode="numeric" class="catalog-blocks-container__block__quantity form-control" />
+                                 </label>
+                              </div>
+                              <div class="my_input_group"><a href="#" class="btn btn-default-light btn-info catalog-blocks-container__block__details che-flexible che-flexible-btn-cenetring"><span>Подробнее</span></a>
+                              </div>
+                              <div class="my_input_group">
+                                 <button class="btn btn-default-light btn-success catalog-blocks-container__block__details">Купить</button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="pagination-container">
+                  <div class="che-flexible">
+                     <div class="pagination-container__backward che-flexible__child">
+                        <button class="pagination-container__first-button che-flexible che-flexible-btn-cenetring"></button>
+                        <button class="pagination-container__prev-button che-flexible che-flexible-btn-cenetring"></button>
+                     </div>
+                     <div class="pagination-container__pages che-flexible__child">
+                        <button class="pagination-container__number-button active">1</button>
+                        <button class="pagination-container__number-button">2</button>
+                        <button class="pagination-container__number-button">3</button><span class="pagination-container__number-button che-flexible che-flexible-btn-cenetring"><span>...</span></span>
+                        <button class="pagination-container__number-button">263</button>
+                     </div>
+                     <div class="pagination-container__forward che-flexible__child">
+                        <button class="pagination-container__next-button che-flexible che-flexible-btn-cenetring"></button>
+                        <button class="pagination-container__last-button che-flexible che-flexible-btn-cenetring"></button>
+                     </div>
+                     <div class="pagination-container__custom-page che-flexible__child">
+                        <input type="number" pattern="[0-9]*" inputmode="numeric" class="form-control pagination-container__custom-page-input" />
+                        <button class="btn btn-default-dark btn-info pagination-container__custom-page-button">Перейти</button>
                      </div>
                   </div>
                </div>

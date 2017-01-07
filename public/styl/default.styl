@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:700&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:500,700,700i&subset=cyrillic');
 
 @font-face
    font-family RobotoRegular
@@ -15,6 +15,9 @@
    font-style normal
    src url('../fonts/Roboto-Thin.ttf')
 
+html, body
+    height 100%
+
 .form-control
     height 45px
     border-radius 2px
@@ -27,8 +30,10 @@
 
 .btn
     height 45px
-    font-family RobotoRegular
+    font-family Roboto, sans-serif
+    font-weight 700
     font-size 14px
+    text-transform uppercase
     padding 0 15px
     &:hover, &:active, &:focus
         outline none i
@@ -45,6 +50,9 @@ button, a, input, textarea, select
     outline none i
     box-shadow none i
 
+button, a, input[type="button"], input[type="submit"], input[type="image"], input[type="checkbox"], input[type="radio"], textarea, select, label
+    cursor pointer
+
 input[type="number"]::-webkit-outer-spin-button
 input[type="number"]::-webkit-inner-spin-button
     -webkit-appearance none
@@ -52,3 +60,64 @@ input[type="number"]::-webkit-inner-spin-button
 
 input[type="number"]
     -moz-appearance textfield
+
+.btn-default-dark
+    color black
+    border-color black
+    background-color transparent
+    &:active, &:focus
+        color black
+        border-color black
+        background-color transparent
+    &:hover, &:active:hover, &:active:focus
+        color black
+        border-color black
+
+.btn-default-light
+    color white
+    border-color white
+    background-color transparent
+    &:active, &:focus
+        color white
+        border-color white
+        background-color transparent
+    &:hover, &:active:hover, &:active:focus
+        color white
+        border-color white
+
+.btn-transparent
+    background-color transparent
+    &:hover, &:focus
+        background-color rgba(0, 0, 0, 0.05)
+    &:active:hover, &:active:focus
+        background-color rgba(0, 0, 0, 0.1)
+
+.btn-transparent-light
+    background-color transparent
+    &:hover, &:focus
+        background-color rgba(255, 255, 255, 0.05)
+    &:active:hover, &:active:focus
+        background-color rgba(255, 255, 255, 0.1)
+
+.btn-info
+    &:hover, &:focus
+        color white
+        background fblue
+        border-color #269abc
+    &:active:hover, &:active:focus
+        color white
+        background #269abc
+        border-color #1b6d85
+
+.btn-success
+    &:hover, &:focus
+        color white
+        background #32bc34
+        border-color #398439
+    &:active:hover, &:active:focus
+        color white
+        background #398439
+        border-color #255625
+
+.che-flexible.che-flexible-btn-cenetring
+    justify-content center
