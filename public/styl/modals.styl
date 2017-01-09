@@ -24,10 +24,11 @@
     background #fff
     position relative
     margin 0 auto
+    max-height 100vh
+    overflow-y auto
 
 .modal-window__window-title
     font-family RobotoRegular, sans-serif
-    padding 20px 40px
     color black
     font-size 16px
 
@@ -39,6 +40,9 @@
 .modal-window__window-form-group
     padding 20px 40px
 
+.modal-window__window-form-group .che-flexible
+    justify-content center
+
 .modal-window__window-form-group + .modal-window__window-form-group
     border-top 1px solid lgrey
 
@@ -46,17 +50,13 @@
     font-family RobotoLight, sans-serif
     font-size 14px
     margin-right 24px
+    font-weight 400
 
-#modal-windows__window-sing-in-input
+#modal-window__window-sing-in-input
     border 1px solid #9a9a9a
     width 260px
     max-width 65%
     display inline-block
-
-#modal-windows__window-sing-in-button
-    text-transform uppercase
-    font-family Roboto,sans-serif
-    font-weight 700
 
 .modal-window__window-sing-in-reminder
     width 220px
@@ -72,9 +72,9 @@
 
 .modal-window__window-sing-in-reminder-icon
     position absolute
-    top -5px
+    top -4px
     left -23px
-    font-size 19px
+    font-size 21px
 
 .modal-window__window-dialog-bubble
     padding 15px
@@ -98,7 +98,7 @@
     justify-content flex-start
     margin-left -15px
 
-.modal-window__window-smile
+.che-flexible.modal-window__window-smile
     margin-left 15px
     margin-bottom 15px
     padding 0
@@ -109,7 +109,89 @@
 #modal-windows__window-dialog-textarea
     border 1px solid #9a9a9a
 
-#modal-windows__window-dialog-send-button
-    text-transform uppercase
-    font-family Roboto,sans-serif
-    font-weight 700
+.modal-window__window-leave-feedback-input
+    border 1px solid #9a9a9a
+    width 260px
+    max-width 65%
+    display inline-block
+    margin 5px 0
+
+.modal-window__window-leave-feedback-label
+    width 115px
+    text-align left
+    padding 10px 0
+    font-family RobotoLight,sans-serif
+    font-size 14px
+    margin-right 24px
+
+.modal-window__window-leave-feedback-radio-container
+    width 260px
+    max-width 65%
+    margin 5px 0
+
+.che-flexible.modal-window__window-leave-feedback-radio-container
+    justify-content flex-start
+
+.modal-window__window-leave-feedback-radio
+    position absolute
+    opacity 0
+    clip rect(0, 0, 0, 0)
+
+.modal-window__window-leave-feedback-radio+label
+    padding 10px 0 10px 20px
+    font-family RobotoLight, sans-serif
+    font-size 12px
+    color dgrey
+    position relative
+    cursor pointer
+    margin-right 20px
+
+.modal-window__window-leave-feedback-radio+label:before
+    content ""
+    display block
+    width 15px
+    height 15px
+    border 1px solid #9a9a9a
+    top 8px
+    left 0
+    position absolute
+
+.modal-window__window-leave-feedback-radio:checked+label:before
+    border-color #9a9a9a
+
+.modal-window__window-leave-feedback-radio+label:after
+    content ""
+    display block
+    width: 11px;
+    height: 6px;
+    border-left 1px solid reds
+    border-bottom 1px solid reds
+    top 11px
+    left 2px
+    position absolute
+    transform rotate(-50deg)
+    opacity 0
+
+.modal-window__window-leave-feedback-radio:checked+label:after
+    opacity 1
+
+.modal-window__window-send-order-input
+    border 1px solid #9a9a9a
+    width 260px
+    max-width 65%
+    display inline-block
+    margin 5px 0
+
+.modal-window__window-send-order-label
+    width 115px
+    text-align left
+    padding 10px 0
+    font-family RobotoLight,sans-serif
+    font-size 14px
+    margin-right 24px
+
+.modal-window__window-send-order-subtitle
+    font-size 15px
+    text-align left
+    max-width 400px
+    margin 20px auto 0

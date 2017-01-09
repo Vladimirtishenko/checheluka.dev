@@ -63,6 +63,16 @@
          </div>
       </div>
    </div>
+   <ul class="side-menu list-unstyled">
+      <li class="side-menu__list-item"><a href="#" class="che-flexible"><span class="side-menu__list-item-title">ДОБАВИТЬ ОТЗЫВ</span><span class="side-menu__list-item-icon side-menu__list-item-icon_speech"></span></a>
+      </li>
+      <li class="side-menu__list-item"><a href="#" class="che-flexible"><span class="side-menu__list-item-title">ОНЛАЙН ПОМОЩЬ</span><span class="side-menu__list-item-icon side-menu__list-item-icon_question"></span></a>
+      </li>
+      <li class="side-menu__list-item"><a href="#" class="che-flexible"><span class="side-menu__list-item-title">ВИШЛИСТ</span><span class="side-menu__list-item-icon side-menu__list-item-icon_heart"></span></a>
+      </li>
+      <li class="side-menu__list-item"><a href="#" class="che-flexible"><span class="side-menu__list-item-title">КОРЗИНА</span><span class="side-menu__list-item-icon side-menu__list-item-icon_cart"></span></a>
+      </li>
+   </ul>
    <div class="modal-window-cover hidden">
       <div class="modal-window-outer">
          <div class="modal-window modal-window__window-sing-in hidden">
@@ -70,8 +80,10 @@
             </button>
             <div class="modal-window__window-title modal-window__window-form-group">Чат с оператором, пожалуйста, заполните форму:</div>
             <div class="modal-window__window-form-group">
-               <label for="modal-windows__window-sing-in-input">Имя</label>
-               <input id="modal-windows__window-sing-in-input" type="text" class="form-control" />
+               <div class="che-flexible">
+                  <label for="modal-window__window-sing-in-input">Имя</label>
+                  <input id="modal-window__window-sing-in-input" type="text" class="form-control" />
+               </div>
             </div>
             <div class="modal-window__window-form-group">
                <button id="modal-windows__window-sing-in-button" class="btn btn-default-dark btn-transparent">Продолжить</button>
@@ -119,18 +131,45 @@
                <button id="modal-windows__window-dialog-send-button" class="btn btn-default-dark btn-transparent">Отправить</button>
             </div>
          </div>
+         <div class="modal-window modal-window__window-leave-feedback hidden">
+            <button type="button" aria-label="Close" class="close modal-window__window-close"><span aria-hidden="true">&times;</span>
+            </button>
+            <div class="modal-window__window-title modal-window__window-form-group">Пожалуйста, заполните форму:</div>
+            <div class="modal-window__window-form-group">
+               <div class="che-flexible">
+                  <label for="modal-window__window-leave-feedback-full-name-input" class="modal-window__window-leave-feedback-label">ФИО</label>
+                  <input id="modal-window__window-leave-feedback-full-name-input" type="text" class="modal-window__window-leave-feedback-input form-control" />
+               </div>
+               <div class="che-flexible">
+                  <label for="modal-window__window-leave-feedback-email-input" class="modal-window__window-leave-feedback-label">E-mail</label>
+                  <input id="modal-window__window-leave-feedback-email-input" type="email" class="modal-window__window-leave-feedback-input form-control" />
+               </div>
+               <div class="che-flexible">
+                  <label for="modal-window__window-leave-feedback-city-input" class="modal-window__window-leave-feedback-label">Город</label>
+                  <input id="modal-window__window-leave-feedback-city-input" type="text" class="modal-window__window-leave-feedback-input form-control" />
+               </div>
+               <div class="che-flexible">
+                  <div class="modal-window__window-leave-feedback-label">Оценка Магазина</div>
+                  <div class="modal-window__window-leave-feedback-radio-container che-flexible">
+                     <input id="modal-window__window-leave-feedback-mark-excellent" type="radio" name="modal-window__window-leave-feedback-mark" checked="checked" class="modal-window__window-leave-feedback-radio" />
+                     <label for="modal-window__window-leave-feedback-mark-excellent">Отлично</label>
+                     <input id="modal-window__window-leave-feedback-mark-good" type="radio" name="modal-window__window-leave-feedback-mark" class="modal-window__window-leave-feedback-radio" />
+                     <label for="modal-window__window-leave-feedback-mark-good">Хорошо</label>
+                     <input id="modal-window__window-leave-feedback-mark-bad" type="radio" name="modal-window__window-leave-feedback-mark" class="modal-window__window-leave-feedback-radio" />
+                     <label for="modal-window__window-leave-feedback-mark-bad">Плохо</label>
+                  </div>
+               </div>
+               <div class="che-flexible">
+                  <label for="modal-window__window-leave-feedback-textarea" class="modal-window__window-leave-feedback-label">Ваш отзыв</label>
+                  <textarea id="modal-window__window-leave-feedback-textarea" class="modal-window__window-leave-feedback-input form-control"></textarea>
+               </div>
+            </div>
+            <div class="modal-window__window-form-group">
+               <button id="modal-windows__window-leave-feedback-button" class="btn btn-default-dark btn-transparent">Отправить</button>
+            </div>
+         </div>
       </div>
    </div>
-   <ul class="side-menu list-unstyled">
-      <li class="side-menu__list-item"><a href="#" class="che-flexible"><span class="side-menu__list-item-title">ДОБАВИТЬ ОТЗЫВ</span><span class="side-menu__list-item-icon side-menu__list-item-icon_speech"></span></a>
-      </li>
-      <li class="side-menu__list-item"><a href="#" class="che-flexible"><span class="side-menu__list-item-title">ОНЛАЙН ПОМОЩЬ</span><span class="side-menu__list-item-icon side-menu__list-item-icon_question"></span></a>
-      </li>
-      <li class="side-menu__list-item"><a href="#" class="che-flexible"><span class="side-menu__list-item-title">ВИШЛИСТ</span><span class="side-menu__list-item-icon side-menu__list-item-icon_heart"></span></a>
-      </li>
-      <li class="side-menu__list-item"><a href="#" class="che-flexible"><span class="side-menu__list-item-title">КОРЗИНА</span><span class="side-menu__list-item-icon side-menu__list-item-icon_cart"></span></a>
-      </li>
-   </ul>
    <div class="container">
       <div class="row">
          <div class="che-main col-xs-12">
@@ -230,25 +269,17 @@
                </div>
                <div class="che-footer__item col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">
                   <h2 class="che-footer__title">мы в соц.сетях:</h2>
-                  <input id="che-social" type="checkbox" class="che-footer__accordeon-fake" />
-                  <label for="che-social" class="che-footer__accordeon-img"></label>
-                  <div class="che-footer__item-link">
-                     <div class="che-footer__social">
-                        <a href="" class="che-footer__social-fb"></a>
-                        <a href="" class="che-footer__social-ins"></a>
-                        <a href="" class="che-footer__social-vk"></a>
-                        <a href="" class="che-footer__social-o"></a>
-                     </div>
+                  <div class="che-footer__social">
+                     <a href="" class="che-footer__social-fb"></a>
+                     <a href="" class="che-footer__social-ins"></a>
+                     <a href="" class="che-footer__social-vk"></a>
+                     <a href="" class="che-footer__social-o"></a>
                   </div>
                </div>
                <div class="che-footer__item col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">
                   <h2 class="che-footer__title">подписаться на рассылку</h2>
-                  <input id="che-follow" type="checkbox" class="che-footer__accordeon-fake" />
-                  <label for="che-follow" class="che-footer__accordeon-img"></label>
-                  <div class="che-footer__item-link">
-                     <div class="input-group">
-                        <input type="text" placeholder="" class="form-control" /><span class="input-group-btn"><button type="button" class="btn btn-default-black">OK</button></span>
-                     </div>
+                  <div class="input-group footer__subscrtibe">
+                     <input type="text" placeholder="" class="form-control" /><span class="input-group-btn"><button type="button" class="btn btn-default-black">OK</button></span>
                   </div>
                </div>
             </div>

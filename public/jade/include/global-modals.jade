@@ -1,0 +1,87 @@
+.modal-window.modal-window__window-sing-in.hidden
+    button.close.modal-window__window-close(type="button" aria-label="Close")
+        span(aria-hidden="true") &times;
+
+    .modal-window__window-title.modal-window__window-form-group Чат с оператором, пожалуйста, заполните форму:
+
+    .modal-window__window-form-group
+        .che-flexible
+            label(for="modal-window__window-sing-in-input") Имя
+            input#modal-window__window-sing-in-input.form-control(type="text")
+
+    .modal-window__window-form-group
+        button.btn.btn-default-dark.btn-transparent#modal-windows__window-sing-in-button Продолжить
+
+        .modal-window__window-sing-in-reminder Входя в чат с одного компьютера, Вы сможете просмотреть Вашу переписку с оператором
+            span.glyphicon.glyphicon-exclamation-sign.modal-window__window-sing-in-reminder-icon
+
+.modal-window.modal-window__window-dialog.hidden
+    button.close.modal-window__window-close(type="button" aria-label="Close")
+        span(aria-hidden="true") &times;
+
+    .modal-window__window-title.modal-window__window-form-group Чат с оператором
+
+    .modal-window__window-form-group.modal-window__window-dialog-bubbles-container
+        .modal-window__window-dialog-bubble.modal-window__window-dialog-bubble-user Магазин просто супер!Качество вещей на высшем уровне.Спасибо Ва...  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime molestias quidem error nemo sunt cum consequatur ducimus, aut necessitatibus. Officia ratione similique est nam labore assumenda, odio quia expedita praesentium.
+
+        .modal-window__window-dialog-bubble.modal-window__window-dialog-bubble-admin Магазин просто супер!Качество вещей на высшем уровне.Спасибо  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos eum, obcaecati est sequi a non recusandae consequuntur voluptatum dolores rerum reiciendis doloremque tempora atque cumque molestiae dolor, amet itaque porro.
+
+    .modal-window__window-form-group
+        .modal-window__window-smiles-container.che-flexible
+            button.btn.btn-link.modal-window__window-smile
+                img(src="./public/img/img_smile.png")
+            button.btn.btn-link.modal-window__window-smile
+                img(src="./public/img/img_smile.png")
+            button.btn.btn-link.modal-window__window-smile
+                img(src="./public/img/img_smile.png")
+            button.btn.btn-link.modal-window__window-smile
+                img(src="./public/img/img_smile.png")
+            button.btn.btn-link.modal-window__window-smile
+                img(src="./public/img/img_smile.png")
+            button.btn.btn-link.modal-window__window-smile
+                img(src="./public/img/img_smile.png")
+
+        .form-group.modal-window__window-dialog-your-message
+            label(for="modal-windows__window-dialog-textarea") Ваш вопрос:
+            textarea#modal-windows__window-dialog-textarea.form-control
+
+    .modal-window__window-form-group
+        button.btn.btn-default-dark.btn-transparent#modal-windows__window-dialog-send-button Отправить
+
+.modal-window.modal-window__window-leave-feedback.hidden
+    button.close.modal-window__window-close(type="button" aria-label="Close")
+        span(aria-hidden="true") &times;
+
+    .modal-window__window-title.modal-window__window-form-group Пожалуйста, заполните форму:
+
+    .modal-window__window-form-group
+        .che-flexible
+            label.modal-window__window-leave-feedback-label(for="modal-window__window-leave-feedback-full-name-input") ФИО
+            input#modal-window__window-leave-feedback-full-name-input.modal-window__window-leave-feedback-input.form-control(type="text")
+
+        .che-flexible
+            label.modal-window__window-leave-feedback-label(for="modal-window__window-leave-feedback-email-input") E-mail
+            input#modal-window__window-leave-feedback-email-input.modal-window__window-leave-feedback-input.form-control(type="email")
+
+        .che-flexible
+            label.modal-window__window-leave-feedback-label(for="modal-window__window-leave-feedback-city-input") Город
+            input#modal-window__window-leave-feedback-city-input.modal-window__window-leave-feedback-input.form-control(type="text")
+
+        .che-flexible
+            .modal-window__window-leave-feedback-label Оценка Магазина
+            .modal-window__window-leave-feedback-radio-container.che-flexible
+                input.modal-window__window-leave-feedback-radio#modal-window__window-leave-feedback-mark-excellent(type="radio" name="modal-window__window-leave-feedback-mark" checked)
+                label(for="modal-window__window-leave-feedback-mark-excellent") Отлично
+
+                input.modal-window__window-leave-feedback-radio#modal-window__window-leave-feedback-mark-good(type="radio" name="modal-window__window-leave-feedback-mark")
+                label(for="modal-window__window-leave-feedback-mark-good") Хорошо
+
+                input.modal-window__window-leave-feedback-radio#modal-window__window-leave-feedback-mark-bad(type="radio" name="modal-window__window-leave-feedback-mark")
+                label(for="modal-window__window-leave-feedback-mark-bad") Плохо
+
+        .che-flexible
+            label.modal-window__window-leave-feedback-label(for="modal-window__window-leave-feedback-textarea") Ваш отзыв
+            textarea#modal-window__window-leave-feedback-textarea.modal-window__window-leave-feedback-input.form-control
+
+    .modal-window__window-form-group
+        button.btn.btn-default-dark.btn-transparent#modal-windows__window-leave-feedback-button Отправить
