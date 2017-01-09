@@ -131,102 +131,87 @@
       <li class="side-menu__list-item"><a href="#" class="che-flexible"><span class="side-menu__list-item-title">КОРЗИНА</span><span class="side-menu__list-item-icon side-menu__list-item-icon_cart"></span></a>
       </li>
    </ul>
-   <div class="container">
-      <div class="che-main text-center">
-         <div class="head-quotes-block text-center hidden-xs clearfix">
-            <div class="head-quotes-block__text col-xs-10 col-xs-push-1">
-               <p class="head-quotes-block__paragraph">Приветствуем Вас, наши друзья и партнёры! В нашем on-line магазине Вы можете оставлять свои отзывы о его работе. Мы с больщим удовольствием будем прислушиваться к Вашим оценкам и пожеланиям. Также просим Вас оставлять информацию о себе
-                  (достаточно Вашего e-mail), для того чтобы наши будущие партнёры, которые только планируют начинать с нами работать могли с Вами связатья и удостовериться в нашей компетентности.</p>
-               <p class="head-quotes-block__paragraph">Желаем Вам успех и процветания!</p>
-               <p class="head-quotes-block__paragraph head-quotes-block__title">С уважением, ген. директор Chechelyka.com Герасименко Сергей Александрович.</p>
+   <div class="cart">
+      <div class="cart_table-container">
+         <div class="container">
+            <div class="cart_table-responsive-container">
+               <div class="table-responsive cart_table-responsive">
+                  <table class="table cart_table">
+                     <thead>
+                        <tr>
+                           <td class="cart_product-id-title">Артикул</td>
+                           <td></td>
+                           <td>Товар</td>
+                           <td>Цена</td>
+                           <td>Количество</td>
+                           <td>Сумма (руб)</td>
+                           <td class="cart_product-remove-title"></td>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td class="cart_product-id">75045</td>
+                           <td class="cart_product-image">
+                              <img src="./public/img/catalog_img_1.jpg" alt="" class="img-responsive" />
+                           </td>
+                           <td class="cart_product-info">
+                              <div>Костюм SBS</div>
+                              <div>Размер: S</div>
+                              <div>Цвет: дизай №1</div>
+                           </td>
+                           <td class="cart_product-price">1200</td>
+                           <td class="cart_product-count">
+                              <input type="number" value="1" pattern="[0-9]*" inputmode="numeric" class="cart_product-count-input form-control" />
+                           </td>
+                           <td class="cart_product-price-total">1200</td>
+                           <td class="cart_product-remove text-right">
+                              <button class="catalog-sidebar__selected-categories__remove"></button>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td class="cart_product-id">75045</td>
+                           <td class="cart_product-image">
+                              <img src="./public/img/catalog_img_1.jpg" alt="" class="img-responsive" />
+                           </td>
+                           <td class="cart_product-info">
+                              <div>Костюм SBS</div>
+                              <div>Размер: S</div>
+                              <div>Цвет: дизай №1</div>
+                           </td>
+                           <td class="cart_product-price">1200</td>
+                           <td class="cart_product-count">
+                              <input type="number" value="1" pattern="[0-9]*" inputmode="numeric" class="cart_product-count-input form-control" />
+                           </td>
+                           <td class="cart_product-price-total">1200</td>
+                           <td class="cart_product-remove text-right">
+                              <button class="catalog-sidebar__selected-categories__remove"></button>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
             </div>
          </div>
-         <div class="feedback-container">
-            <div class="feedback-container__top text-center">
-               <div class="feedback-container__title">Отзывы покупателей</div>
-               <button class="feedback-container__add-feedback-button btn btn-info">добавьте ваш отзыв</button>
+      </div>
+   </div>
+   <div class="container">
+      <div class="row">
+         <div class="col-xs-12 col-sm-4 col-md-3 pull-right">
+            <div class="order-info">
+               <div class="order-info_title">Общая сумма заказа:</div>
+               <div class="order-info_value">2400 руб.</div>
             </div>
-            <div class="feedback-container__block-container">
-               <div class="clearfix feedback-container__block">
-                  <div class="feedback-container__block-inner feedback-container__block_user-comment">
-                     <div class="feedback-container__block-top che-flexible">
-                        <div class="feedback-container__block-top-part feedback-container__block-date">18 Oct 2016 13:52:08</div>
-                        <div class="feedback-container__block-top-part feedback-container__block-sender">Татьяна, Москва</div>
-                        <div class="feedback-container__block-top-part feedback-container__block-rating">Оценка магазина:<b>отлично!</b>
-                        </div>
-                     </div>
-                     <div class="feedback-container__block-bubble">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda esse molestiae, nisi magnam illo error officia unde ad, tempora minus quo, rem praesentium harum expedita, consequatur quia inventore a. Eum.</div>
-                  </div>
-               </div>
-               <div class="clearfix feedback-container__block">
-                  <div class="feedback-container__block-inner feedback-container__block_admin-comment">
-                     <div class="feedback-container__block-top che-flexible">
-                        <div class="feedback-container__block-top-part feedback-container__block-sender">Администратор</div>
-                     </div>
-                     <div class="feedback-container__block-bubble">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda esse molestiae, nisi magnam illo error officia unde ad, tempora minus quo, rem praesentium harum expedita, consequatur quia inventore a. Eum.</div>
-                  </div>
-               </div>
-               <div class="clearfix feedback-container__block">
-                  <div class="feedback-container__block-inner feedback-container__block_user-comment">
-                     <div class="feedback-container__block-top che-flexible">
-                        <div class="feedback-container__block-top-part feedback-container__block-date">18 Oct 2016 13:52:08</div>
-                        <div class="feedback-container__block-top-part feedback-container__block-sender">Татьяна, Москва</div>
-                        <div class="feedback-container__block-top-part feedback-container__block-rating">Оценка магазина:<b>отлично!</b>
-                        </div>
-                     </div>
-                     <div class="feedback-container__block-bubble">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda esse molestiae, nisi magnam illo error officia unde ad, tempora minus quo, rem praesentium harum expedita, consequatur quia inventore a. Eum.</div>
-                  </div>
-               </div>
-               <div class="clearfix feedback-container__block">
-                  <div class="feedback-container__block-inner feedback-container__block_admin-comment">
-                     <div class="feedback-container__block-top che-flexible">
-                        <div class="feedback-container__block-top-part feedback-container__block-sender">Администратор</div>
-                     </div>
-                     <div class="feedback-container__block-bubble">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda esse molestiae, nisi magnam illo error officia unde ad, tempora minus quo, rem praesentium harum expedita, consequatur quia inventore a. Eum.</div>
-                  </div>
-               </div>
-               <div class="clearfix feedback-container__block">
-                  <div class="feedback-container__block-inner feedback-container__block_user-comment">
-                     <div class="feedback-container__block-top che-flexible">
-                        <div class="feedback-container__block-top-part feedback-container__block-date">18 Oct 2016 13:52:08</div>
-                        <div class="feedback-container__block-top-part feedback-container__block-sender">Татьяна, Москва</div>
-                        <div class="feedback-container__block-top-part feedback-container__block-rating">Оценка магазина:<b>отлично!</b>
-                        </div>
-                     </div>
-                     <div class="feedback-container__block-bubble">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda esse molestiae, nisi magnam illo error officia unde ad, tempora minus quo, rem praesentium harum expedita, consequatur quia inventore a. Eum.</div>
-                  </div>
-               </div>
-               <div class="clearfix feedback-container__block">
-                  <div class="feedback-container__block-inner feedback-container__block_admin-comment">
-                     <div class="feedback-container__block-top che-flexible">
-                        <div class="feedback-container__block-top-part feedback-container__block-sender">Администратор</div>
-                     </div>
-                     <div class="feedback-container__block-bubble">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda esse molestiae, nisi magnam illo error officia unde ad, tempora minus quo, rem praesentium harum expedita, consequatur quia inventore a. Eum.</div>
-                  </div>
-               </div>
-            </div>
-            <div class="pagination-container">
-               <div class="che-flexible">
-                  <div class="pagination-container__backward che-flexible__child">
-                     <button class="pagination-container__first-button che-flexible che-flexible-btn-cenetring"></button>
-                     <button class="pagination-container__prev-button che-flexible che-flexible-btn-cenetring"></button>
-                  </div>
-                  <div class="pagination-container__pages che-flexible__child">
-                     <button class="pagination-container__number-button active">1</button>
-                     <button class="pagination-container__number-button">2</button>
-                     <button class="pagination-container__number-button">3</button><span class="pagination-container__number-button che-flexible che-flexible-btn-cenetring"><span>...</span></span>
-                     <button class="pagination-container__number-button">263</button>
-                  </div>
-                  <div class="pagination-container__forward che-flexible__child">
-                     <button class="pagination-container__next-button che-flexible che-flexible-btn-cenetring"></button>
-                     <button class="pagination-container__last-button che-flexible che-flexible-btn-cenetring"></button>
-                  </div>
-                  <div class="pagination-container__custom-page che-flexible__child">
-                     <input type="number" pattern="[0-9]*" inputmode="numeric" class="form-control pagination-container__custom-page-input" />
-                     <button class="btn btn-default-dark btn-info pagination-container__custom-page-button">Перейти</button>
-                  </div>
-               </div>
-            </div>
+         </div>
+      </div>
+      <div class="row che-flexible cart-button-container">
+         <div class="col-xs-12 col-sm-4 col-md-3 text-center">
+            <button class="btn btn-default-dark btn-transparent cart-button-container_button">Распечатать заказ</button>
+         </div>
+         <div class="col-xs-12 col-sm-4 col-md-3 text-center">
+            <button class="btn btn-default-dark btn-info cart-button-container_button">Пересчитать</button>
+         </div>
+         <div class="col-xs-12 col-sm-4 col-md-3 text-center">
+            <button class="btn btn-default-dark btn-success cart-button-container_button">Оформить заказ</button>
          </div>
       </div>
    </div>

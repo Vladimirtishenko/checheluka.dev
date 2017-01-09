@@ -262,6 +262,13 @@
     max-width 263px
     margin 0 auto 30px
 
+@media screen and (min-width 768px) and (max-width 1199px)
+    .catalog-blocks-container__block
+        max-width none
+
+    .catalog-blocks-container__block .img-responsive
+        width 100%
+
 .catalog-blocks-container__block__wishlist
     position absolute
     top 10px
@@ -349,10 +356,6 @@
     margin -1px -1px -1px 0
     padding 0
     text-align-last center
-    &:focus
-        border-color black
-        background dgrey
-        color white
 
 .catalog-blocks-container__block__quantity
     width 45px
@@ -366,10 +369,6 @@
     border 1px solid white
     margin -1px -1px -1px 0
     padding 0
-    &:focus
-        border-color black
-        background dgrey
-        color white
 
 .catalog-blocks-container__block__details
     width 100%

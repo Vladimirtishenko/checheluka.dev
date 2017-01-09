@@ -1,0 +1,115 @@
+.modal-window-cover
+    position fixed
+    height 100%
+    width 100%
+    top 0
+    left 0
+    text-align center
+    z-index 1000
+    font-size 0
+    background rgba(46, 45, 45, 0.6)
+    &:after
+        content ""
+        display inline-block
+        height 100%
+        vertical-align middle
+
+.modal-window-outer
+    display inline-block
+    vertical-align middle
+    width 100%
+
+.modal-window
+    max-width 570px
+    background #fff
+    position relative
+    margin 0 auto
+
+.modal-window__window-title
+    font-family RobotoRegular, sans-serif
+    padding 20px 40px
+    color black
+    font-size 16px
+
+.modal-window__window-close
+    position absolute
+    top 18px
+    right 19px
+
+.modal-window__window-form-group
+    padding 20px 40px
+
+.modal-window__window-form-group + .modal-window__window-form-group
+    border-top 1px solid lgrey
+
+.modal-window__window-form-group label
+    font-family RobotoLight, sans-serif
+    font-size 14px
+    margin-right 24px
+
+#modal-windows__window-sing-in-input
+    border 1px solid #9a9a9a
+    width 260px
+    max-width 65%
+    display inline-block
+
+#modal-windows__window-sing-in-button
+    text-transform uppercase
+    font-family Roboto,sans-serif
+    font-weight 700
+
+.modal-window__window-sing-in-reminder
+    width 220px
+    max-width 70%
+    text-align left
+    font-family RobotoLight, sans-serif
+    font-size 14px
+    color #242424
+    margin 25px auto 0
+    position relative
+    line-height normal
+    padding 0 0 6px 6px
+
+.modal-window__window-sing-in-reminder-icon
+    position absolute
+    top -5px
+    left -23px
+    font-size 19px
+
+.modal-window__window-dialog-bubble
+    padding 15px
+    font-family RobotoLight, sans-serif
+    font-size 12px
+    color dgrey
+    line-height normal
+    border-radius 7px
+    text-align left
+
+.modal-window__window-dialog-bubble + .modal-window__window-dialog-bubble
+    margin-top 15px
+
+.modal-window__window-dialog-bubble-user
+    background #f1e8f0
+
+.modal-window__window-dialog-bubble-admin
+    background #e6e6e6
+
+.modal-window__window-smiles-container
+    justify-content flex-start
+    margin-left -15px
+
+.modal-window__window-smile
+    margin-left 15px
+    margin-bottom 15px
+    padding 0
+
+.modal-window__window-dialog-your-message
+    text-align left
+
+#modal-windows__window-dialog-textarea
+    border 1px solid #9a9a9a
+
+#modal-windows__window-dialog-send-button
+    text-transform uppercase
+    font-family Roboto,sans-serif
+    font-weight 700

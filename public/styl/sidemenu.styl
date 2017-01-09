@@ -1,0 +1,87 @@
+.side-menu
+    position fixed
+    left 15px
+    bottom -102px
+    z-index 900
+    font-size 0
+
+.side-menu__list-item
+    display inline-block
+    position relative
+    top 0
+    background #2e2d2d
+    border-radius 5px 5px 0 0
+    transition top ease 0.5s
+    width 43px
+    &:hover
+        top -102px
+
+.side-menu__list-item + .side-menu__list-item
+    margin 0 0 0 10px
+
+.side-menu__list-item a
+    padding 8px 7px 30px 7px
+    justify-content center
+
+.side-menu__list-item-title
+    color #fff
+    height 70px
+    font-family Roboto,sans-serif
+    font-weight 600
+    text-align left
+    display block
+    writing-mode vertical-rl
+
+.side-menu__list-item-icon
+    width 24px
+    height 21px
+    display block
+    background-position center center
+    background-repeat no-repeat
+    margin 0 0 10px
+    order -1
+
+.side-menu__list-item-icon_speech
+    background-image url(../img/icon_speak.png)
+
+.side-menu__list-item-icon_question
+    background-image url(../img/icon_question.png)
+
+.side-menu__list-item-icon_heart
+    background-image url(../img/icon_heart.png)
+
+.side-menu__list-item-icon_cart
+    background-image url(../img/icon_cart.png)
+
+@media screen and (min-width 768px)
+    .side-menu
+        left -102px
+        top 50%
+        bottom auto
+        transform translateY(-50%)
+
+    .side-menu__list-item
+        display block
+        left 0
+        border-radius 0 5px 5px 0
+        transition left ease 0.5s
+        width auto
+        &:hover
+            left 102px
+            top 0
+
+    .side-menu__list-item + .side-menu__list-item
+        margin 10px 0 0
+
+    .side-menu__list-item a
+        padding 7px 8px 7px 30px
+
+    .side-menu__list-item-title
+        width 70px
+        height auto
+        writing-mode lr-tb
+
+    .side-menu__list-item-icon
+        margin 0 0 0 10px
+        order 0
+
