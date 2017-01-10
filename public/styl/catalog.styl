@@ -112,7 +112,6 @@
 
 .catalog-sidebar__item-hidden
     height 0
-    overflow hidden
     display none
     margin-top 15px
 
@@ -198,13 +197,47 @@
     color lgrey
 
 .catalog-sidebar__label-hover
-    position absolute
-    color #fff
+    position fixed
+    bottom 10px
+    left 50%
+    transform translateX(-50%)
     background fblue
+    color #fff
     padding 15px
+    white-space nowrap
     border-radius 10px
-    top 0
-    left 0
+    z-index 10
+    font-family RobotoLight, sans-serif
+    font-size 14px
+    display none
+
+.catalog-sidebar__label-hover a
+    font-family Roboto, sans-serif
+    font-weight 700
+    text-transform uppercase
+    font-size 14px
+
+.catalog-sidebar__item-hidden input[type="checkbox"]+label:hover .catalog-sidebar__label-hover
+    display block
+
+@media screen and (min-width 992px)
+    .catalog-sidebar__label-hover
+        position absolute
+        right calc(100% + 15px)
+        bottom auto
+        left auto
+        top -15px
+        transform none
+
+    .catalog-sidebar__label-hover:after
+        content ""
+        height 100%
+        display block
+        position absolute
+        width 15px
+        top 0
+        left 100%
+
 
 .my_input_group
     padding-top 5px
@@ -267,15 +300,10 @@
 .catalog-blocks-container__block
     position relative
     overflow hidden
-    max-width 263px
     margin 0 auto 30px
 
-@media screen and (min-width 768px) and (max-width 1199px)
-    .catalog-blocks-container__block
-        max-width none
-
-    .catalog-blocks-container__block .img-responsive
-        width 100%
+.catalog-blocks-container__block .img-responsive
+    width 100%
 
 .catalog-blocks-container__block__wishlist
     position absolute

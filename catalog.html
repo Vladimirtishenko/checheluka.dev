@@ -168,6 +168,55 @@
                <button id="modal-windows__window-leave-feedback-button" class="btn btn-default-dark btn-transparent">Отправить</button>
             </div>
          </div>
+         <div class="modal-window modal-window__window-send-order hidden">
+            <button type="button" aria-label="Close" class="close modal-window__window-close"><span aria-hidden="true">&times;</span>
+            </button>
+            <div class="modal-window__window-title modal-window__window-form-group">Для отправки заказа, пожалуйста, заполните форму:</div>
+            <div class="modal-window__window-form-group">
+               <div class="che-flexible">
+                  <label for="modal-window__window-send-order-country-select" class="modal-window__window-send-order-label">Страна</label>
+                  <select id="modal-window__window-send-order-country-select" class="modal-window__window-send-order-input form-control">
+                     <option>Россия</option>
+                     <option>Белорусия</option>
+                     <option>Казахстан</option>
+                  </select>
+               </div>
+               <div class="che-flexible">
+                  <label for="modal-window__window-send-order-city-input" class="modal-window__window-send-order-label">Город</label>
+                  <input id="modal-window__window-send-order-city-input" type="text" class="modal-window__window-send-order-input form-control" />
+               </div>
+               <div class="che-flexible">
+                  <label for="modal-window__window-send-order-full-name-input" class="modal-window__window-send-order-label">ФИО</label>
+                  <input id="modal-window__window-send-order-full-name-input" type="text" class="modal-window__window-send-order-input form-control" />
+               </div>
+               <div class="che-flexible">
+                  <label for="modal-window__window-send-order-email-input" class="modal-window__window-send-order-label">E-mail</label>
+                  <input id="modal-window__window-send-order-email-input" type="email" class="modal-window__window-send-order-input form-control" />
+               </div>
+               <div class="che-flexible">
+                  <label for="modal-window__window-send-order-phone-input" class="modal-window__window-send-order-label">Телефон</label>
+                  <input id="modal-window__window-send-order-phone-input" type="tel" class="modal-window__window-send-order-input form-control" />
+               </div>
+               <div class="che-flexible">
+                  <label for="modal-window__window-send-order-storage-input" class="modal-window__window-send-order-label">Склад</label>
+                  <input id="modal-window__window-send-order-storage-input" type="text" class="modal-window__window-send-order-input form-control" />
+               </div>
+               <div class="modal-window__window-title modal-window__window-send-order-subtitle">Менеджер, с помощью которого вы сделали заказ:</div>
+               <div class="che-flexible">
+                  <label for="modal-window__window-send-order-manager-select" class="modal-window__window-send-order-label">Менеджер</label>
+                  <select id="modal-window__window-send-order-manager-select" class="modal-window__window-send-order-input form-control">
+                     <option>Без помощи менеджера</option>
+                  </select>
+               </div>
+               <div class="che-flexible">
+                  <label for="modal-window__window-send-order-textarea" class="modal-window__window-send-order-label">Ваш отзыв</label>
+                  <textarea id="modal-window__window-send-order-textarea" class="modal-window__window-send-order-input form-control"></textarea>
+               </div>
+            </div>
+            <div class="modal-window__window-form-group">
+               <button id="modal-window__window-send-order-button" class="btn btn-default-dark btn-transparent">Оформить заказ</button>
+            </div>
+         </div>
       </div>
    </div>
    <div class="container">
@@ -230,131 +279,183 @@
                      <div class="my_input_group">
                         <input id="catalog-sidebar-categories__big-sizes" type="checkbox" />
                         <label for="catalog-sidebar-categories__big-sizes">Большие размеры <span class="catalog-sidebar__label-suffix">(81)</span>
+                           <div class="catalog-sidebar__label-hover">Товаров: 81 <a href="#">Показать</a>
+                           </div>
                         </label>
                      </div>
                      <div class="my_input_group">
                         <input id="catalog-sidebar-categories__trousers" type="checkbox" />
                         <label for="catalog-sidebar-categories__trousers">Брюки <span class="catalog-sidebar__label-suffix">(81)</span>
+                           <div class="catalog-sidebar__label-hover">Товаров: 81 <a href="#">Показать</a>
+                           </div>
                         </label>
                      </div>
                      <div class="my_input_group">
                         <input id="catalog-sidebar-categories__windbreaker" type="checkbox" />
                         <label for="catalog-sidebar-categories__windbreaker">Ветровки <span class="catalog-sidebar__label-suffix">(1)</span>
+                           <div class="catalog-sidebar__label-hover">Товаров: 1 <a href="#">Показать</a>
+                           </div>
                         </label>
                      </div>
                      <div class="my_input_group">
                         <input id="catalog-sidebar-categories__kneesocks" type="checkbox" />
                         <label for="catalog-sidebar-categories__kneesocks">Гольфы <span class="catalog-sidebar__label-suffix">(16)</span>
+                           <div class="catalog-sidebar__label-hover">Товаров: 16 <a href="#">Показать</a>
+                           </div>
                         </label>
                      </div>
                      <div class="my_input_group">
                         <input id="catalog-sidebar-categories__ds-jackets" type="checkbox" />
                         <label for="catalog-sidebar-categories__ds-jackets">Демисезонные куртки <span class="catalog-sidebar__label-suffix">(16)</span>
+                           <div class="catalog-sidebar__label-hover">Товаров: 16 <a href="#">Показать</a>
+                           </div>
                         </label>
                      </div>
                      <div class="my_input_group">
                         <input id="catalog-sidebar-categories__sweaters" type="checkbox" />
                         <label for="catalog-sidebar-categories__sweaters">Джемпера <span class="catalog-sidebar__label-suffix">(6)</span>
+                           <div class="catalog-sidebar__label-hover">Товаров: 6 <a href="#">Показать</a>
+                           </div>
                         </label>
                      </div>
                      <div class="my_input_group">
                         <input id="catalog-sidebar-categories__sheepskin-coats" type="checkbox" />
                         <label for="catalog-sidebar-categories__sheepskin-coats">Дубленки <span class="catalog-sidebar__label-suffix">(3)</span>
+                           <div class="catalog-sidebar__label-hover">Товаров: 3 <a href="#">Показать</a>
+                           </div>
                         </label>
                      </div>
                      <div class="my_input_group">
                         <input id="catalog-sidebar-categories__vests" type="checkbox" />
                         <label for="catalog-sidebar-categories__vests">Жилеты <span class="catalog-sidebar__label-suffix">(303)</span>
+                           <div class="catalog-sidebar__label-hover">Товаров: 303 <a href="#">Показать</a>
+                           </div>
                         </label>
                      </div>
                      <div class="my_input_group">
                         <input id="catalog-sidebar-categories__overalls" type="checkbox" />
                         <label for="catalog-sidebar-categories__overalls">Комбинезоны <span class="catalog-sidebar__label-suffix">(23)</span>
+                           <div class="catalog-sidebar__label-hover">Товаров: 23 <a href="#">Показать</a>
+                           </div>
                         </label>
                      </div>
                      <div class="my_input_group">
                         <input id="catalog-sidebar-categories__complects" type="checkbox" />
                         <label for="catalog-sidebar-categories__complects">Комплекты <span class="catalog-sidebar__label-suffix">(33)</span>
+                           <div class="catalog-sidebar__label-hover">Товаров: 33 <a href="#">Показать</a>
+                           </div>
                         </label>
                      </div>
                      <div class="my_input_group">
                         <input id="catalog-sidebar-categories__costumes" type="checkbox" />
                         <label for="catalog-sidebar-categories__costumes">Костюмы <span class="catalog-sidebar__label-suffix">(53)</span>
+                           <div class="catalog-sidebar__label-hover">Товаров: 53 <a href="#">Показать</a>
+                           </div>
                         </label>
                      </div>
                      <div class="my_input_group">
                         <input id="catalog-sidebar-categories__blouses" type="checkbox" />
                         <label for="catalog-sidebar-categories__blouses">Кофты <span class="catalog-sidebar__label-suffix">(77)</span>
+                           <div class="catalog-sidebar__label-hover">Товаров: 77 <a href="#">Показать</a>
+                           </div>
                         </label>
                      </div>
                      <div class="my_input_group">
                         <input id="catalog-sidebar-categories__light-jackets" type="checkbox" />
                         <label for="catalog-sidebar-categories__light-jackets">Куртки легкие <span class="catalog-sidebar__label-suffix">(15)</span>
+                           <div class="catalog-sidebar__label-hover">Товаров: 15 <a href="#">Показать</a>
+                           </div>
                         </label>
                      </div>
                      <div class="my_input_group">
                         <input id="catalog-sidebar-categories__heavy-jackets" type="checkbox" />
                         <label for="catalog-sidebar-categories__heavy-jackets">Куртки теплые <span class="catalog-sidebar__label-suffix">(5)</span>
+                           <div class="catalog-sidebar__label-hover">Товаров: 5 <a href="#">Показать</a>
+                           </div>
                         </label>
                      </div>
                      <div class="my_input_group">
                         <input id="catalog-sidebar-categories__sport-jackets" type="checkbox" />
                         <label for="catalog-sidebar-categories__sport-jackets">Мастерки <span class="catalog-sidebar__label-suffix">(19)</span>
+                           <div class="catalog-sidebar__label-hover">Товаров: 19 <a href="#">Показать</a>
+                           </div>
                         </label>
                      </div>
                      <div class="my_input_group">
                         <input id="catalog-sidebar-categories__shoes" type="checkbox" />
                         <label for="catalog-sidebar-categories__shoes">Обувь <span class="catalog-sidebar__label-suffix">(109)</span>
+                           <div class="catalog-sidebar__label-hover">Товаров: 109 <a href="#">Показать</a>
+                           </div>
                         </label>
                      </div>
                      <div class="my_input_group">
                         <input id="catalog-sidebar-categories__coats" type="checkbox" />
                         <label for="catalog-sidebar-categories__coats">Пальто <span class="catalog-sidebar__label-suffix">(221)</span>
+                           <div class="catalog-sidebar__label-hover">Товаров: 221 <a href="#">Показать</a>
+                           </div>
                         </label>
                      </div>
                      <div class="my_input_group">
                         <input id="catalog-sidebar-categories__cardigans" type="checkbox" />
                         <label for="catalog-sidebar-categories__cardigans">Пиджаки и кардиганы <span class="catalog-sidebar__label-suffix">(521)</span>
+                           <div class="catalog-sidebar__label-hover">Товаров: 521 <a href="#">Показать</a>
+                           </div>
                         </label>
                      </div>
                      <div class="my_input_group">
                         <input id="catalog-sidebar-categories__dresses" type="checkbox" />
                         <label for="catalog-sidebar-categories__dresses">Платья <span class="catalog-sidebar__label-suffix">(1999)</span>
+                           <div class="catalog-sidebar__label-hover">Товаров: 1999 <a href="#">Показать</a>
+                           </div>
                         </label>
                      </div>
                      <div class="my_input_group">
                         <input id="catalog-sidebar-categories__cloaks" type="checkbox" />
                         <label for="catalog-sidebar-categories__cloaks">Плащи <span class="catalog-sidebar__label-suffix">(169)</span>
+                           <div class="catalog-sidebar__label-hover">Товаров: 169 <a href="#">Показать</a>
+                           </div>
                         </label>
                      </div>
                      <div class="my_input_group">
                         <input id="catalog-sidebar-categories__shirts" type="checkbox" />
                         <label for="catalog-sidebar-categories__shirts">Рубашки и блузы <span class="catalog-sidebar__label-suffix">(488)</span>
+                           <div class="catalog-sidebar__label-hover">Товаров: 488 <a href="#">Показать</a>
+                           </div>
                         </label>
                      </div>
                      <div class="my_input_group">
                         <input id="catalog-sidebar-categories__pulloves" type="checkbox" />
                         <label for="catalog-sidebar-categories__pulloves">Свитера <span class="catalog-sidebar__label-suffix">(146)</span>
+                           <div class="catalog-sidebar__label-hover">Товаров: 146 <a href="#">Показать</a>
+                           </div>
                         </label>
                      </div>
                      <div class="my_input_group">
                         <input id="catalog-sidebar-categories__swaetshirts" type="checkbox" />
                         <label for="catalog-sidebar-categories__swaetshirts">Свитшоты <span class="catalog-sidebar__label-suffix">(134)</span>
+                           <div class="catalog-sidebar__label-hover">Товаров: 134 <a href="#">Показать</a>
+                           </div>
                         </label>
                      </div>
                      <div class="my_input_group">
                         <input id="catalog-sidebar-categories__sportswear" type="checkbox" />
                         <label for="catalog-sidebar-categories__sportswear">Спортивная одежда <span class="catalog-sidebar__label-suffix">(14)</span>
+                           <div class="catalog-sidebar__label-hover">Товаров: 14 <a href="#">Показать</a>
+                           </div>
                         </label>
                      </div>
                      <div class="my_input_group">
                         <input id="catalog-sidebar-categories__hoodies" type="checkbox" />
                         <label for="catalog-sidebar-categories__hoodies">Толстовки <span class="catalog-sidebar__label-suffix">(1)</span>
+                           <div class="catalog-sidebar__label-hover">Товаров: 1 <a href="#">Показать</a>
+                           </div>
                         </label>
                      </div>
                      <div class="my_input_group">
                         <input id="catalog-sidebar-categories__tunic" type="checkbox" />
                         <label for="catalog-sidebar-categories__tunic">Туники <span class="catalog-sidebar__label-suffix">(116)</span>
+                           <div class="catalog-sidebar__label-hover">Товаров: 116 <a href="#">Показать</a>
+                           </div>
                         </label>
                      </div>
                      <div class="my_input_group">
@@ -365,26 +466,36 @@
                      <div class="my_input_group">
                         <input id="catalog-sidebar-categories__hats" type="checkbox" />
                         <label for="catalog-sidebar-categories__hats">Шапки <span class="catalog-sidebar__label-suffix">(212)</span>
+                           <div class="catalog-sidebar__label-hover">Товаров: 212 <a href="#">Показать</a>
+                           </div>
                         </label>
                      </div>
                      <div class="my_input_group">
                         <input id="catalog-sidebar-recently_added" type="checkbox" />
                         <label for="catalog-sidebar-recently_added">Шапки женские <span class="catalog-sidebar__label-suffix">(212)</span>
+                           <div class="catalog-sidebar__label-hover">Товаров: 212 <a href="#">Показать</a>
+                           </div>
                         </label>
                      </div>
                      <div class="my_input_group">
                         <input id="catalog-sidebar-categories__shorts" type="checkbox" />
                         <label for="catalog-sidebar-categories__shorts">Шорты <span class="catalog-sidebar__label-suffix">(21)</span>
+                           <div class="catalog-sidebar__label-hover">Товаров: 21 <a href="#">Показать</a>
+                           </div>
                         </label>
                      </div>
                      <div class="my_input_group">
                         <input id="catalog-sidebar-categories__pants" type="checkbox" />
                         <label for="catalog-sidebar-categories__pants">Штаны <span class="catalog-sidebar__label-suffix">(3)</span>
+                           <div class="catalog-sidebar__label-hover">Товаров: 3 <a href="#">Показать</a>
+                           </div>
                         </label>
                      </div>
                      <div class="my_input_group">
                         <input id="catalog-sidebar-categories__skirts" type="checkbox" />
                         <label for="catalog-sidebar-categories__skirts">Юбки <span class="catalog-sidebar__label-suffix">(3)</span>
+                           <div class="catalog-sidebar__label-hover">Товаров: 3 <a href="#">Показать</a>
+                           </div>
                         </label>
                      </div>
                      <div class="my_input_group">

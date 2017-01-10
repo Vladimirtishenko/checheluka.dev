@@ -1,22 +1,34 @@
 .cart
     padding 35px 0 25px
 
-.cart_table-container
+.cart-table-container
     background #efe7e7
     margin-top 42px
 
-.cart_table-responsive-container
+.cart-table-responsive-container
     margin-top -42px
 
-.cart_table-responsive
+.cart-table-responsive
     border none
     margin-bottom 0
 
-.cart_table
+.cart-table
     margin-bottom 0
 
-.cart_table.table>thead>tr>td
-    vertical-align middle
+.cart-table__row
+.cart-table__header-row
+    display flex
+    align-items center
+    justify-content space-between
+    flex-wrap nowrap
+
+.cart-table__row + .cart-table__row
+    border-top 1px solid #fff
+
+.cart-table__cell
+    padding 20px 20px
+
+.cart-table__header-cell
     padding 0 20px
     height 42px
     font-family RobotoLight, sans-serif
@@ -24,44 +36,49 @@
     color #242424
     white-space nowrap
 
-.cart_table.table>thead>tr>td.cart_product-id-title
-    padding-left 0
-
-.cart_table.table>thead>tr>td.cart_product-remove-title
+.cart-product-remove-title
     padding-right 0
 
-.cart_table.table>tbody>tr>td
-    vertical-align middle
-    border-top none
-    border-bottom 1px solid #fff
-    padding 20px 20px
-
-.cart_table.table>tbody>tr>td.cart_product-id
+.cart-product-id-title
+.cart-product-id
     padding-left 0
+    width 8%
+
+.cart-product-id
     font-family Roboto, sans-serif
     font-weight 500
     font-size 14px
     color #242424
 
-.cart_table.table>tbody>tr>td.cart_product-image
-    width 175px
-    min-width 175px
-    padding-right 35px
-    padding-left 35px
+.cart-product-image
+.cart-product-image-title
+    width 20%
 
-.cart_table.table>tbody>tr>td.cart_product-info
+.cart-product-info
+.cart-product-info-title
+    width 20%
+
+.cart-product-info
     font-family Roboto, sans-serif
     font-weight 500
     font-size 14px
     color #242424
 
-.cart_table.table>tbody>tr>td.cart_product-price
+.cart-product-price
+.cart-product-price-title
+    width 14%
+
+.cart-product-price
     font-family Roboto, sans-serif
     font-weight 700
     font-size 24px
     color #242424
 
-.cart_product-count-input
+.cart-product-count
+.cart-product-count-title
+    width 17%
+
+.cart-product-count-input
     width 45px
     height 45px
     text-align center
@@ -74,22 +91,32 @@
     border 1px solid #a7abc3
     padding 0
 
-.cart_table.table>tbody>tr>td.cart_product-price-total
+.cart-product-price-total
+.cart-product-price-total-title
+    width 14%
+
+.cart-product-price-total
     font-family Roboto, sans-serif
     font-weight 700
     font-size 24px
     color #242424
 
-.cart_table.table>tbody>tr>td.cart_product-remove
+.cart-product-remove
+.cart-product-remove-title
+    width 5%
     padding-right 0
 
 @media screen and (max-width: 767px)
-    .cart_table-responsive-container
+    .cart-table-responsive-container
         margin-left -15px
         margin-right -15px
 
-    .cart_table-responsive
+    .cart-table-responsive
         padding 0 15px
+        overflow auto
+
+    .cart-table
+        width 750px
 
 .order-info
     background #2e2d2d
