@@ -25,13 +25,20 @@
 </head>
 
 <body>
-   <div class="container">
-      <div class="row">
-         <div class="che-header col-xs-12">
-            <a href="/" class="che-header__logo-link">
-               <img src="public/img/logo_chechelyka.png" alt="" class="che-header__logo" />
-            </a>
-         </div>
+   <div class="modal-window-cover che-flash-flex hidden">
+      <div class="che-flash-message">
+         <p> <span>Добавлено в </span><a href="/">корзину</a>
+         </p>
+      </div>
+   </div>
+   <div class="container-fliud che-background">
+      <div class="che-header">
+         <a href="/" class="che-header__logo-link">
+            <img src="public/img/logo_chechelyka.png" alt="" class="che-header__logo" />
+            <p class="che-header__title">
+               ... ЧЕЧЕЛ<span>Ю</span>КА ЧЕЧЕЛ<span>Ю</span>КА ЧЕЧЕЛ<span>Ю</span>КА ТРРРР-Р-Р-Р ...</p>
+            <p class="che-header__title-hover">Производство красивой молодежной одежды</p>
+         </a>
       </div>
    </div>
    <div class="container-fluid che-menu">
@@ -55,6 +62,7 @@
                   </ul>
                </div>
                <div class="che-search col-xs-12 col-sm-4 col-lg-3">
+                  <a href="/" class="che-bucket-container"></a>
                   <form action="" class="che-search__form">
                      <input type="text" placeholder="Поиск..." class="form-control" /><span class="che-search__input-ico"></span>
                   </form>
@@ -64,17 +72,100 @@
       </div>
    </div>
    <ul class="side-menu list-unstyled">
-      <li class="side-menu__list-item"><a href="#" class="che-flexible"><span class="side-menu__list-item-title">ДОБАВИТЬ ОТЗЫВ</span><span class="side-menu__list-item-icon side-menu__list-item-icon_speech"></span></a>
+      <li class="side-menu__list-item"><a href="#" data-modal="modal-window__window-sing-in" class="che-flexible modal-open-action"><span class="side-menu__list-item-title">ДОБАВИТЬ ОТЗЫВ</span><span class="side-menu__list-item-icon side-menu__list-item-icon_speech"></span></a>
       </li>
-      <li class="side-menu__list-item"><a href="#" class="che-flexible"><span class="side-menu__list-item-title">ОНЛАЙН ПОМОЩЬ</span><span class="side-menu__list-item-icon side-menu__list-item-icon_question"></span></a>
+      <li class="side-menu__list-item"><a href="#" data-modal="modal-window__window-leave-feedback" class="modal-open-action che-flexible"><span class="side-menu__list-item-title">ОНЛАЙН ПОМОЩЬ</span><span class="side-menu__list-item-icon side-menu__list-item-icon_question"></span></a>
       </li>
-      <li class="side-menu__list-item"><a href="#" class="che-flexible"><span class="side-menu__list-item-title">ВИШЛИСТ</span><span class="side-menu__list-item-icon side-menu__list-item-icon_heart"></span></a>
+      <li class="side-menu__list-item"><a href="wishlist.html" class="che-flexible"><span class="side-menu__list-item-title">ВИШЛИСТ</span><span class="side-menu__list-item-icon side-menu__list-item-icon_heart"></span></a>
       </li>
       <li class="side-menu__list-item"><a href="#" class="che-flexible"><span class="side-menu__list-item-title">КОРЗИНА</span><span class="side-menu__list-item-icon side-menu__list-item-icon_cart"></span></a>
       </li>
    </ul>
    <div class="modal-window-cover hidden">
       <div class="modal-window-outer">
+         <div class="modal-window modal-window__window-pop-up hidden">
+            <div class="modal-window__controls"><span class="modal-window__controls-prev"></span><span class="modal-window__controls-next"></span>
+            </div>
+            <div class="modal-window__state-image">
+               <img src="./public/img/catalog_img_2.jpg" class="img-responsive" />
+               <button class="catalog-blocks-container__block__wishlist-active"></button>
+            </div>
+            <div class="modal-window__state-description"><span class="modal-window__close"></span>
+               <div class="modal-window__flex-row">
+                  <h3 class="modal-window__title">Платье SbS 71193</h3>
+                  <div class="modal-window__pricing"><span class="modal-window__simple-text">Розн. цена:</span>
+                     <h3 class="modal-window__simple-pricing">2500 руб.</h3><span class="modal-window__simple-text"> 
+Опт. цена: <a href="#" class="modal-window__simple-text-link">узнать </a></span>
+                  </div>
+                  <div class="product-options-block__bottom">
+                     <div class="my_input_group">
+                        <label class="che-flexible"><span>Цвет</span>
+                           <select class="product-options-block__color form-control">
+                              <option>медное золото</option>
+                              <option>серый</option>
+                              <option>темносерый</option>
+                           </select>
+                        </label>
+                     </div>
+                     <div class="che-flexible">
+                        <div class="my_input_group">
+                           <label class="che-flexible"><span>Размер</span>
+                              <select class="product-options-block__size form-control">
+                                 <option>X</option>
+                                 <option>M</option>
+                                 <option>L</option>
+                                 <option>XL</option>
+                              </select>
+                           </label>
+                        </div>
+                        <div class="my_input_group">
+                           <label class="che-flexible__child"><span>Кол-во</span>
+                              <input type="number" value="1" pattern="[0-9]*" inputmode="numeric" class="product-options-block__quantity form-control" />
+                           </label>
+                        </div>
+                     </div>
+                     <div class="my_input_group clearfix"><a href="" class="btn btn-default-dark btn-success col-xs-12">Купить</a>
+                     </div>
+                     <div class="my_input_group clearfix"><a href="" class="btn btn-default-dark btn-info col-xs-12">Подробнее</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="modal-window modal-window__window-size-of hidden">
+            <button type="button" aria-label="Close" class="close modal-window__window-close"><span aria-hidden="true">&times;</span>
+            </button>
+            <div class="modal-window__window-title modal-window__window-form-group">
+               <p>Таблица размеров</p>
+            </div>
+            <div class="modal-window__window-title modal-window__window-form-group">
+               <div class="modal-window-wrapper-table">
+                  <table>
+                     <tr>
+                        <th>Цена</th>
+                        <th>Размер</th>
+                        <th>Размер</th>
+                        <th>Размер</th>
+                        <th>Размер</th>
+                     </tr>
+                     <tr>
+                        <td>Цена</td>
+                        <td>Размер</td>
+                        <td>Размер</td>
+                        <td>Размер</td>
+                        <td>Размер</td>
+                     </tr>
+                     <tr>
+                        <td>Цена</td>
+                        <td>Размер</td>
+                        <td>Размер</td>
+                        <td>Размер</td>
+                        <td>Размер</td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+         </div>
          <div class="modal-window modal-window__window-sing-in hidden">
             <button type="button" aria-label="Close" class="close modal-window__window-close"><span aria-hidden="true">&times;</span>
             </button>
@@ -230,15 +321,13 @@
                   <div class="contact-info__block col-xs-12 col-sm-6">
                      <div class="contact-info__block-icon contact-info__block-icon-address"></div>
                      <div class="contact-info__block-text che-flexible">
-                        <div class="contact-info__block-text-line">ООО “Чечелюка”</div>
-                        <div class="contact-info__block-text-line">г.&nbsp;Белгород, ул.&nbsp;Новая&nbsp;2&#8209;а, офис&nbsp;N14</div>
+                        <div class="contact-info__block-text-line">ООО “Чечелюка Плюс”</div>
+                        <div class="contact-info__block-text-line">Российская Федерация. г.Белгород, ул.Новая 2а, офис #14</div>
                      </div>
                   </div>
                   <div class="contact-info__block col-xs-12 col-sm-6">
                      <div class="contact-info__block-icon contact-info__block-icon-phone"></div>
-                     <div class="contact-info__block-text che-flexible">
-                        <div class="contact-info__block-text-line">+7&nbsp;(495)&nbsp;777&nbsp;31&nbsp;9</div>
-                        <div class="contact-info__block-text-line">+7&nbsp;(980)&nbsp;393&nbsp;25&nbsp;95</div>
+                     <div class="contact-info__block-text che-flexible"><a class="contact-info__block-text-line">+7&nbsp;(495)&nbsp;777&nbsp;31&nbsp;97</a><a class="contact-info__block-text-line">+7&nbsp;(980)&nbsp;393&nbsp;25&nbsp;95</a>
                      </div>
                   </div>
                </div>
@@ -247,14 +336,12 @@
                <div class="row">
                   <div class="contact-info__block col-xs-12 col-sm-6">
                      <div class="contact-info__block-icon contact-info__block-icon-email"></div>
-                     <div class="contact-info__block-text che-flexible">
-                        <div class="contact-info__block-text-line">belgorod@chechelyka.com</div>
+                     <div class="contact-info__block-text che-flexible"><a class="contact-info__block-text-line">belgorod@chechelyka.com</a>
                      </div>
                   </div>
                   <div class="contact-info__block col-xs-12 col-sm-6">
                      <div class="contact-info__block-icon contact-info__block-icon-skype"></div>
-                     <div class="contact-info__block-text che-flexible">
-                        <div class="contact-info__block-text-line">chechelyka</div>
+                     <div class="contact-info__block-text che-flexible"><a class="contact-info__block-text-line">chechelyka</a>
                      </div>
                   </div>
                </div>
@@ -264,52 +351,12 @@
    </div>
    <div class="contact-persons">
       <div class="contact-persons__container-lg clearfix">
-         <div class="col-xs-12 col-lg-6">
+         <div class="col-xs-12 col-lg-12">
             <div class="row contact-persons__row">
-               <div class="contact-persons__container-sm contact-persons__container-md clearfix">
-                  <div class="contact-persons__block col-xs-12 col-sm-6">
-                     <div class="contact-persons__block-title">Генеральный директор:</div>
-                     <div class="contact-persons__block-name">Герасименко Сергей Александрович</div>
-                     <div class="contact-persons__block-content">
-                        <div class="contact-persons__block-text-line"><b>Тел:</b>  <span class="contact-persons__info">+7&nbsp;(905)&nbsp;672&nbsp;90&nbsp;52</span>
-                        </div>
-                        <div class="contact-persons__block-text-line"><b>Email:</b>  <span class="contact-persons__info-underlined">gerasimenko@chechelyka.com</span>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="contact-persons__block col-xs-12 col-sm-6">
-                     <div class="contact-persons__block-title">Администратор:</div>
-                     <div class="contact-persons__block-name">Ольга Кизилова</div>
-                     <div class="contact-persons__block-content">
-                        <div class="contact-persons__block-text-line"><b>Тел:</b>  <span class="contact-persons__info">+7&nbsp;(980)&nbsp;393&nbsp;25&nbsp;95</span>
-                        </div>
-                        <div class="contact-persons__block-text-line"><b>Email:</b>  <span class="contact-persons__info-underlined">kizilova@chechelyka.com</span>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="col-xs-12 col-lg-6">
-            <div class="row contact-persons__row">
-               <div class="contact-persons__container-sm contact-persons__container-md clearfix">
-                  <div class="contact-persons__block col-xs-12 col-sm-6">
-                     <div class="contact-persons__block-title">Отдел продаж:</div>
-                     <div class="contact-persons__block-name">Татьяна Белоусова</div>
-                     <div class="contact-persons__block-content">
-                        <div class="contact-persons__block-text-line"><b>Тел:</b>  <span class="contact-persons__info">+7&nbsp;(915)&nbsp;572&nbsp;12&nbsp;69</span>
-                        </div>
-                        <div class="contact-persons__block-text-line"><b>Email:</b>  <span class="contact-persons__info-underlined">t.belousova@chechelyka.com</span>
-                        </div>
-                        <div class="contact-persons__block-text-line"><b>Skype:</b>  <span class="contact-persons__info-underlined">tatiana.belousova22</span>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="contact-persons__block col-xs-12 col-sm-6">
-                     <div class="contact-persons__block-title">Документы:</div>
-                     <div class="contact-persons__block-content">
-                        <button class="btn btn-default-light btn-info">Ознакомиться</button>
-                     </div>
+               <div class="contact-persons__block col-xs-12 col-sm-12">
+                  <div class="contact-persons__block-title">Со всеми необходимыми документами вы можите:</div>
+                  <div class="contact-persons__block-content">
+                     <button class="btn btn-default-light btn-info">Ознакомиться</button>
                   </div>
                </div>
             </div>
@@ -319,7 +366,7 @@
    <div class="map-container"></div>
    <script>
       function initMap() {
-          var pos = {lat: 49.99335, lng: 36.23237};
+          var pos = {lat: 50.657466, lng: 36.561591};
           var map = new google.maps.Map(document.querySelector('.map-container'), {
               zoom: 10,
               center: pos,
@@ -328,6 +375,26 @@
               scrollwheel: false,
               styles: [{"featureType":"all","elementType":"geometry.fill","stylers":[{"weight":"2.00"}]},{"featureType":"all","elementType":"geometry.stroke","stylers":[{"color":"#9c9c9c"}]},{"featureType":"all","elementType":"labels.text","stylers":[{"visibility":"on"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"landscape","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"color":"#eeeeee"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#7b7b7b"}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#46bcec"},{"visibility":"on"}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#c8d7d4"}]},{"featureType":"water","elementType":"labels.text.fill","stylers":[{"color":"#070707"}]},{"featureType":"water","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]}]
           });
+      
+          var img = "./public/img/map-marker.png"
+      
+          var marker = new google.maps.Marker({
+              position: pos,
+              map: map,
+              animation: google.maps.Animation.DROP,
+              title: 'ул.Новая 2а',
+              icon: img
+          });
+      
+          marker.addListener('click', toggleBounce);
+      
+          function toggleBounce() {
+            if (marker.getAnimation() !== null) {
+              marker.setAnimation(null);
+            } else {
+              marker.setAnimation(google.maps.Animation.BOUNCE);
+            }
+          }
       }
    </script>
    <script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBd_snhGQX7cHByP0hssPXaIGyPRmuc4kU&amp;signed_in=true&amp;callback=initMap"></script>
@@ -368,6 +435,14 @@
          </div>
       </div>
    </div>
+   <div class="container-fluid che-development">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 che-footer-development">
+         <a href="http://4side.in.ua">
+            <img src="public/img/development1-01.svg" alt="" />
+         </a>
+      </div>
+   </div>
+   <script src="public/build/build.app.js"></script>
 </body>
 
 </html>

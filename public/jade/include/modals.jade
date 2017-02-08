@@ -1,5 +1,81 @@
 .modal-window-cover.hidden
     .modal-window-outer
+        .modal-window.modal-window__window-pop-up.hidden
+            .modal-window__controls
+                span.modal-window__controls-prev
+                span.modal-window__controls-next
+            .modal-window__state-image
+                img.img-responsive(src="./public/img/catalog_img_2.jpg")
+                button.catalog-blocks-container__block__wishlist-active
+            .modal-window__state-description
+                span.modal-window__close
+                .modal-window__flex-row
+                    h3.modal-window__title Платье SbS 71193
+                    .modal-window__pricing
+                        span.modal-window__simple-text Розн. цена:
+                        h3.modal-window__simple-pricing 2500 руб.
+                        span.modal-window__simple-text 
+                            | Опт. цена: 
+                            a.modal-window__simple-text-link(href="#") узнать 
+                     .product-options-block__bottom
+                                .my_input_group
+                                    label.che-flexible
+                                        span Цвет
+                                        select.product-options-block__color.form-control
+                                            option медное золото
+                                            option серый
+                                            option темносерый
+
+                                .che-flexible
+                                    .my_input_group
+                                        label.che-flexible
+                                            span Размер
+                                            select.product-options-block__size.form-control
+                                                option X
+                                                option M
+                                                option L
+                                                option XL
+
+                                    .my_input_group
+                                        label.che-flexible__child
+                                            span Кол-во
+                                            input.product-options-block__quantity.form-control(type="number" value="1" pattern="[0-9]*" inputmode="numeric")
+
+                                .my_input_group.clearfix
+                                    a(href="").btn.btn-default-dark.btn-success.col-xs-12 Купить
+
+                                .my_input_group.clearfix
+                                    a(href="").btn.btn-default-dark.btn-info.col-xs-12 Подробнее
+
+
+        .modal-window.modal-window__window-size-of.hidden
+            button.close.modal-window__window-close(type="button" aria-label="Close")
+                span(aria-hidden="true") &times;
+
+            .modal-window__window-title.modal-window__window-form-group 
+                p Таблица размеров
+
+            .modal-window__window-title.modal-window__window-form-group
+                div.modal-window-wrapper-table
+                    table
+                        tr 
+                            th Цена 
+                            th Размер 
+                            th Размер 
+                            th Размер 
+                            th Размер 
+                        tr 
+                            td Цена 
+                            td Размер 
+                            td Размер 
+                            td Размер 
+                            td Размер
+                        tr 
+                            td Цена 
+                            td Размер 
+                            td Размер 
+                            td Размер 
+                            td Размер
         .modal-window.modal-window__window-sing-in.hidden
             button.close.modal-window__window-close(type="button" aria-label="Close")
                 span(aria-hidden="true") &times;

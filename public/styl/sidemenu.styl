@@ -1,15 +1,18 @@
 .side-menu
     position fixed
     left -102px
-    top 50%
+    top 55%
     transform translateY(-50%)
     z-index 900
 
 .side-menu__list-item
     position relative
     left 0
+    height 46px
+    display flex
+    border 1px solid #515050
+    align-items center
     background #2e2d2d
-    border-radius 0 5px 5px 0
     transition left ease 0.5s
     &:hover
         left 102px
@@ -23,8 +26,10 @@
 .side-menu__list-item-title
     color #fff
     width 70px
-    font-family Roboto,sans-serif
-    font-weight 600
+    font-family RobotoLight
+    font-weight 400
+    letter-spacing 1px
+    line-height 16px
     text-align left
     display block
 
@@ -43,6 +48,7 @@
     background-image url(../img/icon_question.png)
 
 .side-menu__list-item-icon_heart
+    background-position 2px 0
     background-image url(../img/icon_heart.png)
 
 .side-menu__list-item-icon_cart

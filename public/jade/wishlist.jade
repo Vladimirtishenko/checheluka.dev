@@ -1,0 +1,52 @@
+extends layout/layout.jade
+
+block content
+    .cart
+        .cart-table-container
+            .container
+                .cart-table-responsive-container
+                    .cart-table-responsive
+                        .cart-table
+                            .cart-table__header-row
+                                .cart-table__cell.cart-table__header-cell.cart-product-id-title Артикул
+                                .cart-table__cell.cart-table__header-cell.cart-product-image-title
+                                .cart-table__cell.cart-table__header-cell.cart-product-info-title Товар
+                                .cart-table__cell.cart-table__header-cell.cart-product-price-title Цена
+                                .cart-table__cell.cart-table__header-cell.cart-product-price-in-bucket
+                                .cart-table__cell.cart-table__header-cell.cart-product-remove-title
+
+                            .cart-table__row
+                                .cart-table__cell.cart-product-id 75045
+                                .cart-table__cell.cart-product-image
+                                    img.img-responsive(src="./public/img/catalog_img_1.jpg", alt="")
+                                .cart-table__cell.cart-product-info
+                                    div Костюм SBS
+                                    div Размер: S
+                                    div Цвет: дизай №1
+                                .cart-table__cell.cart-product-price 1200
+                                .cart-table__cell.cart-product-price-in-bucket  
+                                     button.btn.btn-default-dark.btn-info.btn-greens.cart-button-container_button В корзину
+                                .cart-table__cell.cart-product-remove.text-right
+                                    button.catalog-sidebar__selected-categories__remove
+
+                            .cart-table__row
+                                .cart-table__cell.cart-product-id 75045
+                                .cart-table__cell.cart-product-image
+                                    img.img-responsive(src="./public/img/catalog_img_1.jpg", alt="")
+                                .cart-table__cell.cart-product-info
+                                    div Костюм SBS
+                                    div Размер: S
+                                    div Цвет: дизай №1
+                                .cart-table__cell.cart-product-price 1200
+                                .cart-table__cell.cart-product-price-in-bucket 
+                                     button.btn.btn-default-dark.btn-info.btn-greens.cart-button-container_button В корзину
+                                .cart-table__cell.cart-product-remove.text-right
+                                    button.catalog-sidebar__selected-categories__remove
+
+    .container
+        .row.che-flexible.cart-button-container
+            .col-xs-12.col-sm-5.col-md-4.text-center
+                button.btn.btn-default-dark.btn-transparent.btn-red.cart-button-container_button Удалить все
+
+            .col-xs-12.col-sm-5.col-md-4.text-center
+                button.btn.btn-default-dark.btn-info.btn-greens.cart-button-container_button Переместить все в корзину

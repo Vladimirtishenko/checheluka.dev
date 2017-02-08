@@ -1,12 +1,76 @@
+.che-background
+	background-image url('../img/8-01.png')
+	background-size 100% auto 
+	background-position 50% 50%
+	background-repeat no-repeat
+
 .che-header
-    display flex
-    align-items center
-    justify-content space-between
-    overflow hidden
+	padding 75px 0 55px
+	display flex
+	align-items center
+	justify-content center
+	overflow hidden
+	&:hover .che-header__title
+		display none
+	&:hover .che-header__title-hover
+		display block
 
 .che-header__logo
-    max-width 100%
+	max-width 100%
+
+.che-header__title
+	text-align center
+	color #464646
+	font-size 17px
+	font-family RobotoLight
+	padding 15px 0 0 0
+	letter-spacing 1px
+	text-transform uppercase
+	
+.che-header__title-hover
+	text-align center
+	color #464646
+	font-size 17px
+	letter-spacing 1px
+	font-family RobotoLight
+	padding 15px 0 0 0
+	text-transform uppercase
+	display none
+
+@media (min-width: 1170px) and (max-width: 1366px)
+	.che-header
+		padding 45px 0 35px
+		
+@media (min-width: 970px) and (max-width: 1169px)
+	.che-header
+		padding 45px 0 35px
+		
+	.che-background
+		background-size auto 100%
+
+@media (min-width: 750px) and (max-width: 970px)
+	.che-header
+		padding 45px 0 35px
+		
+	.che-header__logo
+		max-width 80%
+		margin 0 auto
+		display inherit
+	
+	.che-background
+		background-size auto 100%
 
 @media (max-width: 749px)
-    .che-header__logo-link
-        margin 0 -95px
+	.che-header__logo-link
+		margin 0 -95px
+		
+	.che-header
+		padding 45px 0 35px
+		
+	.che-header__logo
+		max-width 60%
+		margin 0 auto
+		display inherit
+	
+	.che-background
+		background-size auto 100%

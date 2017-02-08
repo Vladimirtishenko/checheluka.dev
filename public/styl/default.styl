@@ -15,12 +15,34 @@
    font-style normal
    src url('../fonts/Roboto-Thin.ttf')
 
+@font-face
+   font-family OpenSansLight
+   font-style normal
+   src url('../fonts/OpenSans-Light.ttf')
+
 html, body
     height 100%
 
+table
+    width 100%
+    padding 10px
+    border-collapse collapse
+    
+th,td 
+    border 1px solid #cdcdcd
+    padding 15px
+
+td
+    font-family RobotoLight
+    
+th
+    font-family RobotoRegular
+    background #f6f6f6
+    text-align center
+
 .form-control
     height 45px
-    border-radius 2px
+    border-radius 0px
     border none
     outline none
     box-shadow none
@@ -30,14 +52,19 @@ html, body
 
 .btn
     height 45px
-    font-family Roboto, sans-serif
-    font-weight 700
+    font-family RobotoLight
+    font-weight 400
     font-size 14px
     text-transform uppercase
     padding 0 15px
+    letter-spacing 1px
+    border-radius 0
     &:hover, &:active, &:focus
         outline none i
         box-shadow none
+
+a.btn
+    padding 12px 25px
 
 .btn-default-black
     background #000
@@ -119,5 +146,39 @@ input[type="number"]
         background #398439
         border-color #255625
 
+.btn-red
+    &:hover
+        background reds
+        color #fff 
+        border 1px solid reds
+        
+.btn-greens
+    &:hover
+        background #31bb32
+        color #fff 
+        border 1px solid #31bb32
+
+.bth-filters-active__opacity
+    background-color rgba(0,0,0,.05) i
+
 .che-flexible.che-flexible-btn-cenetring
     justify-content center
+    
+optgroup
+    font-weight 700
+    font-size 18px
+    text-align center
+    
+.btn-white
+    display table 
+    margin 50px auto 0 
+    text-transform uppercase
+    letter-spacing 2px
+    background #fff
+    color #595959
+    padding 12px 38px
+    height initial
+    border 1px solid rgba(89, 89, 89, 0.08)
+    &:hover
+        background transparent
+    

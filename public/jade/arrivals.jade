@@ -1,0 +1,95 @@
+extends layout/layout.jade
+
+block content
+    .container
+        .filters-panel
+            .che-flexible
+                .filters-panel__block.filters-panel__arrivals.che-flexible__child
+                    span.filters-panel__block-first-title Новинки за:
+                    button.btn-transparent.filters-panel__btn-square.btn-number
+                        | 2
+                    button.btn-transparent.filters-panel__btn-square.btn-number.bth-filters-active__opacity
+                        | 7
+                    button.btn-transparent.filters-panel__btn-square.btn-number
+                        | 30
+                    span.filters-panel__block-last-title дней
+
+                .filters-panel__block.filters-panel__images_count.che-flexible__child
+                    span Фото на стр.:
+                    select.form-control.btn-transparent
+                        option(value="25") 25
+                        option(value="50") 50
+                        option(value="100") 100
+
+                .filters-panel__block.filters-panel__veiw.che-flexible__child
+                    span Вид:
+                    button.filters-panel__btn-square.fullzise.btn-transparent
+                    button.filters-panel__btn-square.halfsize.btn-transparent
+                    button.filters-panel__btn-square.thirdsize.btn-transparent
+
+                .che-flexible__divider.hidden-lg.hidden-md
+
+                .filters-panel__block.filters-panel__sizes.che-flexible__child
+                    span Размерная таблица:
+                    button.filters-panel__btn-square.btn-transparent.modal-open-action(data-modal="modal-window__window-size-of")
+
+    .container-fluid
+        .catalog-blocks-container.text-center
+            h2.che-catalog-title-all-item
+                | Новинки за послении 7 дней
+            .row.che-flexible.che-responsive-action-view
+                - for (var i = 0; i < 20; i++)
+                    .catalog-blocks-container__block.che-medium
+                        img.img-responsive(src="./public/img/catalog_img_1.jpg")
+
+                        button.catalog-blocks-container__block__wishlist
+
+                        .catalog-blocks-container__block__bottom
+                            .catalog-blocks-container__block__rozn розн.: 2500 руб
+                            .catalog-blocks-container__block__opt опт.:
+                                =" "
+                                b 500 руб
+
+                        .catalog-blocks-container__block__bottom-inner-container.che-flexible
+                            .catalog-blocks-container__block__title платье SbS 71193
+                            .che-input-flex-wrapper
+                                .my_input_group
+                                     label.che-flexible__child
+                                         span Размер
+                                         select.catalog-blocks-container__block__size.form-control
+                                             option X
+                                             option M
+                                             option L
+                                             option XL
+                                .my_input_group
+                                     label.che-flexible__child
+                                         span Кол-во
+                                         input.catalog-blocks-container__block__quantity.form-control(type="number" value="1" pattern="[0-9]*" inputmode="numeric")
+                                .my_input_group
+                                     a.btn.btn-default-light.btn-info.catalog-blocks-container__block__details(href="#").che-flexible.che-flexible-btn-cenetring
+                                         span Подробнее
+                                .my_input_group
+                                    button.btn.btn-default-light.btn-success.catalog-blocks-container__block__details Купить
+
+
+            .pagination-container
+                .che-flexible
+                    .pagination-container__backward.che-flexible__child
+                        a.pagination-container__first-button.che-flexible.che-flexible-btn-cenetring
+                        a.pagination-container__prev-button.che-flexible.che-flexible-btn-cenetring
+
+                    .pagination-container__pages.che-flexible__child
+                        a.pagination-container__number-button.active 1
+                        a.pagination-container__number-button 2
+                        a.pagination-container__number-button 3
+                        span.pagination-container__number-button.che-flexible.che-flexible-btn-cenetring
+                            span ...
+                        a.pagination-container__number-button 263
+
+                    .pagination-container__forward.che-flexible__child
+                        a.pagination-container__next-button.che-flexible.che-flexible-btn-cenetring
+                        a.pagination-container__last-button.che-flexible.che-flexible-btn-cenetring
+
+                    .pagination-container__custom-page.che-flexible__child
+                        input.form-control.pagination-container__custom-page-input(type="number" pattern="[0-9]*" inputmode="numeric")
+                        a.btn.btn-default-dark.btn-info.pagination-container__custom-page-button Перейти

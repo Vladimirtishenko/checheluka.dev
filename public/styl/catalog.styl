@@ -11,6 +11,9 @@
     width 45px
     font-family RobotoLight, sans-serif
 
+.my_input_group > .my_input_group 
+    padding 10px 0px 0 30px
+
 .filters-panel__btn-square
     width 45px
     height 45px
@@ -39,6 +42,22 @@
     text-align right
     width 45px
     font-family RobotoLight, sans-serif
+
+.filters-panel__arrivals > span 
+    display inline-block
+    font-size 12px
+    text-align left
+    font-family RobotoLight, sans-serif
+
+.filters-panel__block-first-title
+    margin-right 5px
+    
+.filters-panel__block-last-title
+    margin-left 5px
+
+.filters-panel__arrivals .btn-number
+    margin 0 5px
+
 
 .filters-panel__veiw .filters-panel__btn-square
     margin-left 10px
@@ -100,7 +119,6 @@
 
 .catalog-sidebar__item
     padding 15px
-    background #f1e8f0
 
 .catalog-sidebar__item + .catalog-sidebar__item
     margin-top 1px
@@ -121,10 +139,11 @@
 
 .catalog-sidebar__accordeon-img
     width 100%
-    font-family RobotoRegular, sans-serif
+    font-family RobotoLight
     color #000
     position relative
     cursor pointer
+    font-weight 400
     &:after
         content ""
         position absolute
@@ -155,10 +174,11 @@
 
 .catalog-sidebar__item-hidden input[type="checkbox"]+label
     padding 0 0 0 20px
-    font-family RobotoLight, sans-serif
+    font-family RobotoLight
     color dgrey
     position relative
     cursor pointer
+    font-weight 400
 
 .catalog-sidebar__item-hidden input[type="checkbox"]+label:hover
     color reds
@@ -199,17 +219,15 @@
 .catalog-sidebar__label-hover
     position fixed
     bottom 10px
-    left 50%
-    transform translateX(-50%)
+    right 70px
     background fblue
     color #fff
     padding 15px
     white-space nowrap
-    border-radius 10px
+    border-radius 0px
     z-index 10
     font-family RobotoLight, sans-serif
     font-size 14px
-    display none
 
 .catalog-sidebar__label-hover a
     font-family Roboto, sans-serif
@@ -219,25 +237,9 @@
 
 .catalog-sidebar__item-hidden input[type="checkbox"]+label:hover .catalog-sidebar__label-hover
     display block
-
-@media screen and (min-width 992px)
-    .catalog-sidebar__label-hover
-        position absolute
-        right calc(100% + 15px)
-        bottom auto
-        left auto
-        top -15px
-        transform none
-
-    .catalog-sidebar__label-hover:after
-        content ""
-        height 100%
-        display block
-        position absolute
-        width 15px
-        top 0
-        left 100%
-
+    
+.che-responsive-action-view
+    padding 0 50px
 
 .my_input_group
     padding-top 5px
@@ -252,6 +254,7 @@
 .catalog-sidebar-price-limit-container .che-flexible__child label
     margin-right 10px
     padding 10px 0
+    font-weight 400
 
 #catalog-sidebar__price-lowest,
 #catalog-sidebar__price-highest
@@ -264,8 +267,10 @@
     margin-top 10px
 
 #catalog-sidebar__reset-all
-    width 100%
-    margin-top 15px
+    width 80%
+    margin 30px auto 15px
+    display table
+    padding 11px
 
 .catalog-sidebar__selected-categories
     padding 15px
@@ -273,6 +278,7 @@
 .catalog-sidebar__selected-categories__remove
     border none
     background none
+    display inline-block
     width 15px
     height 15px
     position relative
@@ -297,14 +303,6 @@
 .catalog-sidebar__selected-categories__remove:hover:after
     border-color reds
 
-.catalog-blocks-container__block
-    position relative
-    overflow hidden
-    margin 0 auto 30px
-
-.catalog-blocks-container__block .img-responsive
-    width 100%
-
 .catalog-blocks-container__block__wishlist
     position absolute
     top 10px
@@ -316,26 +314,28 @@
     filter grayscale() brightness(265%)
     &:hover
         filter none
+            
+.catalog-blocks-container__block__wishlist-active
+    position absolute
+    top 10px
+    right 10px
+    width 35px
+    height 31px
+    border none
+    background url(../img/button_wishlist.png)
 
 .catalog-blocks-container__block__bottom
     position absolute
     width 100%
-    background rgba(51, 51, 51, 0.9)
+    background #e6e6e6
     bottom 0
     left 0
-    color white
+    color #000
+    padding 10px 15px
     text-align center
-    transform translateY(125px)
-    transition ease 1s transform
-
-.catalog-blocks-container__block:hover .catalog-blocks-container__block__bottom
-    transform translateY(0)
-
-.catalog-blocks-container__block__bottom-inner-container
-    padding 15px
-
-.catalog-blocks-container__block__bottom-inner-container + .catalog-blocks-container__block__bottom-inner-container
-    padding-top 0
+    display flex
+    justify-content space-between
+    z-index 10
 
 .catalog-blocks-container__block__title
     width 100%
@@ -343,31 +343,49 @@
     margin-bottom 15px
     font-size 16px
     font-family RobotoRegular, sans-serif
+    color #fff
 
-.catalog-blocks-container__block__rozn
+.catalog-blocks-container__block__rozn, .catalog-blocks-container__block__opt, .catalog-blocks-container__block__opt b
     font-family RobotoLight, sans-serif
     font-size 14px
-
-.catalog-blocks-container__block__opt
-    font-family RobotoLight, sans-serif
-    font-size 14px
-
-.catalog-blocks-container__block__opt b
-    font-size 16px
-    font-family Roboto, sans-serif
-    font-weight 700
 
 .catalog-blocks-container__block__opt b a
     text-transform uppercase
     text-decoration underline
     font-size 14px
+    
+.catalog-blocks-container__block.che-min .catalog-blocks-container__block__rozn,
+.catalog-blocks-container__block.che-min .catalog-blocks-container__block__opt,
+.catalog-blocks-container__block.che-min .catalog-blocks-container__block__opt b,
+.catalog-blocks-container__block.che-min .catalog-blocks-container__block__opt b a
+    font-family RobotoLight, sans-serif
+    font-size 9px
+    
+.catalog-blocks-container__block.che-min .catalog-blocks-container__block__bottom
+    padding 10px 5px
+    
 
-.catalog-blocks-container__block__bottom-inner-container .my_input_group
-    width calc(50% - 6px)
-    &:nth-child(odd)
-        margin-right 6px
-    &:nth-child(even)
-        margin-left 6px
+.catalog-blocks-container__block.che-full, .catalog-blocks-container__block.che-medium
+    &:hover 
+        .catalog-blocks-container__block__bottom-inner-container
+            bottom 34px
+
+.catalog-blocks-container__block__bottom-inner-container
+    width 100%
+    position absolute
+    background rgba(0,0,0, .6)
+    padding 20px 5px
+    bottom -200px
+    transition .3s
+
+.che-input-flex-wrapper
+    display flex
+    justify-content space-between
+    flex-wrap wrap
+    padding 0 10px
+
+.che-input-flex-wrapper .my_input_group
+    width 48%
 
 .catalog-blocks-container__block__bottom-inner-container .my_input_group label
     width 100%
@@ -376,30 +394,31 @@
 .catalog-blocks-container__block__bottom-inner-container .my_input_group label span
     font-family RobotoLight, sans-serif
     font-size 12px
-    width calc(100% - 45px)
+    width 50%
+    color #fff
 
 .catalog-blocks-container__block__size
     appearance none
-    width 45px
+    width 50%
     height 45px
     text-align center
-    font-family RobotoRegular, sans-serif
+    font-family RobotoLight
     border-radius 0
-    font-size 18px
+    font-size 13px
     background white
     color black
     border 1px solid white
     margin -1px -1px -1px 0
-    padding 0
+    padding 0 2px
     text-align-last center
 
 .catalog-blocks-container__block__quantity
-    width 45px
+    width 50%
     height 45px
     text-align center
-    font-family RobotoRegular, sans-serif
+    font-family RobotoLight
     border-radius 0
-    font-size 18px
+    font-size 13px
     background white
     color black
     border 1px solid white
@@ -427,6 +446,7 @@
 .pagination-container__next-button
 .pagination-container__last-button
     height 45px
+    width 45px
     background none
     overflow hidden
     &:before
@@ -457,11 +477,12 @@
         transform rotate(-135deg);
 
 .pagination-container__number-button
+    font-size 16px
+    padding 15px 0
     height 45px
     width 45px
     color #9a9a9a
     background none
-    padding 0
     &:hover
         color reds
     &.active
@@ -469,11 +490,100 @@
         border 1px solid reds
 
 .pagination-container__custom-page-input
-    width 45px
+    width 55px
     border 1px solid #9a9a9a
     text-align center
     border-radius 0
     margin-right 10px
 
 .pagination-container__custom-page-button
-    padding 0 20px
+    padding 12px 20px
+    
+.che-unfiltered-or-checked
+    position relative
+
+.catalog-blocks-container__block
+    position relative
+    overflow hidden
+    margin 15px auto
+    
+.catalog-blocks-container__block .img-responsive
+    width 100%
+
+.catalog-blocks-container__block.che-full
+    width 320px
+  
+.catalog-blocks-container__block.che-medium
+    width 250px
+    
+.catalog-blocks-container__block.che-min
+    width 150px
+    
+
+.che-filters-fixed
+    position fixed 
+    width 350px
+    right -345px
+    height 100%
+    background #fff 
+    border-width 0 0 0 4px 
+    border-style solid
+    border-color #fc392b
+    transition .5s ease
+    top 0
+    z-index 996
+    
+.che-filters-wrapper-accordeon
+    overflow auto
+    height calc(100% - 105px)
+    width 106%
+    position absolute
+    
+.che-filters-wrapper-accordeon-inner
+    width 95%
+    
+.che-filters-fixed.che-show-filters
+    right 0px
+
+.btn-vertical-red
+    position absolute
+    width 40px
+    left -40px
+    top 50%
+    margin-top -110px
+    height 220px
+    background url('../img/sprite_chechelyka.png') -442px 0
+
+.che-show-filters .btn-vertical-red  
+    background url('../img/sprite_chechelyka.png') -481px 0 
+
+
+.che-catalog-title-all-item
+    padding 20px 0
+    font-family RobotoLight
+    fint-size 16px
+        
+@media screen and (min-width 850px) and (max-width 980px)
+    .catalog-blocks-container__block.che-full
+        width 30%
+        
+
+@media screen and (min-width 420px) and (max-width 560px)
+    .catalog-blocks-container__block.che-full
+        width 95%
+        
+    .catalog-blocks-container__block.che-medium
+        width 45%
+        
+    .catalog-blocks-container__block.che-min
+        width 45%
+        
+@media screen and (max-width 419px)
+    .catalog-blocks-container__block.che-full
+        width 95%
+
+    .catalog-blocks-container__block.che-medium
+        width 95%
+
+    .catalog-blocks-container__block.che-min
+        width 95%

@@ -11,7 +11,11 @@ block content
                                 .cart-table__cell.cart-table__header-cell.cart-product-id-title Артикул
                                 .cart-table__cell.cart-table__header-cell.cart-product-image-title
                                 .cart-table__cell.cart-table__header-cell.cart-product-info-title Товар
-                                .cart-table__cell.cart-table__header-cell.cart-product-price-title Цена
+                                .cart-table__cell.cart-table__header-cell.cart-product-price-title
+                                    span
+                                        span.che-price-choise(href="") Опт
+                                        | /
+                                        a(href="") Розница
                                 .cart-table__cell.cart-table__header-cell.cart-product-count-title Количество
                                 .cart-table__cell.cart-table__header-cell.cart-product-price-total-title Сумма (руб)
                                 .cart-table__cell.cart-table__header-cell.cart-product-remove-title
@@ -29,7 +33,7 @@ block content
                                     input.cart-product-count-input.form-control(type="number" value="1" pattern="[0-9]*" inputmode="numeric")
                                 .cart-table__cell.cart-product-price-total 1200
                                 .cart-table__cell.cart-product-remove.text-right
-                                    button.catalog-sidebar__selected-categories__remove
+                                    a.catalog-sidebar__selected-categories__remove
 
                             .cart-table__row
                                 .cart-table__cell.cart-product-id 75045
@@ -44,7 +48,7 @@ block content
                                     input.cart-product-count-input.form-control(type="number" value="1" pattern="[0-9]*" inputmode="numeric")
                                 .cart-table__cell.cart-product-price-total 1200
                                 .cart-table__cell.cart-product-remove.text-right
-                                    button.catalog-sidebar__selected-categories__remove
+                                    a.catalog-sidebar__selected-categories__remove
 
     .container
         .row
@@ -61,4 +65,4 @@ block content
                 button.btn.btn-default-dark.btn-info.cart-button-container_button Пересчитать
 
             .col-xs-12.col-sm-4.col-md-3.text-center
-                button.btn.btn-default-dark.btn-success.cart-button-container_button Оформить заказ
+                button.btn.btn-default-dark.btn-success.cart-button-container_button.modal-open-action(data-modal='modal-window__window-send-order') Оформить заказ

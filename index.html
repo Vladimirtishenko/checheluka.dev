@@ -25,13 +25,20 @@
 </head>
 
 <body>
-   <div class="container">
-      <div class="row">
-         <div class="che-header col-xs-12">
-            <a href="/" class="che-header__logo-link">
-               <img src="public/img/logo_chechelyka.png" alt="" class="che-header__logo" />
-            </a>
-         </div>
+   <div class="modal-window-cover che-flash-flex hidden">
+      <div class="che-flash-message">
+         <p> <span>Добавлено в </span><a href="/">корзину</a>
+         </p>
+      </div>
+   </div>
+   <div class="container-fliud che-background">
+      <div class="che-header">
+         <a href="/" class="che-header__logo-link">
+            <img src="public/img/logo_chechelyka.png" alt="" class="che-header__logo" />
+            <p class="che-header__title">
+               ... ЧЕЧЕЛ<span>Ю</span>КА ЧЕЧЕЛ<span>Ю</span>КА ЧЕЧЕЛ<span>Ю</span>КА ТРРРР-Р-Р-Р ...</p>
+            <p class="che-header__title-hover">Производство красивой молодежной одежды</p>
+         </a>
       </div>
    </div>
    <div class="container-fluid che-menu">
@@ -55,6 +62,7 @@
                   </ul>
                </div>
                <div class="che-search col-xs-12 col-sm-4 col-lg-3">
+                  <a href="/" class="che-bucket-container"></a>
                   <form action="" class="che-search__form">
                      <input type="text" placeholder="Поиск..." class="form-control" /><span class="che-search__input-ico"></span>
                   </form>
@@ -64,17 +72,100 @@
       </div>
    </div>
    <ul class="side-menu list-unstyled">
-      <li class="side-menu__list-item"><a href="#" class="che-flexible"><span class="side-menu__list-item-title">ДОБАВИТЬ ОТЗЫВ</span><span class="side-menu__list-item-icon side-menu__list-item-icon_speech"></span></a>
+      <li class="side-menu__list-item"><a href="#" data-modal="modal-window__window-sing-in" class="che-flexible modal-open-action"><span class="side-menu__list-item-title">ДОБАВИТЬ ОТЗЫВ</span><span class="side-menu__list-item-icon side-menu__list-item-icon_speech"></span></a>
       </li>
-      <li class="side-menu__list-item"><a href="#" class="che-flexible"><span class="side-menu__list-item-title">ОНЛАЙН ПОМОЩЬ</span><span class="side-menu__list-item-icon side-menu__list-item-icon_question"></span></a>
+      <li class="side-menu__list-item"><a href="#" data-modal="modal-window__window-leave-feedback" class="modal-open-action che-flexible"><span class="side-menu__list-item-title">ОНЛАЙН ПОМОЩЬ</span><span class="side-menu__list-item-icon side-menu__list-item-icon_question"></span></a>
       </li>
-      <li class="side-menu__list-item"><a href="#" class="che-flexible"><span class="side-menu__list-item-title">ВИШЛИСТ</span><span class="side-menu__list-item-icon side-menu__list-item-icon_heart"></span></a>
+      <li class="side-menu__list-item"><a href="wishlist.html" class="che-flexible"><span class="side-menu__list-item-title">ВИШЛИСТ</span><span class="side-menu__list-item-icon side-menu__list-item-icon_heart"></span></a>
       </li>
       <li class="side-menu__list-item"><a href="#" class="che-flexible"><span class="side-menu__list-item-title">КОРЗИНА</span><span class="side-menu__list-item-icon side-menu__list-item-icon_cart"></span></a>
       </li>
    </ul>
    <div class="modal-window-cover hidden">
       <div class="modal-window-outer">
+         <div class="modal-window modal-window__window-pop-up hidden">
+            <div class="modal-window__controls"><span class="modal-window__controls-prev"></span><span class="modal-window__controls-next"></span>
+            </div>
+            <div class="modal-window__state-image">
+               <img src="./public/img/catalog_img_2.jpg" class="img-responsive" />
+               <button class="catalog-blocks-container__block__wishlist-active"></button>
+            </div>
+            <div class="modal-window__state-description"><span class="modal-window__close"></span>
+               <div class="modal-window__flex-row">
+                  <h3 class="modal-window__title">Платье SbS 71193</h3>
+                  <div class="modal-window__pricing"><span class="modal-window__simple-text">Розн. цена:</span>
+                     <h3 class="modal-window__simple-pricing">2500 руб.</h3><span class="modal-window__simple-text"> 
+Опт. цена: <a href="#" class="modal-window__simple-text-link">узнать </a></span>
+                  </div>
+                  <div class="product-options-block__bottom">
+                     <div class="my_input_group">
+                        <label class="che-flexible"><span>Цвет</span>
+                           <select class="product-options-block__color form-control">
+                              <option>медное золото</option>
+                              <option>серый</option>
+                              <option>темносерый</option>
+                           </select>
+                        </label>
+                     </div>
+                     <div class="che-flexible">
+                        <div class="my_input_group">
+                           <label class="che-flexible"><span>Размер</span>
+                              <select class="product-options-block__size form-control">
+                                 <option>X</option>
+                                 <option>M</option>
+                                 <option>L</option>
+                                 <option>XL</option>
+                              </select>
+                           </label>
+                        </div>
+                        <div class="my_input_group">
+                           <label class="che-flexible__child"><span>Кол-во</span>
+                              <input type="number" value="1" pattern="[0-9]*" inputmode="numeric" class="product-options-block__quantity form-control" />
+                           </label>
+                        </div>
+                     </div>
+                     <div class="my_input_group clearfix"><a href="" class="btn btn-default-dark btn-success col-xs-12">Купить</a>
+                     </div>
+                     <div class="my_input_group clearfix"><a href="" class="btn btn-default-dark btn-info col-xs-12">Подробнее</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="modal-window modal-window__window-size-of hidden">
+            <button type="button" aria-label="Close" class="close modal-window__window-close"><span aria-hidden="true">&times;</span>
+            </button>
+            <div class="modal-window__window-title modal-window__window-form-group">
+               <p>Таблица размеров</p>
+            </div>
+            <div class="modal-window__window-title modal-window__window-form-group">
+               <div class="modal-window-wrapper-table">
+                  <table>
+                     <tr>
+                        <th>Цена</th>
+                        <th>Размер</th>
+                        <th>Размер</th>
+                        <th>Размер</th>
+                        <th>Размер</th>
+                     </tr>
+                     <tr>
+                        <td>Цена</td>
+                        <td>Размер</td>
+                        <td>Размер</td>
+                        <td>Размер</td>
+                        <td>Размер</td>
+                     </tr>
+                     <tr>
+                        <td>Цена</td>
+                        <td>Размер</td>
+                        <td>Размер</td>
+                        <td>Размер</td>
+                        <td>Размер</td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+         </div>
          <div class="modal-window modal-window__window-sing-in hidden">
             <button type="button" aria-label="Close" class="close modal-window__window-close"><span aria-hidden="true">&times;</span>
             </button>
@@ -220,79 +311,93 @@
       </div>
    </div>
    <div class="container">
+      <div class="row che-min-wrap-flexible che-main__margin che-top-margin">
+         <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-xs-12 che-flexible__child-index"><a href="" class="che-link-item-index che-four-block__item"><span class="che-mask"><img src="./public/img/main_img_1.jpg" class="img-responsive"/></span><span class="che-flexible__child__title-white">коллекция</span></a>
+         </div>
+         <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-xs-12 che-flexible__child-index"><a href="" class="che-link-item-index che-sm-md-between che-four-block__item"><span class="che-mask"><img src="./public/img/main_img_2.jpg" class="img-responsive"/></span><div class="che-flexible__child__title-auction"><span class="che-flexible__child__title-auction-general">аукцион</span><span class="che-flexible__child__title-auction-less">начнется в конце февраля</span></div></a>
+            <a
+            href="" class="che-link-item-index che-sm-md-between che-four-block__item"><span class="che-mask"><img src="./public/img/main_img_3.jpg" class="img-responsive"/></span>
+               <div class="che-flexible__child__title-sale"><span class="che-flexible__child__title-sale-general">sale</span><span class="che-flexible__child__title-sale-less">скидки до 70 %</span>
+               </div>
+               </a>
+         </div>
+      </div>
+      <div class="row che-flexible che-four-block che-main__margin">
+         <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-6 che-four-block__item che-margin-md-sm che-xs-four">
+            <a href="">
+               <div class="che-block-top-title"><span>Шубки</span>
+               </div><span class="che-mask"><img src="./public/img/main_img_11.jpg" class="img-responsive img-borders"/></span>
+            </a>
+         </div>
+         <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-6 che-four-block__item che-margin-md-sm che-xs-four">
+            <a href="">
+               <div class="che-block-top-title"><span>Верхняя одежда</span>
+               </div><span class="che-mask"><img src="./public/img/main_img_4.jpg" class="img-responsive"/></span>
+            </a>
+         </div>
+         <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-6 che-four-block__item che-xs-four">
+            <a href="">
+               <div class="che-block-top-title"><span>Платья</span>
+               </div><span class="che-mask"><img src="./public/img/main_img_6.jpg" class="img-responsive img-borders"/></span>
+            </a>
+         </div>
+         <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-6 che-four-block__item che-xs-four">
+            <a href="">
+               <div class="che-block-top-title"><span>Вязаные изделия</span>
+               </div><span class="che-mask"><img src="./public/img/main_img_5.jpg" class="img-responsive"/></span>
+            </a>
+         </div>
+      </div>
+   </div>
+   <div class="container-fluid che-main__margin che-news-container">
       <div class="row">
-         <div class="che-main col-xs-12">
-            <div class="row che-flexible">
-               <div class="col-md-8 col-xs-12 che-flexible__child">
-                  <div class="che-main__block">
-                     <img src="./public/img/main_img_1.jpg" class="img-responsive" />
-                     <div class="che-main__block-tilte-container">
-                        <div class="che-main__block-title"><span class="che-main__block-title-display-inline-block">Коллекция
-</span>
-                        </div>
-                     </div>
+         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="container">
+               <div class="row che-flexible">
+                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-4 che-news-container__first">
+                     <img src="./public/img/main_img_new1.png" alt="" />
                   </div>
-               </div>
-               <div class="col-md-4 col-xs-12 che-flexible__child">
-                  <div class="che-main__block">
-                     <img src="./public/img/main_img_2.jpg" class="img-responsive" />
-                     <div class="che-main__block-tilte-container">
-                        <div class="che-main__block-title"><span class="che-main__block-title-display-inline-block">Аукцион
-</span>
-                        </div>
-                     </div>
+                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-6 che-news-container__title">
+                     <h2 class="che-news-container__title-h2"><span class="che-news-container__title-text">Новинки</span><span class="che-news-container__title-description">Будь первым!</span></h2>
+                     <button class="btn btn-white">Перейти</button>
                   </div>
-                  <div class="che-main__block">
-                     <img src="./public/img/main_img_3.jpg" class="img-responsive" />
-                     <div class="che-main__block-tilte-container">
-                        <div class="che-main__block-title"><span class="che-main__block-title-display-inline-block">Шубки
-</span>
-                        </div>
-                     </div>
+                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-0 che-news-container__second">
+                     <img src="./public/img/main_img_new2.png" alt="" />
                   </div>
                </div>
             </div>
-            <div class="row che-flexible">
-               <div class="col-md-4 col-xs-12">
-                  <div class="che-main__block">
-                     <img src="./public/img/main_img_4.jpg" class="img-responsive" />
-                     <div class="che-main__block-tilte-container">
-                        <div class="che-main__block-title"><span class="che-main__block-title-display-inline-block">Вязаные изделия
-</span>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-8 col-xs-12">
-                  <div class="che-main__block">
-                     <img src="./public/img/main_img_5.jpg" class="img-responsive" />
-                     <div class="che-main__block-tilte-container">
-                        <div class="che-main__block-title"><span class="che-main__block-title-display-inline-block">Вехняя одежда
-</span>
-                        </div>
-                     </div>
-                  </div>
+         </div>
+      </div>
+   </div>
+   <div class="container">
+      <div class="row che-flexible che-main__margin">
+         <a class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 che-excluzive-collection-first">
+            <img src="./public/img/main_img_new3.png" /><span class="che-excluzive-collection__title che-left__title">эксклюзивная Верхняя одежда</span>
+         </a>
+         <a class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 che-excluzive-collection-second">
+            <img src="./public/img/main_img_new4.png" /><span class="che-excluzive-collection__title che-right__title">вечерние Платья</span>
+         </a>
+      </div>
+   </div>
+   <div class="container-fluid che-main__margin che-mans-and-kids-container che-flexible">
+      <div class="container">
+         <div class="row che-flexible">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+               <div class="row che-flexible">
+                  <div class="che-mans-and-kids-container__title che-left-absolute__title">Мужская
+                     <br/>одежда</div>
+                  <a href="">
+                     <img src="./public/img/main_img_man.jpg" class="img-responsive" />
+                  </a>
                </div>
             </div>
-            <div class="row che-flexible">
-               <div class="col-md-8 col-xs-12">
-                  <div class="che-main__block">
-                     <img src="./public/img/main_img_6.jpg" class="img-responsive" />
-                     <div class="che-main__block-tilte-container">
-                        <div class="che-main__block-title sale"><span class="che-main__block-title-display-inline-block">Sale
-</span>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-4 col-xs-12">
-                  <div class="che-main__block">
-                     <img src="./public/img/main_img_7.jpg" class="img-responsive" />
-                     <div class="che-main__block-tilte-container">
-                        <div class="che-main__block-title"><span class="che-main__block-title-display-inline-block">Обувь</span>
-                        </div>
-                     </div>
-                  </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+               <div class="row che-flexible">
+                  <div class="che-mans-and-kids-container__title che-right-absolute__title">Детская
+                     <br/>одежда</div>
+                  <a href="">
+                     <img src="./public/img/main_img_kids.jpg" class="img-responsive" />
+                  </a>
                </div>
             </div>
          </div>
@@ -335,6 +440,14 @@
          </div>
       </div>
    </div>
+   <div class="container-fluid che-development">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 che-footer-development">
+         <a href="http://4side.in.ua">
+            <img src="public/img/development1-01.svg" alt="" />
+         </a>
+      </div>
+   </div>
+   <script src="public/build/build.app.js"></script>
 </body>
 
 </html>

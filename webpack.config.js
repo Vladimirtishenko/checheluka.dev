@@ -14,7 +14,8 @@ let config = [{
     },
     output: {
         path: "./public/build/",
-        filename: 'build.[name].js'
+        filename: 'build.[name].js',
+        publicPath: './public/build/'
     },
     module: {
         loaders: [

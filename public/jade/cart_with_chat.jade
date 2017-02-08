@@ -1,0 +1,76 @@
+extends layout/layout.jade
+
+block content
+    .cart
+        .cart-table-container
+            .container
+                .cart-table-responsive-container
+                    .cart-table-responsive
+                        .cart-table
+                            .cart-table__header-row
+                                .cart-table__cell.cart-table__header-cell.cart-product-id-title Артикул
+                                .cart-table__cell.cart-table__header-cell.cart-product-info-title Товар
+                                .cart-table__cell.cart-table__header-cell.cart-product-price-title Цена
+                                .cart-table__cell.cart-table__header-cell.cart-product-count-title Количество
+                                .cart-table__cell.cart-table__header-cell.cart-product-price-total-title Сумма (руб)
+                                .cart-table__cell.cart-table__header-cell.cart-product-remove-title
+                        - for(var i = 0; i < 10; i++)
+                            .cart-table__row
+                                .cart-table__cell.cart-product-id 75045
+                                .cart-table__cell.cart-product-info
+                                    div Костюм SBS
+                                    div Размер: S
+                                    div Цвет: дизай №1
+                                .cart-table__cell.cart-product-price 1200
+                                .cart-table__cell.cart-product-count
+                                    input.cart-product-count-input.form-control(type="number" value="1" pattern="[0-9]*" inputmode="numeric")
+                                .cart-table__cell.cart-product-price-total 1200
+                                .cart-table__cell.cart-product-remove.text-right
+                                    a.catalog-sidebar__selected-categories__remove
+    .container-fuid
+        .container
+            .col-xl-12.col-lg-12.col-md-12.col-sm-12.col-xs-12.che-area-chat__title
+                h3 Переписка с администратором по данному заказу
+
+    .container-fluid.che-area-chat
+        .container
+            .che-date-chat.che-client
+                .col-xl-3.col-lg-3.col-md-4.col-sm-12.col-xs-12
+                    p 
+                        span 14 Jul 2016 22:52:38 
+                        span.che-date-chat__persone ВЫ                 
+                .col-xl-9.col-lg-9.col-md-8.col-sm-12.col-xs-12
+                    p.che-date-chat__message
+                        | Магазин просто супер!Качество вещей на высшем уровне.Спасибо Вам за отличную работу.Магазин просто супер!Качество вещей на высшем уровне.Спасибо Вам за отличную работу.
+            .che-date-chat.che-manager
+                .col-xl-4.col-lg-4.col-md-5.col-sm-12.col-xs-12
+                    p 
+                        span 14 Jul 2016 22:52:38 
+                        span.che-date-chat__persone Менеджер
+                .col-xl-8.col-lg-8.col-md-7.col-sm-12.col-xs-12
+                    p.che-date-chat__message
+                        | Магазин просто супер!Качество вещей на высшем уровне.Спасибо Вам за отличную работу.
+            .che-date-chat.che-client
+                .col-xl-3.col-lg-3.col-md-4.col-sm-12.col-xs-12
+                    p 
+                        span 14 Jul 2016 22:52:38 
+                        span.che-date-chat__persone ВЫ                 
+                .col-xl-9.col-lg-9.col-md-8.col-sm-12.col-xs-12
+                    p.che-date-chat__message
+                        | Магазин просто супер!Качество вещей на высшем уровне.Спасибо Вам за отличную работу.Магазин просто супер!Качество вещей на высшем уровне.Спасибо Вам за отличную работу.
+            .che-date-chat.che-manager
+                .col-xl-4.col-lg-4.col-md-5.col-sm-12.col-xs-12
+                    p 
+                        span 14 Jul 2016 22:52:38 
+                        span.che-date-chat__persone Менеджер
+                .col-xl-8.col-lg-8.col-md-7.col-sm-12.col-xs-12
+                    p.che-date-chat__message
+                        | Магазин просто супер!Качество вещей на высшем уровне.Спасибо Вам за отличную работу.
+    .container.che-form-to-send
+            form.che-date-chat.che-form-to-send__items(action="#")
+                .col-xl-1.col-lg-1.col-md-2.col-sm-2.col-xs-12 
+                    p Ваш вопрос:  
+                .col-xl-9.col-lg-9.col-md-8.col-sm-7.col-xs-8   
+                    textarea.che-form-item(rows="4")
+                .col-xl-2.col-lg-2.col-md-2.col-sm-3.col-xs-4   
+                    button.btn.btn-default-dark.btn-success(type="submit") Отправить

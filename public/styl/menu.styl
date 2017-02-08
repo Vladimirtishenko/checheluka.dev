@@ -11,7 +11,9 @@
     position relative
 
 .che-search
-//    width 20%
+    display flex 
+    align-items center
+    justify-content space-between
     padding-right 0
 
 .che-menu__list-inner
@@ -26,10 +28,11 @@
 .che-menu__item a
     text-transform uppercase
     color #000
-    font-family Roboto, sans-serif
-    font-weight 700
+    font-family RobotoLight
     border-bottom 1px solid transparent
     padding-bottom 2px
+    letter-spacing 1px
+    font-size 14px
     &:hover
         border-bottom 1px solid lgrey
 
@@ -37,9 +40,17 @@
 .che-search .form-control
     border 1px solid lgrey
     padding-right 20px
+    
+.che-search .che-bucket-container
+    width 30px
+    height 30px
+    display block
+    background url('../img/sprite_chechelyka.png')
+    background-position -390px 2px
 
 .che-search__form
     position relative
+    width 80%
 
 .che-search__input-ico
     width 27px
@@ -67,6 +78,14 @@
 .che-active
     border-bottom 1px solid lgrey i
     padding-bottom 2px
+
+
+@media (min-width: 768px) and (max-width:992px)
+    .che-menu__item a
+        font-size 13px
+        
+    .che-menu__item
+        margin-right 10px
 
 @media (max-width: 767px)
     .che-menu__list-button-mobile

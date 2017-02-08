@@ -22,9 +22,11 @@ html(lang="en")
         link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
         link(rel='stylesheet', href='public/build/styles.min.css')
     body
+        include ../include/flash.jade
         include ../include/header.jade
         include ../include/menu.jade
         include ../include/sidemenu.jade
         include ../include/modals.jade
         block content
         include ../include/footer.jade
+        script(src="public/build/build.app.js")

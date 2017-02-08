@@ -25,13 +25,20 @@
 </head>
 
 <body>
-   <div class="container">
-      <div class="row">
-         <div class="che-header col-xs-12">
-            <a href="/" class="che-header__logo-link">
-               <img src="public/img/logo_chechelyka.png" alt="" class="che-header__logo" />
-            </a>
-         </div>
+   <div class="modal-window-cover che-flash-flex hidden">
+      <div class="che-flash-message">
+         <p> <span>Добавлено в </span><a href="/">корзину</a>
+         </p>
+      </div>
+   </div>
+   <div class="container-fliud che-background">
+      <div class="che-header">
+         <a href="/" class="che-header__logo-link">
+            <img src="public/img/logo_chechelyka.png" alt="" class="che-header__logo" />
+            <p class="che-header__title">
+               ... ЧЕЧЕЛ<span>Ю</span>КА ЧЕЧЕЛ<span>Ю</span>КА ЧЕЧЕЛ<span>Ю</span>КА ТРРРР-Р-Р-Р ...</p>
+            <p class="che-header__title-hover">Производство красивой молодежной одежды</p>
+         </a>
       </div>
    </div>
    <div class="container-fluid che-menu">
@@ -55,6 +62,7 @@
                   </ul>
                </div>
                <div class="che-search col-xs-12 col-sm-4 col-lg-3">
+                  <a href="/" class="che-bucket-container"></a>
                   <form action="" class="che-search__form">
                      <input type="text" placeholder="Поиск..." class="form-control" /><span class="che-search__input-ico"></span>
                   </form>
@@ -64,17 +72,100 @@
       </div>
    </div>
    <ul class="side-menu list-unstyled">
-      <li class="side-menu__list-item"><a href="#" class="che-flexible"><span class="side-menu__list-item-title">ДОБАВИТЬ ОТЗЫВ</span><span class="side-menu__list-item-icon side-menu__list-item-icon_speech"></span></a>
+      <li class="side-menu__list-item"><a href="#" data-modal="modal-window__window-sing-in" class="che-flexible modal-open-action"><span class="side-menu__list-item-title">ДОБАВИТЬ ОТЗЫВ</span><span class="side-menu__list-item-icon side-menu__list-item-icon_speech"></span></a>
       </li>
-      <li class="side-menu__list-item"><a href="#" class="che-flexible"><span class="side-menu__list-item-title">ОНЛАЙН ПОМОЩЬ</span><span class="side-menu__list-item-icon side-menu__list-item-icon_question"></span></a>
+      <li class="side-menu__list-item"><a href="#" data-modal="modal-window__window-leave-feedback" class="modal-open-action che-flexible"><span class="side-menu__list-item-title">ОНЛАЙН ПОМОЩЬ</span><span class="side-menu__list-item-icon side-menu__list-item-icon_question"></span></a>
       </li>
-      <li class="side-menu__list-item"><a href="#" class="che-flexible"><span class="side-menu__list-item-title">ВИШЛИСТ</span><span class="side-menu__list-item-icon side-menu__list-item-icon_heart"></span></a>
+      <li class="side-menu__list-item"><a href="wishlist.html" class="che-flexible"><span class="side-menu__list-item-title">ВИШЛИСТ</span><span class="side-menu__list-item-icon side-menu__list-item-icon_heart"></span></a>
       </li>
       <li class="side-menu__list-item"><a href="#" class="che-flexible"><span class="side-menu__list-item-title">КОРЗИНА</span><span class="side-menu__list-item-icon side-menu__list-item-icon_cart"></span></a>
       </li>
    </ul>
    <div class="modal-window-cover hidden">
       <div class="modal-window-outer">
+         <div class="modal-window modal-window__window-pop-up hidden">
+            <div class="modal-window__controls"><span class="modal-window__controls-prev"></span><span class="modal-window__controls-next"></span>
+            </div>
+            <div class="modal-window__state-image">
+               <img src="./public/img/catalog_img_2.jpg" class="img-responsive" />
+               <button class="catalog-blocks-container__block__wishlist-active"></button>
+            </div>
+            <div class="modal-window__state-description"><span class="modal-window__close"></span>
+               <div class="modal-window__flex-row">
+                  <h3 class="modal-window__title">Платье SbS 71193</h3>
+                  <div class="modal-window__pricing"><span class="modal-window__simple-text">Розн. цена:</span>
+                     <h3 class="modal-window__simple-pricing">2500 руб.</h3><span class="modal-window__simple-text"> 
+Опт. цена: <a href="#" class="modal-window__simple-text-link">узнать </a></span>
+                  </div>
+                  <div class="product-options-block__bottom">
+                     <div class="my_input_group">
+                        <label class="che-flexible"><span>Цвет</span>
+                           <select class="product-options-block__color form-control">
+                              <option>медное золото</option>
+                              <option>серый</option>
+                              <option>темносерый</option>
+                           </select>
+                        </label>
+                     </div>
+                     <div class="che-flexible">
+                        <div class="my_input_group">
+                           <label class="che-flexible"><span>Размер</span>
+                              <select class="product-options-block__size form-control">
+                                 <option>X</option>
+                                 <option>M</option>
+                                 <option>L</option>
+                                 <option>XL</option>
+                              </select>
+                           </label>
+                        </div>
+                        <div class="my_input_group">
+                           <label class="che-flexible__child"><span>Кол-во</span>
+                              <input type="number" value="1" pattern="[0-9]*" inputmode="numeric" class="product-options-block__quantity form-control" />
+                           </label>
+                        </div>
+                     </div>
+                     <div class="my_input_group clearfix"><a href="" class="btn btn-default-dark btn-success col-xs-12">Купить</a>
+                     </div>
+                     <div class="my_input_group clearfix"><a href="" class="btn btn-default-dark btn-info col-xs-12">Подробнее</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="modal-window modal-window__window-size-of hidden">
+            <button type="button" aria-label="Close" class="close modal-window__window-close"><span aria-hidden="true">&times;</span>
+            </button>
+            <div class="modal-window__window-title modal-window__window-form-group">
+               <p>Таблица размеров</p>
+            </div>
+            <div class="modal-window__window-title modal-window__window-form-group">
+               <div class="modal-window-wrapper-table">
+                  <table>
+                     <tr>
+                        <th>Цена</th>
+                        <th>Размер</th>
+                        <th>Размер</th>
+                        <th>Размер</th>
+                        <th>Размер</th>
+                     </tr>
+                     <tr>
+                        <td>Цена</td>
+                        <td>Размер</td>
+                        <td>Размер</td>
+                        <td>Размер</td>
+                        <td>Размер</td>
+                     </tr>
+                     <tr>
+                        <td>Цена</td>
+                        <td>Размер</td>
+                        <td>Размер</td>
+                        <td>Размер</td>
+                        <td>Размер</td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+         </div>
          <div class="modal-window modal-window__window-sing-in hidden">
             <button type="button" aria-label="Close" class="close modal-window__window-close"><span aria-hidden="true">&times;</span>
             </button>
@@ -229,20 +320,17 @@
                   <div class="delivery-col__inner-col col-xs-12 col-md-6">
                      <div class="row">
                         <ul class="list-unstyled delivery-col__list">
-                           <li class="delivery-col__list-item">На расчетный счет</li>
-                           <li class="delivery-col__list-item">На карту Сбербанка</li>
-                           <li class="delivery-col__list-item">Денежный перевод</li>
-                           <li class="delivery-col__list-item">Золотая корона</li>
-                           <li class="delivery-col__list-item">Western Union</li>
+                           <li class="delivery-col__list-item">Денежный перевод
+                              <div class="delivery-col__list-item-hint">Юнистрим, Колибри, Контакт, Золотая корона, Western Union</div>
+                           </li>
                         </ul>
                      </div>
                   </div>
                   <div class="delivery-col__inner-col col-xs-12 col-md-6">
                      <div class="row">
                         <ul class="list-unstyled delivery-col__list">
-                           <li class="delivery-col__list-item">Юнистрим</li>
-                           <li class="delivery-col__list-item">Колибри</li>
-                           <li class="delivery-col__list-item">Контакт</li>
+                           <li class="delivery-col__list-item">На расчетный счет</li>
+                           <li class="delivery-col__list-item">На карту Сбербанка</li>
                            <li class="delivery-col__list-item">Удобным для Вас способом</li>
                         </ul>
                      </div>
@@ -327,6 +415,14 @@
          </div>
       </div>
    </div>
+   <div class="container-fluid che-development">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 che-footer-development">
+         <a href="http://4side.in.ua">
+            <img src="public/img/development1-01.svg" alt="" />
+         </a>
+      </div>
+   </div>
+   <script src="public/build/build.app.js"></script>
 </body>
 
 </html>
