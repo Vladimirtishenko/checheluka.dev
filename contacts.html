@@ -433,15 +433,28 @@
          </div>
       </div>
    </div>
-   <div class="container-fluid che-development">
-      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 che-footer-development">
-         <a href="http://4side.in.ua">
-            <img src="public/img/development1-01.svg" alt="" />
-         </a>
-      </div>
-   </div>
-   <script src="public/build/build.app.js"></script>
+   <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+   <script>
+      let parent = document.querySelector('.masonry-parent');
+      imagesLoaded( parent, function( instance ) {
+          
+          let msnry = new Masonry( '.masonry-parent', {
+            itemSelector: '.masonry-item',
+            horizontalOrder: true,
+            initLayout: false
+          });
+          
+          msnry.on( 'layoutComplete', function( items ) {
+            
+            parent.style.cssText += "opacity: 1; overflow: hidden";  
+      
+          });
+          
+          msnry.layout();
+      
+      });
+   </script>
 </body>
 
 </html>

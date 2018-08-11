@@ -28,6 +28,9 @@
   },
   "devDependencies": {},
   "scripts": {
+    "build": "webpack --colours -p",
+    "dev": "webpack --watch",
+    "gulp": "gulp jade",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

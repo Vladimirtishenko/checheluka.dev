@@ -630,13 +630,27 @@ a.che-main__block
     @media (max-width: 640px)
         padding-top 0
                 
-.msnr-item
+.masonry-item
     width 33.3%
     @media (max-width: 991px)
         width 50%
     @media (max-width: 500px)
         width 100%
-                        
+
+.masonry-stamp 
+    width 33.3%
+    height 100px
+    @media (max-width: 991px)
+        width 0%
+    @media (max-width: 500px)
+        width 0%
+        
+.masonry-parent
+    opacity 0
+    position relative
+    height 300px
+    overflow hidden
+
 .che-index__banner-item
     padding 30px 25px 100px
     text-align center
@@ -652,11 +666,12 @@ a.che-main__block
                 
 .che-index__banner-img
     max-width 100%
+    width 100%
     margin-bottom 50px
     @media (max-width: 1200px)
         margin-bottom 35px
     @media (max-width: 700px)
-        margin-bottom 15px
+        margin-bottom 25px
         
 .che-index__banner-title
     font 48px/48px RobotoBlack
@@ -671,50 +686,64 @@ a.che-main__block
         font-size 30px
         line-height 30px
     @media (max-width: 700px)
-        font-size 24px
-        line-height 24px
+        font-size 34px
+        line-height 34px
                 
 .che-index__banner-title--red 
     background #f50b33
     color #fff
-    margin-right 15px
+    padding-left 4px
 
 .che-index__banner-title--blue
     background #0179b5
     color #fff
+    padding-left 4px
     
 .che-index__banner-title--yellow
     background #fff59b
-    color #fff
+    color #000
+    padding-left 4px
     
 .che-index__banner-title--grey
     background #9db9ca
     color #fff
+    padding-left 4px
     
 .che-index__banner-title--marsala
     background #7f1949
     color #fff
+    padding-left 4px
     
 .che-index__banner-title--bieje
     background #e3b3a7 
     color #fff
+    padding-left 4px
     
 .che-index__banner-title--darkblue   
     background #194eaa
     color #fff
+    padding-left 4px
     
 .che-index__banner-title--pink
     background #a55a94
     color #fff
+    padding-left 4px
     
 .che-index__banner-title--lightblue
     background #cce0f1
-    color #fff
+    color #000
+    padding-left 4px
     
 .che-index__banner-title--lightpink
     background #f09dc6
     color #fff
+    padding-left 4px
 
+.che-index__banner-title--rose
+    background #ff0067
+    color #fff
+    padding-left 4px
+    
 
 
 /*.che-index__banners-wrap

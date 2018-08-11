@@ -8,32 +8,6 @@ const stylusLoader = ExtractTextPlugin.extract("style-loader", "css-loader?minim
 const NODE_ENV = process.env.NODE_ENV || "development";
 
 let config = [{
-    name: 'js',
-    entry: {
-        app: './public/js/app.js',
-    },
-    output: {
-        path: "./public/build/",
-        filename: 'build.[name].js',
-        publicPath: './public/build/'
-    },
-    module: {
-        loaders: [
-            {
-                test: /\.js?$/,
-                exclude: /(node_modules)/,
-                loader: "babel",
-                query: {
-                    presets: ['es2015']
-                }
-            }
-        ]
-    },
-    resolve: {
-        modulesDirectories: ["node_modules"],
-        extensions: ["", ".js", "css", "styl", "woff", "ttf", "otf", "jpg"]
-	}
-}, {
     name: 'styles',
     entry: {
         styles: "./public/styl/build.styl",
