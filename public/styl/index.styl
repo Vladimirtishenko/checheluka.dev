@@ -635,6 +635,8 @@ a.che-main__block
     width 33.3%
     &:hover
         cursor url('../img/plus.png'), auto i 
+        & .che-index__banner-img 
+            filter grayscale(100%)
     @media (max-width: 991px)
         width 50%
     @media (max-width: 500px)
@@ -671,6 +673,8 @@ a.che-main__block
     max-width 100%
     width 100%
     margin-bottom 50px
+    filter grayscale(0%)
+    transition .3s
     @media (max-width: 1200px)
         margin-bottom 35px
     @media (max-width: 700px)
