@@ -1,6 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:500,700,700i&subset=cyrillic');
 
 @font-face
+   font-family RobotoBold
+   font-style normal
+   src url('../fonts/Roboto-Bold.ttf')
+
+@font-face
+   font-family RobotoBlack
+   font-style normal
+   src url('../fonts/Roboto-Black.ttf')
+   
+@font-face
    font-family RobotoRegular
    font-style normal
    src url('../fonts/Roboto-Regular.ttf')
@@ -22,6 +32,10 @@
 
 html, body
     height 100%
+
+body
+    display flex
+    flex-direction column
 
 table
     width 100%
@@ -181,4 +195,7 @@ optgroup
     border 1px solid rgba(89, 89, 89, 0.08)
     &:hover
         background transparent
+
+.che-nowrap
+    white-space nowrap
     

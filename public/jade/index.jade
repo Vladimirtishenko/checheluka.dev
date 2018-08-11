@@ -1,110 +1,111 @@
 extends layout/layout.jade
 
 block content
-    .container
-        .row.che-min-wrap-flexible.che-main__margin.che-top-margin
-            .col-xl-7.col-lg-7.col-md-7.col-sm-12.col-xs-12.che-flexible__child-index
-                    a.che-link-item-index.che-four-block__item(href="")
-                        span.che-mask
-                            img.img-responsive(src="./public/img/main_img_1.jpg")
-                        span.che-flexible__child__title-white
-                            | коллекция
-                        
-             .col-xl-5.col-lg-5.col-md-5.col-sm-12.col-xs-12.che-flexible__child-index
-                    a.che-link-item-index.che-sm-md-between.che-four-block__item(href="")
-                        span.che-mask
-                            img.img-responsive(src="./public/img/main_img_2.jpg")
-                        .che-flexible__child__title-auction
-                            span.che-flexible__child__title-auction-general аукцион
-                            span.che-flexible__child__title-auction-less начнется в конце февраля
-                        
-                    a.che-link-item-index.che-sm-md-between.che-four-block__item(href="")
-                        span.che-mask
-                            img.img-responsive(src="./public/img/main_img_3.jpg")
-                        .che-flexible__child__title-sale
-                            span.che-flexible__child__title-sale-general sale
-                            span.che-flexible__child__title-sale-less скидки до 70 %
-                        
+    .che-index__wrap
+        img.che-index__wrap_bg(src="./public/img/index_bg_bottom.png")
+        .che-index__inner
+            .che-index__info-wrap
+                .che-index__info-head 
+                    p ООО "Чечелюка ПЛЮС" является официальным дилером и представителем в Российской Федерации торговых марок и брендов, представленных в нашем оптовом онлайн-магазине
+
+                .che-index__info-inner
+
+                    .che-index__info-item.che-index__info-item--tobottom
+                        .che-index__info-textpart.text--top.text--1
+                            p.che-index__info-text Доставка ДО транспортной компании БЕСПЛАТНАЯ
+
+                        .che-index__info-imgpart.border--red.img--bottom    
+                            img(src="./public/img/index_free_triangle.svg").che-index__info-img
+
+                    .che-index__info-item
+                        .che-index__info-imgpart.border--green.img--top                              
+                            img(src="./public/img/index_tshirt_triangle.svg").che-index__info-img
+
+                        .che-index__info-textpart.text--bottom.text--2                        
+                            p.che-index__info-text Минимальный заказ - #[span.che-nowrap 5 любых единиц со всего сайта]
+
+                    .che-index__info-item.che-index__info-item--tobottom
+                        .che-index__info-textpart.text--top.text--3
+                            p.che-index__info-text Моментальная отгрузка (1-3 дня)
+
+                        .che-index__info-imgpart.border--yellow.img--bottom                                  
+                            img(src="./public/img/index_delivery_triangle.svg").che-index__info-img
+
+                    .che-index__info-item
+                        .che-index__info-imgpart.border--orange.img--top                               
+                            img(src="./public/img/index_card_triangle.svg").che-index__info-img
+
+                        .che-index__info-textpart.text--bottom.text--4                           
+                            p.che-index__info-text Возможность безналичного расчёта
                 
-        .row.che-flexible.che-four-block.che-main__margin
-            .col-xl-3.col-lg-3.col-md-3.col-sm-6.col-xs-6.che-four-block__item.che-margin-md-sm.che-xs-four
-                    a(href="")
-                        .che-block-top-title
-                            span
-                                | Шубки
-                        span.che-mask
-                            img.img-responsive.img-borders(src="./public/img/main_img_11.jpg")
-            .col-xl-3.col-lg-3.col-md-3.col-sm-6.col-xs-6.che-four-block__item.che-margin-md-sm.che-xs-four
-                    a(href="")
-                        .che-block-top-title
-                            span
-                                | Верхняя одежда
-                        span.che-mask
-                            img.img-responsive(src="./public/img/main_img_4.jpg")
-            .col-xl-3.col-lg-3.col-md-3.col-sm-6.col-xs-6.che-four-block__item.che-xs-four
-                    a(href="")
-                        .che-block-top-title
-                            span
-                                | Платья
-                        span.che-mask
-                            img.img-responsive.img-borders(src="./public/img/main_img_6.jpg")
-            .col-xl-3.col-lg-3.col-md-3.col-sm-6.col-xs-6.che-four-block__item.che-xs-four
-                    a(href="")
-                        .che-block-top-title
-                            span
-                                | Вязаные изделия
-                        span.che-mask
-                            img.img-responsive(src="./public/img/main_img_5.jpg")
-    
-    .container-fluid.che-main__margin.che-news-container
-        .row
-            .col-xl-12.col-lg-12.col-md-12.col-sm-12.col-xs-12
-                .container 
-                    .row.che-flexible
-                        .col-xl-4.col-lg-4.col-md-4.col-sm-4.col-xs-4.che-news-container__first
-                            img(src="./public/img/main_img_new1.png", alt="")
-                        .col-xl-4.col-lg-4.col-md-4.col-sm-4.col-xs-6.che-news-container__title
-                            h2.che-news-container__title-h2
-                                span.che-news-container__title-text Новинки
-                                span.che-news-container__title-description Будь первым!
-                            button.btn.btn-white
-                                | Перейти
+                .che-index__info-text--mobile
+                    p.che-index__info-item--mobile.che-index__info-item--mobile-1 Доставка ДО транспортной компании БЕСПЛАТНАЯ
+                    p.che-index__info-item--mobile.che-index__info-item--mobile-2 Минимальный заказ - #[span.che-bold 5] любых единиц со всего сайта
+                    p.che-index__info-item--mobile.che-index__info-item--mobile-3 Моментальная отгрузка (1-3 дня)
+                    p.che-index__info-item--mobile.che-index__info-item--mobile-4 Возможность безналичного расчёта
 
-                        .col-xl-4.col-lg-4.col-md-4.col-sm-4.col-xs-0.che-news-container__second
-                             img(src="./public/img/main_img_new2.png", alt="")
+            //- banners part---------------------
+            .che-index__banners-wrap.msnr-parent.js-masonry(data-masonry-options='{"itemSelector":".msnr-item"}')
+                a.msnr-item.che-index__banner-item(href="#")
+                    img(src="./public/img/index_jadone_fashion.jpg" alt="jadone_fashion").che-index__banner-img
+                    p.che-index__banner-title jadone
+                        br
+                        #[span.che-index__banner-title--red fashion]
 
+                a.msnr-item.che-index__banner-item(href="#")
+                    img(src="./public/img/index_view_mode.jpg" alt="view_mode").che-index__banner-img
+                    p.che-index__banner-title view#[span.che-index__banner-title--blue mode]
 
-    .container          
-        .row.che-flexible.che-main__margin
-            a.col-xl-6.col-lg-6.col-md-6.col-sm-12.col-xs-12.che-excluzive-collection-first
-                img(src="./public/img/main_img_new3.png")
-                span.che-excluzive-collection__title.che-left__title
-                    | эксклюзивная Верхняя одежда
-            a.col-xl-6.col-lg-6.col-md-6.col-sm-12.col-xs-12.che-excluzive-collection-second
-                img(src="./public/img/main_img_new4.png")
-                span.che-excluzive-collection__title.che-right__title
-                    | вечерние Платья
-                       
+                a.msnr-item.che-index__banner-item(href="#")
+                    img(src="./public/img/index_it_elle.jpg" alt="it_elle").che-index__banner-img
+                    p.che-index__banner-title it#[span.che-index__banner-title--bieje elle]
 
-                    
-    .container-fluid.che-main__margin.che-mans-and-kids-container.che-flexible 
-        .container
-            .row.che-flexible            
-                .col-xl-6.col-lg-6.col-md-6.col-sm-12.col-xs-12
-                    .row.che-flexible 
-                        .che-mans-and-kids-container__title.che-left-absolute__title
-                            | Мужская
-                            br 
-                            | одежда
-                        a(href="")
-                            img.img-responsive(src="./public/img/main_img_man.jpg")
-                          
-                .col-xl-6.col-lg-6.col-md-6.col-sm-12.col-xs-12
-                    .row.che-flexible 
-                        .che-mans-and-kids-container__title.che-right-absolute__title
-                            | Детская
-                            br
-                            | одежда
-                        a(href="")
-                            img.img-responsive(src="./public/img/main_img_kids.jpg")
-                        
+                a.msnr-item.che-index__banner-item(href="#")
+                    img(src="./public/img/index_tess_dress.jpg" alt="tess_dress").che-index__banner-img
+                    p.che-index__banner-title tess#[span.che-index__banner-title--yellow dress]
+
+                a.msnr-item.che-index__banner-item(href="#")
+                    img(src="./public/img/index_glem.png" alt="glem").che-index__banner-img
+                    p.che-index__banner-title #[span.che-index__banner-title--grey glem]
+
+                a.msnr-item.che-index__banner-item(href="#")
+                    img(src="./public/img/index_marse.jpg" alt="it_marse").che-index__banner-img
+                    p.che-index__banner-title mar#[span.che-index__banner-title--marsala se]
+
+                a.msnr-item.che-index__banner-item(href="#")
+                    img(src="./public/img/index_rimari.jpg" alt="rimari").che-index__banner-img
+                    p.che-index__banner-title ri#[span.che-index__banner-title--bieje mari]
+
+                a.msnr-item.che-index__banner-item(href="#")
+                    img(src="./public/img/index_mila_nova.jpg" alt="mila_nova").che-index__banner-img
+                    p.che-index__banner-title mila#[span.che-index__banner-title--darkblue nova]
+
+                a.msnr-item.che-index__banner-item(href="#")
+                    img(src="./public/img/index_seventeen.jpg" alt="seventeen").che-index__banner-img
+                    p.che-index__banner-title #[span.che-index__banner-title--pink seven]teen
+
+                a.msnr-item.che-index__banner-item(href="#")
+                    img(src="./public/img/index_safika.jpg" alt="safika").che-index__banner-img
+                    p.che-index__banner-title #[span.che-index__banner-title--lightblue safika]
+
+                a.msnr-item.che-index__banner-item(href="#")
+                    img(src="./public/img/index_art_style_leggings.jpg" alt="art_style_leggings").che-index__banner-img
+                    p.che-index__banner-title art
+                        br
+                        #[span.che-index__banner-title--grey style]
+                        br
+                        | leggings
+
+                a.msnr-item.che-index__banner-item(href="#")
+                    img(src="./public/img/index_fashion_up.jpg" alt="fashion_up").che-index__banner-img
+                    p.che-index__banner-title fashion#[span.che-index__banner-title--blue up]
+
+                a.msnr-item.che-index__banner-item(href="#")
+                    img(src="./public/img/index_luzana.jpg" alt="luzana").che-index__banner-img
+                    p.che-index__banner-title #[span.che-index__banner-title--lightpink luzana]
+
+                a.msnr-item.che-index__banner-item(href="#")
+                    img(src="./public/img/index_irena_richi.png" alt="irena_richi").che-index__banner-img
+                    p.che-index__banner-title irena
+                        br
+                        #[span.che-index__banner-title--red richi]

@@ -5,26 +5,25 @@
 	background-repeat no-repeat
 
 .che-header
-	padding 75px 0 55px
+	padding 70px 0 62px
 	display flex
 	align-items center
 	justify-content center
 	overflow hidden
-	&:hover .che-header__title
-		display none
-	&:hover .che-header__title-hover
-		display block
 
+.che-header__logo-link
+	width 500px
+	
 .che-header__logo
 	max-width 100%
 
 .che-header__title
 	text-align center
-	color #464646
-	font-size 17px
-	font-family RobotoLight
-	padding 15px 0 0 0
-	letter-spacing 1px
+	color #000
+	font-size 14px
+	font-family RobotoBold
+	padding 20px 0 0 0
+	letter-spacing 7px
 	text-transform uppercase
 	
 .che-header__title-hover
@@ -63,6 +62,7 @@
 @media (max-width: 749px)
 	.che-header__logo-link
 		margin 0 -95px
+		width auto
 		
 	.che-header
 		padding 45px 0 35px

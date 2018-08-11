@@ -1,7 +1,7 @@
 webpackJsonp([1],{
 
 /***/ 3:
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	'use strict';
 
@@ -46,6 +46,6 @@ webpackJsonp([1],{
 
 	exports.default = new ModalAction();
 
-/***/ }
+/***/ })
 
 });

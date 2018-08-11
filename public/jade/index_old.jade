@@ -1,0 +1,110 @@
+extends layout/layout.jade
+
+block content
+    .container
+        .row.che-min-wrap-flexible.che-main__margin.che-top-margin
+            .col-xl-7.col-lg-7.col-md-7.col-sm-12.col-xs-12.che-flexible__child-index
+                    a.che-link-item-index.che-four-block__item(href="")
+                        span.che-mask
+                            img.img-responsive(src="./public/img/main_img_1.jpg")
+                        span.che-flexible__child__title-white
+                            | коллекция
+                        
+             .col-xl-5.col-lg-5.col-md-5.col-sm-12.col-xs-12.che-flexible__child-index
+                    a.che-link-item-index.che-sm-md-between.che-four-block__item(href="")
+                        span.che-mask
+                            img.img-responsive(src="./public/img/main_img_2.jpg")
+                        .che-flexible__child__title-auction
+                            span.che-flexible__child__title-auction-general аукцион
+                            span.che-flexible__child__title-auction-less начнется в конце февраля
+                        
+                    a.che-link-item-index.che-sm-md-between.che-four-block__item(href="")
+                        span.che-mask
+                            img.img-responsive(src="./public/img/main_img_3.jpg")
+                        .che-flexible__child__title-sale
+                            span.che-flexible__child__title-sale-general sale
+                            span.che-flexible__child__title-sale-less скидки до 70 %
+                        
+                
+        .row.che-flexible.che-four-block.che-main__margin
+            .col-xl-3.col-lg-3.col-md-3.col-sm-6.col-xs-6.che-four-block__item.che-margin-md-sm.che-xs-four
+                    a(href="")
+                        .che-block-top-title
+                            span
+                                | Шубки
+                        span.che-mask
+                            img.img-responsive.img-borders(src="./public/img/main_img_11.jpg")
+            .col-xl-3.col-lg-3.col-md-3.col-sm-6.col-xs-6.che-four-block__item.che-margin-md-sm.che-xs-four
+                    a(href="")
+                        .che-block-top-title
+                            span
+                                | Верхняя одежда
+                        span.che-mask
+                            img.img-responsive(src="./public/img/main_img_4.jpg")
+            .col-xl-3.col-lg-3.col-md-3.col-sm-6.col-xs-6.che-four-block__item.che-xs-four
+                    a(href="")
+                        .che-block-top-title
+                            span
+                                | Платья
+                        span.che-mask
+                            img.img-responsive.img-borders(src="./public/img/main_img_6.jpg")
+            .col-xl-3.col-lg-3.col-md-3.col-sm-6.col-xs-6.che-four-block__item.che-xs-four
+                    a(href="")
+                        .che-block-top-title
+                            span
+                                | Вязаные изделия
+                        span.che-mask
+                            img.img-responsive(src="./public/img/main_img_5.jpg")
+    
+    .container-fluid.che-main__margin.che-news-container
+        .row
+            .col-xl-12.col-lg-12.col-md-12.col-sm-12.col-xs-12
+                .container 
+                    .row.che-flexible
+                        .col-xl-4.col-lg-4.col-md-4.col-sm-4.col-xs-4.che-news-container__first
+                            img(src="./public/img/main_img_new1.png", alt="")
+                        .col-xl-4.col-lg-4.col-md-4.col-sm-4.col-xs-6.che-news-container__title
+                            h2.che-news-container__title-h2
+                                span.che-news-container__title-text Новинки
+                                span.che-news-container__title-description Будь первым!
+                            button.btn.btn-white
+                                | Перейти
+
+                        .col-xl-4.col-lg-4.col-md-4.col-sm-4.col-xs-0.che-news-container__second
+                             img(src="./public/img/main_img_new2.png", alt="")
+
+
+    .container          
+        .row.che-flexible.che-main__margin
+            a.col-xl-6.col-lg-6.col-md-6.col-sm-12.col-xs-12.che-excluzive-collection-first
+                img(src="./public/img/main_img_new3.png")
+                span.che-excluzive-collection__title.che-left__title
+                    | эксклюзивная Верхняя одежда
+            a.col-xl-6.col-lg-6.col-md-6.col-sm-12.col-xs-12.che-excluzive-collection-second
+                img(src="./public/img/main_img_new4.png")
+                span.che-excluzive-collection__title.che-right__title
+                    | вечерние Платья
+                       
+
+                    
+    .container-fluid.che-main__margin.che-mans-and-kids-container.che-flexible 
+        .container
+            .row.che-flexible            
+                .col-xl-6.col-lg-6.col-md-6.col-sm-12.col-xs-12
+                    .row.che-flexible 
+                        .che-mans-and-kids-container__title.che-left-absolute__title
+                            | Мужская
+                            br 
+                            | одежда
+                        a(href="")
+                            img.img-responsive(src="./public/img/main_img_man.jpg")
+                          
+                .col-xl-6.col-lg-6.col-md-6.col-sm-12.col-xs-12
+                    .row.che-flexible 
+                        .che-mans-and-kids-container__title.che-right-absolute__title
+                            | Детская
+                            br
+                            | одежда
+                        a(href="")
+                            img.img-responsive(src="./public/img/main_img_kids.jpg")
+                        
