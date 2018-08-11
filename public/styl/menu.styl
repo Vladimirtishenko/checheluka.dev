@@ -2,14 +2,64 @@
     border-width 1px 0px 1px 0px
     border-style solid
     border-color lgrey
-    width 100%
+    position relative
 
 .che-menu__inner
+    padding 10px 0
     display flex
     align-items center
     justify-content space-between
-    padding 10px 0
+    position static
+
+.che-menu__submenu-flex
+    display flex
+    justify-content flex-start
+    align-items flex-start
+    padding 20px 0
     position relative
+    &:before
+        content ""
+        width 115px
+        height 25px
+        bottom 100%
+        left 80px
+        background rgba(255, 0, 0, 0)
+        position absolute
+    
+.che-menu__item-with-menu
+    &:before 
+    &:hover .che-menu__submenu
+        display block
+        
+
+.che-menu__submenu
+    position absolute
+    display none
+    width 100%
+    left 0
+    background url('../img/main_img_10.jpg')
+    top 100%
+    z-index 1
+    box-shadow 0px 19px 24px -20px rgba(0,0,0,0.41)
+
+.che-menu__submenu-item
+    padding-right 150px
+    &:last-child 
+        padding-right 0
+    
+.che-menu__submenu-link
+    text-transform uppercase
+    font-size 14px
+    font-family OpenSansLight
+    padding-bottom 3px 
+    color #000
+    margin 30px 0
+    display table
+    border-bottom 1px solid transparent
+    &:hover 
+        color #000
+        border-bottom 1px solid rgba(0,0,0, .2)
+        
 
 .che-search
     display flex 
@@ -26,7 +76,7 @@
     &:last-child
         margin-right 0px
 
-.che-menu__item a
+.che-menu__item > a, .che-menu__item > span
     text-transform uppercase
     color #000
     font-family RobotoLight
@@ -43,11 +93,11 @@
     padding-right 20px
     
 .che-search .che-bucket-container
-    width 30px
+    width 22px
     height 30px
     display block
     background url('../img/sprite_chechelyka.png')
-    background-position -390px 2px
+    background-position -393px 2px
 
 .che-search__form
     position relative
@@ -80,17 +130,126 @@
     border-bottom 1px solid lgrey i
     padding-bottom 2px
 
+.che-menu__submenu-figure-item
+    background #fffbd7 
+    position relative
+    padding 20px 80px
+    display table
+    margin 30px 0
+    text-align center
+    color #7e2a44
+    display inline-block
+    transition .5s
+    & .che-sub-helper-first
+        &:before
+            position absolute
+            content ""
+            width 63px
+            height 2px 
+            background #7e2a44
+            top 0
+            left 0
+        &:after
+            position absolute
+            content ""
+            width 2px
+            height 33px 
+            background #7e2a44
+            top 0
+            left 0
+    & .che-sub-helper-last
+        &:before
+            position absolute
+            width 63px
+            height 2px 
+            background #7e2a44
+            bottom 0
+            right 0
+            content "" 
+        &:after
+            position absolute
+            width 2px
+            height 33px 
+            background #7e2a44
+            bottom 0
+            right 0
+            content ""
+    &:hover
+        color #7e2a44
+        filter brightness(80%) contrast(130%)
+
+.che-menu__submenu-title
+    font-size 18px
+    font-family OpenSansLight
+    
+.che-menu__submenu-image-item
+    position relative
+    display table
+    transition .5s
+    &:hover 
+        filter brightness(90%) contrast(130%)
+    
+.che-menu__submenu-title-image
+    position absolute
+    top 50%
+    transform translateY(-50%)
+    color #fff59b
+    font-size 18px
+    font-family OpenSansLight
+    z-index 1
+    left 40px
+
+@media (min-width: 992px) and (max-width:1170px)    
+    .che-menu__submenu-item
+        padding-right 100px
+        &:last-child 
+            padding-right 0    
 
 @media (min-width: 768px) and (max-width:992px)
-    .che-menu__item a
+    .che-menu__item  > a, .che-menu__item > span
+        font-size 13px
+        
+    .che-menu__submenu-link
         font-size 13px
         
     .che-menu__item
         margin-right 10px
+    
+    .che-menu__submenu-flex
+        justify-content space-between
+
+    .che-menu__submenu-item
+        padding-right 0
 
 @media (max-width: 767px)
     .che-menu__list-button-mobile
         display block
+    
+    .che-menu__submenu-link
+        margin 20px 0
+
+    .che-menu__inner
+        position relative
+        
+    .che-menu__submenu-item
+        padding-right 0
+        
+    .che-menu__submenu
+        box-shadow none
+        
+    .che-menu__submenu.che-menu
+        border none
+        
+    .che-menu__submenu-flex
+        justify-content space-between
+    
+    .che-menu__submenu-item
+        &:last-child
+            display none
+
+    .che-menu__submenu
+        top 0
+        border-top none
 
     .che-menu__list
         display none
@@ -126,3 +285,11 @@
             padding 15px 0 30px 0
         &:first-child
             padding 30px 0 15px 0
+            
+@media (max-width: 479px)
+    .che-menu__submenu-flex
+        flex-wrap wrap
+        
+    .che-menu__submenu-item
+        &:first-child
+            width 100%

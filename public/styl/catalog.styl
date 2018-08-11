@@ -578,8 +578,13 @@
     .catalog-blocks-container__block.che-min
         width 45%
         
-    .thirdsize
+    .thirdsize, .halfsize
         display none
+        
+    .catalog-blocks-container__block.che-full, .catalog-blocks-container__block.che-medium
+        &:hover 
+            .catalog-blocks-container__block__bottom-inner-container
+                display none
         
 @media screen and (max-width 419px)
     .catalog-blocks-container__block.che-full
@@ -591,5 +596,10 @@
     .catalog-blocks-container__block.che-min
         width 95%
     
-    .thirdsize
+    .thirdsize, .halfsize
         display none
+        
+    .catalog-blocks-container__block.che-full, .catalog-blocks-container__block.che-medium
+        &:hover 
+            .catalog-blocks-container__block__bottom-inner-container
+                display none

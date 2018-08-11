@@ -9,14 +9,39 @@
                         li.che-menu__item
                             a(href="/").che-active Главная
                         li.che-menu__item
-                            a(href="catalog.html") Каталог
+                            span.che-menu__item-with-menu Категории
+                                .che-menu__submenu.che-menu
+                                    .container
+                                        .row
+                                            .col-xl-12.col-lg-12.col-md-12.col-sm-12.col-xs-12
+                                                .che-menu__submenu-flex
+                                                    .che-menu__submenu-item
+                                                        a.che-menu__submenu-link(href="") Вся коллекция
+                                                        a.che-menu__submenu-link(href="") Платья
+                                                        a.che-menu__submenu-link(href="") Шубки
+                                                        a.che-menu__submenu-link(href="") Верхняя одежда
+                                                        a.che-menu__submenu-link(href="") Вязаные изделия
+                                                    .che-menu__submenu-item
+                                                        a.che-menu__submenu-link(href="") Эксклюзивная верхняя одежда
+                                                        a.che-menu__submenu-link(href="") Вечерние платья
+                                                        a.che-menu__submenu-link(href="") Мужская одежда
+                                                        a.che-menu__submenu-link(href="") Детская одежда
+                                                        a.che-menu__submenu-link(href="") Обувь
+                                                    .che-menu__submenu-item
+                                                        a(href="").che-menu__submenu-figure-item
+                                                            span.che-sub-helper-first
+                                                            span.che-menu__submenu-title Хиты недели
+                                                            span.che-sub-helper-last
+                                                        a(href="").che-menu__submenu-image-item
+                                                            img(src="public/img/main_img_9.jpg", alt="")
+                                                            span.che-menu__submenu-title-image Новинки
                         li.che-menu__item
                             a(href="feedback.html") Отзывы
                         li.che-menu__item
                             a(href="delivery.html") Оплата и доставка
                         li.che-menu__item
                             a(href="contacts.html") Контакты
-                .che-search.col-xs-12.col-sm-4.col-lg-3
+                .che-search.col-xs-12.col-sm-3.col-lg-3
                     a(href="/" class="che-bucket-container")
                     form.che-search__form(action="")
                         input.form-control(type='text', placeholder='Поиск...')

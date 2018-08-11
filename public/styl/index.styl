@@ -426,6 +426,7 @@ a.che-main__block
     box-shadow 0 0 0 1px #888888 inset
     padding 62px 0 45px
     position relative
+    margin 0 25px
     @media (max-width: 1199px)
         padding-top 75px
     @media (max-width: 991px)
@@ -632,11 +633,13 @@ a.che-main__block
                 
 .masonry-item
     width 33.3%
+    &:hover
+        cursor url('../img/plus.png'), auto i 
     @media (max-width: 991px)
         width 50%
     @media (max-width: 500px)
         width 100%
-
+    
 .masonry-stamp 
     width 33.3%
     height 100px
