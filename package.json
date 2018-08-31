@@ -22,6 +22,7 @@
     "build": "webpack --colours -p",
     "dev": "webpack --watch",
     "gulp": "gulp jade",
+    "clear": "rm -rf node_modules",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
