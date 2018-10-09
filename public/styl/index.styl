@@ -396,9 +396,10 @@ a.che-main__block
         width 70%
 //----------------------------------------------
 
-.che-index__wrap
+.che-index__common-wrap
     flex 1 0 auto
     position relative
+    overflow hidden
 
 .che-index__wrap_bg
     position absolute
@@ -412,7 +413,7 @@ a.che-main__block
 .che-index__inner
     width 1560px
     margin 0 auto
-    padding 60px 0 15px
+    padding 60px 0 0
     @media (max-width: 1680px)
         width 90%
     @media (max-width: 1199px)
@@ -637,6 +638,8 @@ a.che-main__block
     @media (max-width: 991px)
         padding-top 30px
         margin 0 25px
+    @media (max-width: 800px)
+        padding-top 55px
     @media (max-width: 640px)
         padding-top 0
 
@@ -653,7 +656,11 @@ a.che-main__block
         margin-bottom 100px
     @media (max-width: 1200px)
         margin-bottom 80px
-        
+    @media (max-width: 991px)
+        margin-bottom 50px
+    @media (max-width: 800px)
+        margin-bottom 95px
+                       
 .che-index__banner-img
     width 100%
     max-width 100% 
@@ -671,8 +678,16 @@ a.che-main__block
     @media (max-width: 1200px)
         font-size 22px
         letter-spacing 3px
-        margin-bottom 8px       
-
+        margin-bottom 8px
+    @media (max-width: 991px)
+        font-size 16px
+        letter-spacing 2px
+        margin 5px 0 4px
+    @media (max-width: 800px)
+        font-size 25px
+        letter-spacing 4.2px
+        margin 15px 0 10px
+        
 .che-index__banner-textpart
     & p
         font-size 18px
@@ -685,11 +700,54 @@ a.che-main__block
         & p
             font-size 16px
             letter-spacing .2px 
-        
+    @media (max-width: 991px)
+        & p
+            font-size 12px
+            letter-spacing .1px
+    @media (max-width: 800px)
+        & p
+            font-size 16px
+            letter-spacing 3.1px
+            
 //--outwear-------------------        
 .che-index__banner-item--outwear
-    width 39%//610px
-
+    width 39%
+    &:before, &:after
+        content ''
+        display block
+        position absolute
+        z-index -1
+    &:before
+        width 30%
+        height 23%        
+        background transparent url('../img/index_banner_bg_outwear--left.png') no-repeat
+        background-size contain
+        right 110%
+        top 24%
+    &:after
+        width 26%
+        height 20%
+        left 112%
+        bottom 29%
+        background transparent url('../img/index_banner_bg_outwear--right.png') no-repeat
+        background-size contain
+    @media (max-width: 1600px)
+        &:before
+            right 95%
+    @media (max-width: 800px)
+        margin-left 15px
+        width 76%
+        &:before
+            right -27%
+            width 39%
+            height 29%
+            top 34%
+        &:after
+            width 32%
+            height 24%
+            left -2%
+            bottom -106%
+            
 .che-index__banner-textpart--outwear
     position absolute
     top 65px
@@ -698,7 +756,14 @@ a.che-main__block
         right -145px
     @media (max-width: 1200px)
         right -115px
-
+        top 45px
+    @media (max-width: 991px)
+        right -90px
+        top 35px
+    @media (max-width: 800px)
+        right -35%
+        top 12%
+                
 .che-index__banner-title--outwear
 .che-index__banner-title--knitwear
     border-bottom 3px solid #000
@@ -707,27 +772,86 @@ a.che-main__block
         padding-bottom 12px
     @media (max-width: 1200px)
         padding-bottom 9px
-
+    @media (max-width: 991px)
+        padding-bottom 4px
+        border-bottom 2px solid #000
+    @media (max-width: 800px)
+        padding-bottom 8px
+        border-bottom 3px solid #000
+             
 //--dresses---------------------------
 .che-index__banner-item--dresses
-    width 29%//450px
+    width 29%
     margin-left auto
     margin-right 145px
     margin-top 35px
+    &:before, &:after
+        content ''
+        display block
+        position absolute
+        z-index -1
+    &:before
+        width 18%
+        height 11%        
+        background transparent url('../img/index_banner_bg_dresses--left.png') no-repeat
+        background-size contain
+        right 112%
+        top 30%
+    &:after
+        width 49%
+        height 33%
+        left 130%
+        bottom -11%
+        background transparent url('../img/index_banner_bg_dresses--right.png') no-repeat
+        background-size contain    
     @media (max-width: 1560px)
         margin-right 100px
+        &:after
+            left 110%
     @media (max-width: 1366px)
         margin-right 80px
         margin-top 10px
+    @media (max-width: 991px)
+        margin-right 80px
+        margin-top 0
+    @media (max-width: 800px)
+        margin-right initial
+        margin-left 95px
+        margin-bottom 70px
+        width 72%
+        &:before
+            right -19%
+            top 28%
+        &:after
+            display none
+        
 
 //--hats---------------------------
 .che-index__banner-item--hats
-    width 29%//450px
+    width 29%
     margin-top 45px
-
+    &:after
+        content ''
+        display block
+        position absolute
+        z-index -1
+        width 11%
+        height 12%
+        left 127%
+        bottom 45%
+        background transparent url('../img/index_banner_bg_hats--right.png') no-repeat
+        background-size contain
+    @media (max-width: 991px)
+        margin-top 25px        
+    @media (max-width: 800px)
+        width 72%
+        &:after
+            left 112%
+            bottom 76%
+    
 .che-index__banner-textpart--hats
     position absolute
-    top 54%
+    top 50%
     left 51%
     transform translateX(-50%) translateY(-50%)
 
@@ -736,6 +860,42 @@ a.che-main__block
     width 49%
     margin-left auto
     margin-bottom 0
+    &:before, &:after
+        content ''
+        display block
+        position absolute
+        z-index -1
+    &:before
+        width 19%
+        height 18%        
+        background transparent url('../img/index_banner_bg_knitwear--left.png') no-repeat
+        background-size contain
+        right 96%
+        top 32%
+    &:after
+        width 21%
+        height 21%
+        left 89%
+        bottom -25%
+        background transparent url('../img/index_banner_bg_knitwear--right.png') no-repeat
+        background-size contain
+    @media (max-width: 800px)
+        width 94%
+        transform translate(40px)
+        margin-bottom 95px
+        &:before
+            width 26%
+            height 23%
+            right -7%
+            top -66%
+        &:after
+            width 26%
+            height 28%
+            left -16%
+            bottom 27%
+    @media (max-width: 640px)
+        width 88%
+        transform translate(20px)
 
 .che-index__banner-textpart--knitwear
     position absolute
@@ -747,12 +907,28 @@ a.che-main__block
         left -160px
     @media (max-width: 1200px)
         left -135px
-                
+    @media (max-width: 991px)
+        left -100px
+    @media (max-width: 800px)
+        left -15%
+        top 5%
+        
  //--bigsizes-------------------   
 .che-index__banner-item--bigsizes
     width 29%
     margin 0 0 0 163px
     transform translateY(-110px)
+    &:before
+        content ''
+        display block
+        position absolute
+        z-index -1
+        width 66%
+        height 67%
+        background transparent url('../img/index_banner_bg_bigsizes--left.png') no-repeat
+        background-size contain
+        right 76%
+        top 1%
     @media (max-width: 1560px)
         transform translateY(-70px)
         margin 0 0 30px 130px 
@@ -761,17 +937,147 @@ a.che-main__block
         margin 0 0 45px 85px
     @media (max-width: 1200px)
         transform translateY(-40px)
-        margin 0 0 45px 85px
-
+        margin 0 0 75px 85px
+    @media (max-width: 991px)
+        transform translateY(-30px)
+        margin 0 0 45px 70px
+    @media (max-width: 800px)
+        width 72%
+        transform translateY(0px)
+        margin 0 0 165px 25px
+        &:before
+            right -41%
+            top -19%      
+    @media (max-width: 767px)
+        margin 0 0 80px 25px
+        
 .che-index__banner-textpart--bigsizes
     position absolute
-    //width 650px//145%
     left 107%
     bottom 97px
     @media (max-width: 1366px)
         bottom 75px
     @media (max-width: 1200px)
-        bottom 60px                  
+        bottom 60px
+    @media (max-width: 991px)
+        bottom 40px
+    @media (max-width: 800px)
+        bottom -16%
+        left 19%
+    @media (max-width: 767px)
+        left 0
+        position static
+
+//--popular brands--------------------------------
+.che-index__popular-wrap
+    background #e4ecf5
+    padding 70px 0 55px
+    @media (max-width: 991px)
+        padding 50px 0
+    @media (max-width: 800px)
+        padding 65px 0
+    
+.che-index__chapter-inner
+    width 1560px
+    margin 0 auto
+    //outline 1px solid blue
+    @media (max-width: 1680px)
+        width 90%
+    //@media (max-width: 1199px)
+    //    padding-top 70px
+    @media (max-width: 640px)
+        padding 15px
+        width 100%
+        
+.che-index__chapter-title
+    font 28px/22px RobotoBold
+    letter-spacing 6px
+    text-align center
+    text-transform uppercase
+    margin-bottom 65px
+    @media (max-width: 991px)
+        font-size 24px
+        margin-bottom 45px
+    @media (max-width: 800px)
+        font-size 26px
+        margin-bottom 50px
+            
+.che-index__popular-items
+    display flex
+    justify-content space-between
+    @media (max-width: 991px)
+        margin 0 25px
+    @media (max-width: 800px)        
+        flex-flow wrap
+        justify-content center
+
+.che-index__popular-item
+    width 31%
+    background #fff
+    padding 30px
+    display flex
+    flex-direction column
+    color #000
+    &:hover, &:focus
+        color #000
+        text-decoration none
+    @media (max-width: 1366px)
+        padding 25px
+    @media (max-width: 1100px)
+        padding 20px
+    @media (max-width: 991px)
+        padding 15px
+        width 31.5%
+    @media (max-width: 800px)
+        padding 30px
+        width 75%
+        margin-bottom 50px
+          
+.che-index__popular-img-part
+    width 100%
+    //height 575px
+    //border-bottom 1px solid grey
+
+.che-index__popular-img
+    width 100%
+    max-width 100%
+    display inline-block
+
+.che-index__popular-logo-part
+    height 90px
+    //outline 1px solid grey
+    padding 10px 0
+    display flex
+    justify-content center
+    align-items center
+    @media (max-width: 1366px)
+        height 80px
+    @media (max-width: 1100px)
+        height 60px
+    @media (max-width: 991px)
+        height 50px
+    @media (max-width: 800px)
+        height 90px
+                
+.che-index__popular-logo
+    max-width 65%
+    max-height 100%
+
+.che-index__popular-name-part
+    padding-top 5px
+    //outline 1px solid grey
+    text-transform uppercase
+    text-align center
+    font 14px/22px RobotoLight
+    letter-spacing 2.8px
+    @media (max-width: 1100px)
+        font-size 12px
+        letter-spacing 2px
+    @media (max-width: 991px)
+        font-size 11px
+    @media (max-width: 991px)
+        font-size 16px   
+    
 /*.masonry-item
     width 33.3%
     &:hover

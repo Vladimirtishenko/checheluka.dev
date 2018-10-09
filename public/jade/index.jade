@@ -1,78 +1,113 @@
 extends layout/layout.jade
 
 block content
-    .che-index__wrap
-        .che-index__inner
-            .che-index__info-wrap
-                .che-index__info-head 
-                    p ООО "Чечелюка ПЛЮС" является официальным дилером и представителем в Российской Федерации торговых марок и брендов, представленных в нашем оптовом онлайн-магазине
+    .che-index__common-wrap
+        .che-index__wrap
+            .che-index__inner
+                .che-index__info-wrap
+                    .che-index__info-head 
+                        p ООО "Чечелюка ПЛЮС" является официальным дилером и представителем в Российской Федерации торговых марок и брендов, представленных в нашем оптовом онлайн-магазине
 
-                .che-index__info-inner
+                    .che-index__info-inner
 
-                    .che-index__info-item.che-index__info-item--tobottom
-                        .che-index__info-textpart.text--top.text--1
-                            p.che-index__info-text Доставка ДО транспортной компании БЕСПЛАТНАЯ
+                        .che-index__info-item.che-index__info-item--tobottom
+                            .che-index__info-textpart.text--top.text--1
+                                p.che-index__info-text Доставка ДО транспортной компании БЕСПЛАТНАЯ
 
-                        .che-index__info-imgpart.border--red.img--bottom    
-                            img(src="./public/img/index_free_triangle.svg").che-index__info-img
+                            .che-index__info-imgpart.border--red.img--bottom    
+                                img(src="./public/img/index_free_triangle.svg").che-index__info-img
 
-                    .che-index__info-item
-                        .che-index__info-imgpart.border--green.img--top                              
-                            img(src="./public/img/index_tshirt_triangle.svg").che-index__info-img
+                        .che-index__info-item
+                            .che-index__info-imgpart.border--green.img--top                              
+                                img(src="./public/img/index_tshirt_triangle.svg").che-index__info-img
 
-                        .che-index__info-textpart.text--bottom.text--2                        
-                            p.che-index__info-text Минимальный заказ - #[span.che-nowrap 5 любых единиц со всего сайта]
+                            .che-index__info-textpart.text--bottom.text--2                        
+                                p.che-index__info-text Минимальный заказ - #[span.che-nowrap 5 любых единиц со всего сайта]
 
-                    .che-index__info-item.che-index__info-item--tobottom
-                        .che-index__info-textpart.text--top.text--3
-                            p.che-index__info-text Моментальная отгрузка (1-3 дня)
+                        .che-index__info-item.che-index__info-item--tobottom
+                            .che-index__info-textpart.text--top.text--3
+                                p.che-index__info-text Моментальная отгрузка (1-3 дня)
 
-                        .che-index__info-imgpart.border--yellow.img--bottom                                  
-                            img(src="./public/img/index_delivery_triangle.svg").che-index__info-img
+                            .che-index__info-imgpart.border--yellow.img--bottom                                  
+                                img(src="./public/img/index_delivery_triangle.svg").che-index__info-img
 
-                    .che-index__info-item
-                        .che-index__info-imgpart.border--orange.img--top                               
-                            img(src="./public/img/index_card_triangle.svg").che-index__info-img
+                        .che-index__info-item
+                            .che-index__info-imgpart.border--orange.img--top                               
+                                img(src="./public/img/index_card_triangle.svg").che-index__info-img
 
-                        .che-index__info-textpart.text--bottom.text--4                           
-                            p.che-index__info-text Возможность безналичного расчёта
-                
-                .che-index__info-text--mobile
-                    p.che-index__info-item--mobile.che-index__info-item--mobile-1 Доставка ДО транспортной компании БЕСПЛАТНАЯ
-                    p.che-index__info-item--mobile.che-index__info-item--mobile-2 Минимальный заказ - #[span.che-bold 5] любых единиц со всего сайта
-                    p.che-index__info-item--mobile.che-index__info-item--mobile-3 Моментальная отгрузка (1-3 дня)
-                    p.che-index__info-item--mobile.che-index__info-item--mobile-4 Возможность безналичного расчёта
+                            .che-index__info-textpart.text--bottom.text--4                           
+                                p.che-index__info-text Возможность безналичного расчёта
+                    
+                    .che-index__info-text--mobile
+                        p.che-index__info-item--mobile.che-index__info-item--mobile-1 Доставка ДО транспортной компании БЕСПЛАТНАЯ
+                        p.che-index__info-item--mobile.che-index__info-item--mobile-2 Минимальный заказ - #[span.che-bold 5] любых единиц со всего сайта
+                        p.che-index__info-item--mobile.che-index__info-item--mobile-3 Моментальная отгрузка (1-3 дня)
+                        p.che-index__info-item--mobile.che-index__info-item--mobile-4 Возможность безналичного расчёта
 
-            //- banners part---------------------
-            .che-index__banners-wrap
-                a(href="#").che-index__banner-item.che-index__banner-item--outwear
-                    img.che-index__banner-img(src="./public/img/index_banner_outwear.jpg" alt="Chechelyka - outwear")
-                    .che-index__banner-textpart.che-index__banner-textpart--outwear
-                        h3.che-index__banner-title.che-index__banner-title--outwear верхняя одежда
-                        p одна строчка этого текста
+                //- banners part---------------------
+                .che-index__banners-wrap
+                    a(href="#").che-index__banner-item.che-index__banner-item--outwear
+                        img.che-index__banner-img(src="./public/img/index_banner_outwear.jpg" alt="Chechelyka - outwear")
+                        .che-index__banner-textpart.che-index__banner-textpart--outwear
+                            h3.che-index__banner-title.che-index__banner-title--outwear верхняя одежда
+                            p одна строчка этого текста
 
-                a(href="#").che-index__banner-item.che-index__banner-item--dresses
-                    img.che-index__banner-img(src="./public/img/index_banner_dresses.jpg" alt="Chechelyka - dresses")
-                    .che-index__banner-textpart
-                        h3.che-index__banner-title платья &#8212;
-                        p одна строчка текста описания
+                    a(href="#").che-index__banner-item.che-index__banner-item--dresses
+                        img.che-index__banner-img(src="./public/img/index_banner_dresses.jpg" alt="Chechelyka - dresses")
+                        .che-index__banner-textpart
+                            h3.che-index__banner-title платья &#8212;
+                            p одна строчка текста описания
 
-                a(href="#").che-index__banner-item.che-index__banner-item--hats
-                    img.che-index__banner-img(src="./public/img/index_banner_hats.jpg" alt="Chechelyka - hats")
-                    .che-index__banner-textpart.che-index__banner-textpart--hats
-                        h3.che-index__banner-title шапки
+                    a(href="#").che-index__banner-item.che-index__banner-item--hats
+                        img.che-index__banner-img(src="./public/img/index_banner_hats.jpg" alt="Chechelyka - hats")
+                        .che-index__banner-textpart.che-index__banner-textpart--hats
+                            h3.che-index__banner-title шапки
 
-                a(href="#").che-index__banner-item.che-index__banner-item--knitwear
-                    img.che-index__banner-img(src="./public/img/index_banner_knitwear.jpg" alt="Chechelyka - knitwear")
-                    .che-index__banner-textpart.che-index__banner-textpart--knitwear
-                        h3.che-index__banner-title.che-index__banner-title--knitwear вязаные изделия
-                        p одна строчка текста
+                    a(href="#").che-index__banner-item.che-index__banner-item--knitwear
+                        img.che-index__banner-img(src="./public/img/index_banner_knitwear.jpg" alt="Chechelyka - knitwear")
+                        .che-index__banner-textpart.che-index__banner-textpart--knitwear
+                            h3.che-index__banner-title.che-index__banner-title--knitwear вязаные изделия
+                            p одна строчка текста
 
-                a(href="#").che-index__banner-item.che-index__banner-item--bigsizes    
-                    img.che-index__banner-img(src="./public/img/index_banner_bigsizes.jpg" alt="Chechelyka - bigsizes")
-                    .che-index__banner-textpart.che-index__banner-textpart--bigsizes
-                        h3.che-index__banner-title.che-index__banner-title--bigsizes одежда больших размеров &#8212;
-                        p одна строчка текста описания               
+                    a(href="#").che-index__banner-item.che-index__banner-item--bigsizes    
+                        img.che-index__banner-img(src="./public/img/index_banner_bigsizes.jpg" alt="Chechelyka - bigsizes")
+                        .che-index__banner-textpart.che-index__banner-textpart--bigsizes
+                            h3.che-index__banner-title.che-index__banner-title--bigsizes одежда больших размеров &#8212;
+                            p одна строчка текста описания
+
+            //--popular goods-----------------------
+            .che-index__popular-wrap
+                h3.che-index__chapter-title.che-index__popular-head популярные бренды
+                .che-index__chapter-inner
+                    .che-index__popular-items
+                        a(href="#").che-index__popular-item
+                            .che-index__popular-img-part
+                                img.che-index__popular-img(src="./public/img/index_popular--jadone.jpg" alt="Chechelyka - jadone fashion")
+                            .che-index__popular-logo-part
+                                img.che-index__popular-logo(src="./public/img/index_popular--jadone-logo.png" alt="Chechelyka - jadone fashion logo")
+                            .che-index__popular-name-part
+                                p jadone fashion                              
+
+                        a(href="#").che-index__popular-item
+                            .che-index__popular-img-part
+                                img.che-index__popular-img(src="./public/img/index_popular--viewmode.jpg" alt="Chechelyka - view mode")                         
+                            .che-index__popular-logo-part
+                                img.che-index__popular-logo(src="./public/img/index_popular--viewmode-logo.png" alt="Chechelyka - view mode logo")
+                            .che-index__popular-name-part
+                                p view mode   
+
+                        a(href="#").che-index__popular-item
+                            .che-index__popular-img-part
+                                img.che-index__popular-img(src="./public/img/index_popular--seventeen.jpg" alt="Chechelyka - seventeen")             
+                            .che-index__popular-logo-part
+                                img.che-index__popular-logo(src="./public/img/index_popular--seventeen-logo.png" alt="Chechelyka - seventeen logo")
+                            .che-index__popular-name-part
+                                p seventeen
+
+            //--bestsellers--------------------------
+            .che-index__bestsellers-wrap
+                h3.che-index__chapter-title.che-index__bestsellers-head топ продаж
+                .che-index__chapter-inner
 
 
                 //- a.masonry-item.che-index__banner-item(href="#")
