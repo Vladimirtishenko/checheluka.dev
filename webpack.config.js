@@ -1,133 +1,111 @@
-/*const path = require('path');
-const autoprefixer = require('autoprefixer');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-
-module.exports = {
-  entry: {
-    app: [
-      'babel-polyfill',
-      './core.js',
-    ]
-  },
-  output: {
-    path: path.resolve(__dirname, 'build'),
-    filename: 'core.min.js'
-  },
-  module: {
-    rules: [
-      {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        use: {
-          loader: "babel-loader"
-        }
-      },
-      {
-        use: ['style-loader', 'css-loader'],
-        test: /\.css$/
-      },
-      {
-         test: /\.styl$/, 
-         loader: ExtractTextPlugin.extract({ fallback: 'style-loader', 
-              use: [
-              'css-loader?minimize!',
-              {
-                  loader: 'postcss-loader',
-                  options: {
-                      plugins: function () {
-                          return [autoprefixer()]
-                      },
-                      sourceMap: 'inline'
-                  }
-              },
-              'stylus-loader'
-              ]
-          }) 
-      },
-      {
-          test: /\.(png|woff|woff2|otf|eot|ttf|svg|jpg|jpeg)$/, 
-          loader: 'url-loader?limit=100000'
-      }
-    ]
-  },
-  plugins: [
-    new ExtractTextPlugin("core.min.css"),
-  ],
-  mode: 'production'
-};*/
-
 "use strict";
 
 const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const poststylus = require('poststylus');
-const rucksack = require('rucksack-css');
-const stylusLoader = ExtractTextPlugin.extract("style-loader", "css-loader?minimize!stylus-loader");
-const NODE_ENV = process.env.NODE_ENV || "development";
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const fs = require('fs');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const babelSettings = JSON.parse(fs.readFileSync(".babelrc"));
+const environment = process.env.NODE_ENV || 'development';
+const TerserPlugin = require('terser-webpack-plugin');
 
-let config = [{
+const config = {
     name: 'js',
     entry: {
-        app: './public/js/app.js'
+        app: './public/js/index.js'
     },
     output: {
-        path: __dirname  + "/public/build/",
+        path: __dirname  + "/public/build",
         filename: 'build.[name].js',
-        publicPath: './public/build/'
+        publicPath: './'
     },
     module: {
-        loaders: [
+        rules: [
             {
-                test: /\.js?$/,
-                exclude: /node_modules/,
-                loader: "babel-loader",
-                query: {
-                    presets: ["es2015", "react", "stage-0"]
-                }
-            }
-        ]
-    },
-    resolve: {
-        modules: ["node_modules"],
-        extensions: [".js", "css", "styl", "woff", "ttf", "otf", "jpg", "png", "gif"]
-    },
-    plugins: [
-        new UglifyJSPlugin()
-    ]
-}, {
-    name: 'styles',
-    entry: {
-        styles: "./public/styl/build.styl",
-    },
-    exclude: '/node_modules/',
-    output: {
-        path: './public/build/',
-        filename: '[name].min.css'
-    },
-    module: {
-       loaders: [
-            {
-                test: /\.styl$/,
-                loader: stylusLoader
+                test: /\.pug$/,
+                use: [
+                  {
+                    loader: "file-loader",
+                    options: {
+                      name: "../../[name].html"
+                    }
+                  },{
+                    loader: 'pug-html-loader',
+                    options: {
+                      exports: false,
+                      pretty: false
+                    }
+                  }
+
+                ],
             },
             {
-                test: /\.(jpg|png|woff|woff2|eot|ttf|svg|otf)$/, 
-                loader: 'file-loader?limit=100000'
-            }
+                use: 'babel-loader',
+                test: /\.js?$/,
+                exclude: /node_modules/
+            },
+            {
+                 test: /\.styl$/,
+                 use: [
+                    {
+                      loader: MiniCssExtractPlugin.loader
+                    },
+                    {
+                      loader: 'css-loader',
+                      query: {
+                        minimize: true,
+                        sourceMap: false
+                      }
+                    },
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            plugins: (loader) => [
+                              require('postcss-cssnext')(),
+                              require('cssnano')()
+                            ]
+                        }
+                    },
+                    'stylus-loader'
+                ]
+              },
+              {
+                  test: /\.(png|woff|woff2|otf|eot|ttf|svg|jpg|jpeg)$/,
+                  loader: 'file-loader'
+              }
         ]
     },
-    stylus: {
-      use: [
-        poststylus(rucksack({
-          autoprefixer: true
-        }))
-      ]
-    },
+    performance: { hints: false },
+    optimization: {},
+    mode: environment,
     plugins: [
-        new ExtractTextPlugin("[name].min.css")
+        new MiniCssExtractPlugin({
+          filename: "build.[name].css"
+        })
     ]
-}];
+};
+
+if (environment === 'production') {
+  config.optimization.minimizer = [
+    new TerserPlugin({
+      terserOptions: {
+        parse: {
+          ecma: 8,
+        },
+        compress: {
+          ecma: 5,
+          warnings: false,
+          comparisons: false,
+        },
+        mangle: {
+          safari10: true,
+        },
+        output: {
+          ecma: 5,
+          comments: false
+        },
+      }
+    })
+  ];
+}
 
 
 module.exports = config;

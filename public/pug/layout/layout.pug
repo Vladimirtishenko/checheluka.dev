@@ -20,16 +20,15 @@ html(lang="en")
         link(rel='apple-touch-icon', sizes='128x128', href='')
         link(rel='apple-touch-icon-precomposed', sizes='128x128', href='')
         link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
-        link(rel='stylesheet', href='public/build/styles.min.css')
+        link(rel='stylesheet', href='public/build/build.app.css')
     body
-        include ../include/flash.jade
-        include ../include/header.jade
-        include ../include/menu.jade
-        include ../include/sidemenu.jade
-        include ../include/modals.jade
+        include ../include/flash.pug
+        include ../include/header.pug
+        include ../include/menu.pug
+        include ../include/sidemenu.pug
+        include ../include/modals.pug
         block content
-        include ../include/footer.jade
-        script(src="https://cdn.report/build/core.min.js")
+        include ../include/footer.pug
         script(src="/build/build.app.js")
         //- script(src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js")
         //- script(src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js")

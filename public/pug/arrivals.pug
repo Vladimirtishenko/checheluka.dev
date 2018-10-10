@@ -1,9 +1,19 @@
-extends layout/layout.jade
+extends layout/layout.pug
 
 block content
     .container
         .filters-panel
             .che-flexible
+                .filters-panel__block.filters-panel__arrivals.che-flexible__child
+                    span.filters-panel__block-first-title Новинки за:
+                    button.btn-transparent.filters-panel__btn-square.btn-number
+                        | 2
+                    button.btn-transparent.filters-panel__btn-square.btn-number.bth-filters-active__opacity
+                        | 7
+                    button.btn-transparent.filters-panel__btn-square.btn-number
+                        | 30
+                    span.filters-panel__block-last-title дней
+
                 .filters-panel__block.filters-panel__images_count.che-flexible__child
                     span Фото на стр.:
                     select.form-control.btn-transparent
@@ -19,35 +29,14 @@ block content
 
                 .che-flexible__divider.hidden-lg.hidden-md
 
-                .filters-panel__block.filters-panel__price.che-flexible__child
-                    span Фильтр по цене:
-                    button.filters-panel__btn-square.filters-panel__price__asc.btn-transparent
-                        span min
-                        span MAX
-                    button.filters-panel__btn-square.filters-panel__price__desc.btn-transparent
-                        span MAX
-                        span min
-                    button.filters-panel__btn-square.filters-panel__price__clear.btn-transparent
-
-                .filters-panel__block.filters-panel__price-type.che-flexible__child
-                    span Цена:
-                    button.filters-panel__btn-square.btn-transparent опт
-                    button.filters-panel__btn-square.btn-transparent розн.
-
                 .filters-panel__block.filters-panel__sizes.che-flexible__child
                     span Размерная таблица:
                     button.filters-panel__btn-square.btn-transparent.modal-open-action(data-modal="modal-window__window-size-of")
-    
-    // - .che-show-filters
-    .che-filters-fixed
-        include include/filters.jade
-
 
     .container-fluid
         .catalog-blocks-container.text-center
             h2.che-catalog-title-all-item
-                | Всего товаров: 
-                b 1000 ед.
+                | Новинки за послении 7 дней
             .row.che-flexible.che-responsive-action-view
                 - for (var i = 0; i < 20; i++)
                     .catalog-blocks-container__block.che-medium
