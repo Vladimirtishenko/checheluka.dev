@@ -47,10 +47,11 @@ block content
                 //- banners part---------------------
                 .che-index__banners-wrap
                     a(href="#").che-index__banner-item.che-index__banner-item--outwear
-                        img.che-index__banner-img(src="./public/img/index_banner_outwear.jpg" alt="Chechelyka - outwear")
                         .che-index__banner-textpart.che-index__banner-textpart--outwear
                             h3.che-index__banner-title.che-index__banner-title--outwear верхняя одежда
                             p одна строчка этого текста
+                        img.che-index__banner-img(src="./public/img/index_banner_outwear.jpg" alt="Chechelyka - outwear")
+
 
                     a(href="#").che-index__banner-item.che-index__banner-item--dresses
                         img.che-index__banner-img(src="./public/img/index_banner_dresses.jpg" alt="Chechelyka - dresses")
@@ -64,15 +65,16 @@ block content
                             h3.che-index__banner-title шапки
 
                     a(href="#").che-index__banner-item.che-index__banner-item--knitwear
-                        img.che-index__banner-img(src="./public/img/index_banner_knitwear.jpg" alt="Chechelyka - knitwear")
                         .che-index__banner-textpart.che-index__banner-textpart--knitwear
                             h3.che-index__banner-title.che-index__banner-title--knitwear вязаные изделия
-                            p одна строчка текста
+                            p одна строчка текста                    
+                        img.che-index__banner-img(src="./public/img/index_banner_knitwear.jpg" alt="Chechelyka - knitwear")
+
 
                     a(href="#").che-index__banner-item.che-index__banner-item--bigsizes    
                         img.che-index__banner-img(src="./public/img/index_banner_bigsizes.jpg" alt="Chechelyka - bigsizes")
                         .che-index__banner-textpart.che-index__banner-textpart--bigsizes
-                            h3.che-index__banner-title.che-index__banner-title--bigsizes одежда больших размеров &#8212;
+                            h3.che-index__banner-title.che-index__banner-title--bigsizes одежда больших #[span.nowrap размеров &#8212;]
                             p одна строчка текста описания
 
             //--popular goods-----------------------
@@ -107,8 +109,65 @@ block content
             //--bestsellers--------------------------
             .che-index__bestsellers-wrap
                 h3.che-index__chapter-title.che-index__bestsellers-head топ продаж
-                .che-index__chapter-inner
+                //-.che-index__chapter-inner
+                .che-index__bestsellers-inner
+                    .che-index__bestsellers-redline.frame-carousel-controls
+                        span.arrow-left(data-controls="left")
+                        span.arrow-right(data-controls="right")
 
+                    .che-index__bestsellers-carousel-wrap.frame-carousel
+                        .che-index__bestsellers-carousel.frame-carousel__list
+                            .che-index__bestsellers-carousel-item.carousel-item--big.frame-carousel__item
+                                a(href="#").che-index__bestsellers-carousel-link
+                                    .che-index__bestsellers-img-part
+                                        img.che-index__bestsellers-img(src="./public/img/index_bestsellers--itelle.jpg" alt="Chechelyka - itelle")
+                                    .che-index__bestsellers-text-part
+                                        h3.che-index__bestsellers-brand itelle
+                                        p блуза с кружевом
+
+                            .che-index__bestsellers-carousel-item.carousel-item--small.frame-carousel__item
+                                a(href="#").che-index__bestsellers-carousel-link
+                                    .che-index__bestsellers-img-part
+                                        img.che-index__bestsellers-img(src="./public/img/index_bestsellers--jadone.jpg" alt="Chechelyka - jadone fashion")
+                                    .che-index__bestsellers-text-part
+                                        h3.che-index__bestsellers-brand jadone fashion
+                                        p юбка в горошек
+
+                            .che-index__bestsellers-carousel-item.carousel-item--big.frame-carousel__item
+                                a(href="#").che-index__bestsellers-carousel-link
+                                    .che-index__bestsellers-img-part
+                                        img.che-index__bestsellers-img(src="./public/img/index_bestsellers--adress.jpg" alt="Chechelyka - a-dress")
+                                    .che-index__bestsellers-text-part
+                                        h3.che-index__bestsellers-brand a-dress
+                                        p платье вельвет
+
+                            .che-index__bestsellers-carousel-item.carousel-item--small.frame-carousel__item
+                                a(href="#").che-index__bestsellers-carousel-link
+                                    .che-index__bestsellers-img-part
+                                        img.che-index__bestsellers-img(src="./public/img/index_bestsellers--tatiana.jpg" alt="Chechelyka - tatiana")
+                                    .che-index__bestsellers-text-part
+                                        h3.che-index__bestsellers-brand tatiana
+                                        p платье полоска
+
+                            .che-index__bestsellers-carousel-item.carousel-item--big.frame-carousel__item
+                                a(href="#").che-index__bestsellers-carousel-link
+                                    .che-index__bestsellers-img-part
+                                        img.che-index__bestsellers-img(src="./public/img/index_bestsellers--itelle.jpg" alt="Chechelyka - a-dress")
+                                    .che-index__bestsellers-text-part
+                                        h3.che-index__bestsellers-brand a-dress
+                                        p платье вельвет
+
+                            .che-index__bestsellers-carousel-item.carousel-item--small.frame-carousel__item
+                                a(href="#").che-index__bestsellers-carousel-link
+                                    .che-index__bestsellers-img-part
+                                        img.che-index__bestsellers-img(src="./public/img/index_bestsellers--itelle.jpg" alt="Chechelyka - tatiana")
+                                    .che-index__bestsellers-text-part
+                                        h3.che-index__bestsellers-brand tatiana
+                                        p платье полоска
+
+                        //- .che-index__bestsellers-redline
+                        //-     span.arrow-left
+                        //-     span.arrow-right
 
                 //- a.masonry-item.che-index__banner-item(href="#")
                 //-     img(src="./public/img/index_jadone_fashion.jpg" alt="Chechelyka - jadone_fashion").che-index__banner-img
