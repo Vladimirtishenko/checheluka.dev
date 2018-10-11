@@ -48,66 +48,41 @@ block content
             h2.che-catalog-title-all-item
                 | Всего товаров: 
                 b 1000 ед.
+            .row.che-flexible.che-responsive-action-view
+                - for (var i = 0; i < 20; i++)
+                    .catalog-blocks-container__block.che-medium
+                        img.img-responsive(src="./public/img/catalog_img_1.jpg")
 
-            .row.che-responsive-action-view.che-catalog__main-part
+                        button.catalog-blocks-container__block__wishlist
 
-                .catalog-aside
-                    h3.catalog-aside__title бренды
-                    ul.catalog-aside__list
-                        li.catalog-aside__item 
-                            a(href="#").catalog-aside__link seventeen
-                                span.catalog-aside__item-number (234)
+                        .catalog-blocks-container__block__bottom
+                            .catalog-blocks-container__block__rozn розн.: 2500 руб
+                            .catalog-blocks-container__block__opt опт.:
+                                =" "
+                                b 500 руб
 
-                        li.catalog-aside__item
-                            a(href="#").catalog-aside__link.catalog-aside__link--active tatiana
-                                span.catalog-aside__item-number (234)
+                        .catalog-blocks-container__block__bottom-inner-container.che-flexible
+                            .catalog-blocks-container__block__title платье SbS 71193
+                            .che-input-flex-wrapper
+                                .my_input_group
+                                     label.che-flexible__child
+                                         span Размер
+                                         select.catalog-blocks-container__block__size.form-control
+                                             option X
+                                             option M
+                                             option L
+                                             option XL
+                                .my_input_group
+                                     label.che-flexible__child
+                                         span Кол-во
+                                         input.catalog-blocks-container__block__quantity.form-control(type="number" value="1" pattern="[0-9]*" inputmode="numeric")
+                                .my_input_group
+                                     a.btn.btn-default-light.btn-info.catalog-blocks-container__block__details(href="#").che-flexible.che-flexible-btn-cenetring
+                                         span Подробнее
+                                .my_input_group
+                                    button.btn.btn-default-light.btn-success.catalog-blocks-container__block__details Купить
 
-                        li.catalog-aside__item
-                            a(href="#").catalog-aside__link a-dress
-                                span.catalog-aside__item-number (234)
 
-                        li.catalog-aside__item
-                            a(href="#").catalog-aside__link itelle
-                                span.catalog-aside__item-number (234)
-
-                .catalog-inner
-
-
-                    //--cards--------------------------------------------------------
-                    - for (var i = 0; i < 20; i++)
-                        .catalog-blocks-container__block.che-full
-                            img.img-responsive(src="./public/img/catalog_img_1.jpg")
-
-                            button.catalog-blocks-container__block__wishlist
-
-                            .catalog-blocks-container__block__bottom
-                                .catalog-blocks-container__block__rozn розн.: 2500 руб
-                                .catalog-blocks-container__block__opt опт.:
-                                    =" "
-                                    b 500 руб
-
-                            .catalog-blocks-container__block__bottom-inner-container.che-flexible
-                                .catalog-blocks-container__block__title платье SbS 71193
-                                .che-input-flex-wrapper
-                                    .my_input_group
-                                         label.che-flexible__child
-                                             span Размер
-                                             select.catalog-blocks-container__block__size.form-control
-                                                 option X
-                                                 option M
-                                                 option L
-                                                 option XL
-                                    .my_input_group
-                                         label.che-flexible__child
-                                             span Кол-во
-                                             input.catalog-blocks-container__block__quantity.form-control(type="number" value="1" pattern="[0-9]*" inputmode="numeric")
-                                    .my_input_group
-                                         a.btn.btn-default-light.btn-info.catalog-blocks-container__block__details(href="#").che-flexible.che-flexible-btn-cenetring
-                                             span Подробнее
-                                    .my_input_group
-                                        button.btn.btn-default-light.btn-success.catalog-blocks-container__block__details Купить
-
-            //-------------------------------------------------------
             .pagination-container
                 .che-flexible
                     .pagination-container__backward.che-flexible__child

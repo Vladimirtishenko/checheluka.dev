@@ -511,17 +511,13 @@
     width 100%
 
 .catalog-blocks-container__block.che-full
-    //width 320px
-    width 30%
-    
-
+    width 320px
+  
 .catalog-blocks-container__block.che-medium
-    //width 250px
-    width 22%
+    width 250px
     
 .catalog-blocks-container__block.che-min
-    //width 150px
-    width 17%
+    width 150px
     
 
 .che-filters-fixed
@@ -566,80 +562,7 @@
     padding 20px 0
     font-family RobotoLight
     fint-size 16px
-//------------------------------------------------------------------------------
-
-
-
-
-
-.che-catalog__main-part
-    display flex
-    
-//--aside------------------------------------------------------------------------
-
-.catalog-aside
-    outline 1px solid red
-    width 400px
-    text-align left
-
-.catalog-aside__title
-    text-transform uppercase
-
-.catalog-aside__list
-    border-left 3px solid #000
-    
-.catalog-aside__item
-    display block
-
-.catalog-aside__link
-    display inline-block
-    padding 10px 15px
-    position relative
-    text-transform uppercase
-    color #000
-    transition .3s
-    &:before
-        content ''
-        border-left 20px solid orange
-        border-top 15px solid transparent
-        border-right 15px solid transparent
-        border-bottom 15px solid transparent
-        position absolute
-        left -8px
-        top 50%
-        transform translateY(-50%)
-        display none
-    &:hover
-        padding-left 20px
-        color orange
-        text-decoration none
-        &:before
-            display block
-    &:focus
-        color orange
-        text-decoration none
-
-.catalog-aside__link--active
-    padding-left 20px
-    color orange
-    &:before
-        display block
         
-.catalog-aside__item-number
-    margin-left 10px   
-    
-//--catalog-inner-----------------------------------------------------------------
-.catalog-inner
-    outline 1px solid blue
-    width calc( 100% - 400px )
-    display flex
-    flex-wrap wrap
-
-
-
-
-
-//-------------------------------------------------------------------------------      
 @media screen and (min-width 850px) and (max-width 980px)
     .catalog-blocks-container__block.che-full
         width 30%
