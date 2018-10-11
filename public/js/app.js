@@ -1,5 +1,13 @@
-export default class App {
-  constructor (){
-    console.log('Привет тебе от вебпака');
-  }
+import CarouselModule from "./carousel";
+
+class App {
+	constructor() {
+		this.init();
+	}
+
+	init() {
+		new CarouselModule();
+	}
 }
+
+export default App;

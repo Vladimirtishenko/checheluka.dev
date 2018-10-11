@@ -14,4 +14,8 @@ import '../pug/wishlist.pug'
 import '../pug/product.pug'
 
 
-import './app.js'
+import App from './app.js'
+
+window.addEventListener('DOMContentLoaded', function(){
+	new App()
+});
