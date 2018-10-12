@@ -45,14 +45,15 @@ block content
 
     .container-fluid
         .catalog-blocks-container.text-center
-            h2.che-catalog-title-all-item
-                | Всего товаров: 
-                b 1000 ед.
+            .che-catalog-title-all-item
+                h2.catalog-aside__title.catalog-aside__title--mob бренды
+                h2 Всего товаров: 
+                    b 1000 ед.
 
             .row.che-responsive-action-view.che-catalog__main-part
 
                 .catalog-aside
-                    h3.catalog-aside__title бренды
+                    h2.catalog-aside__title бренды
                     ul.catalog-aside__list
                         li.catalog-aside__item 
                             a(href="#").catalog-aside__link seventeen
@@ -68,14 +69,93 @@ block content
 
                         li.catalog-aside__item
                             a(href="#").catalog-aside__link itelle
+                                span.catalog-aside__item-number
+                        li.catalog-aside__item 
+                            a(href="#").catalog-aside__link view mode
+                                span.catalog-aside__item-number
+
+                        li.catalog-aside__item
+                            a(href="#").catalog-aside__link marse
+                                span.catalog-aside__item-number
+
+                        li.catalog-aside__item
+                            a(href="#").catalog-aside__link tessdress
+                                span.catalog-aside__item-number
+
+                        li.catalog-aside__item
+                            a(href="#").catalog-aside__link fashionup
+                                span.catalog-aside__item-number
+
+                        li.catalog-aside__item 
+                            a(href="#").catalog-aside__link carica
+                                span.catalog-aside__item-number
+
+                        li.catalog-aside__item
+                            a(href="#").catalog-aside__link glem
+                                span.catalog-aside__item-number
+
+                        li.catalog-aside__item
+                            a(href="#").catalog-aside__link nenka
+                                span.catalog-aside__item-number
+
+                        li.catalog-aside__item
+                            a(href="#").catalog-aside__link stellaplus
+                                span.catalog-aside__item-number
+
+                        li.catalog-aside__item 
+                            a(href="#").catalog-aside__link milanova
+                                span.catalog-aside__item-number
+
+                        li.catalog-aside__item
+                            a(href="#").catalog-aside__link artstyleleggings
                                 span.catalog-aside__item-number (234)
+
+                        li.catalog-aside__item
+                            a(href="#").catalog-aside__link luzana
+                                span.catalog-aside__item-number
+
+                        li.catalog-aside__item
+                            a(href="#").catalog-aside__link safika
+                                span.catalog-aside__item-number
+
+                        li.catalog-aside__item 
+                            a(href="#").catalog-aside__link rimari
+                                span.catalog-aside__item-number
+
+                        li.catalog-aside__item
+                            a(href="#").catalog-aside__link aldidi
+                                span.catalog-aside__item-number
+
+                        li.catalog-aside__item
+                            a(href="#").catalog-aside__link headdress
+                                span.catalog-aside__item-number
+
+                        li.catalog-aside__item
+                            a(href="#").catalog-aside__link swirlbyswirl
+                                span.catalog-aside__item-number
+
+                        li.catalog-aside__item 
+                            a(href="#").catalog-aside__link cardo
+                                span.catalog-aside__item-number
+
+                        li.catalog-aside__item
+                            a(href="#").catalog-aside__link daminika
+                                span.catalog-aside__item-number
+
+                        li.catalog-aside__item
+                            a(href="#").catalog-aside__link olis-style
+                                span.catalog-aside__item-number
+
+                        li.catalog-aside__item
+                            a(href="#").catalog-aside__link x-woyz
+                                span.catalog-aside__item-number
 
                 .catalog-inner
 
 
                     //--cards--------------------------------------------------------
-                    - for (var i = 0; i < 20; i++)
-                        .catalog-blocks-container__block.che-full
+                    - for (var i = 0; i < 17; i++)
+                        .catalog-blocks-container__block.che-min
                             img.img-responsive(src="./public/img/catalog_img_1.jpg")
 
                             button.catalog-blocks-container__block__wishlist
@@ -85,6 +165,11 @@ block content
                                 .catalog-blocks-container__block__opt опт.:
                                     =" "
                                     b 500 руб
+                                .tooltipinfo
+                                    img(src="./public/img/infosign_83743.png")
+                                    span.tooltipinfotext оптовый заказ от 5 
+                                        b любых 
+                                        | вещей
 
                             .catalog-blocks-container__block__bottom-inner-container.che-flexible
                                 .catalog-blocks-container__block__title платье SbS 71193

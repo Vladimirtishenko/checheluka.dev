@@ -1,4 +1,5 @@
 import CarouselModule from "./carousel";
+import openBrands from "./brands";
 
 class App {
 	constructor() {
@@ -7,7 +8,9 @@ class App {
 
 	init() {
 		new CarouselModule();
+		new openBrands();
 	}
+
 }
 
 export default App;

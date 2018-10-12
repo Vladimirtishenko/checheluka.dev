@@ -505,25 +505,20 @@
 .catalog-blocks-container__block
     position relative
     overflow hidden
-    margin 15px auto
+    margin 15px auto    
     
 .catalog-blocks-container__block .img-responsive
     width 100%
 
 .catalog-blocks-container__block.che-full
-    //width 320px
-    width 30%
-    
+    width 320px
 
 .catalog-blocks-container__block.che-medium
-    //width 250px
-    width 22%
+    width 250px
     
 .catalog-blocks-container__block.che-min
-    //width 150px
-    width 17%
+    width 155px
     
-
 .che-filters-fixed
     position fixed 
     width 350px
@@ -565,103 +560,273 @@
 .che-catalog-title-all-item
     padding 20px 0
     font-family RobotoLight
-    fint-size 16px
+    font-size 16px
+    @media screen and (max-width 576px)
+        padding 20px 35px
+        display flex
+        justify-content space-between
+        align-items center
+
 //------------------------------------------------------------------------------
-
-
-
-
 
 .che-catalog__main-part
     display flex
+    position relative
     
 //--aside------------------------------------------------------------------------
 
 .catalog-aside
-    outline 1px solid red
-    width 400px
+    width 25%
     text-align left
+    padding 0 15px 0 100px
+    @media screen and (max-width 1560px)
+        padding 0 15px 0 65px  
+    @media screen and (max-width 1366px)
+        padding 0 15px 0 35px  
+    @media screen and (max-width 1200px)
+        padding 0 15px 0 0
+    @media screen and (max-width 991px)
+        width 230px
+    @media screen and (max-width 700px)
+        width 205px
+    @media screen and (max-width 576px)
+        position absolute
+        padding 0
+        z-index 11
+        background #fff
+        width 220px
+        height 350px
+        overflow-y scroll
+        display none
+        opacity 0
+        transition opacity .5s
+        box-shadow 0 0 3px 0 rgba(39.39,39,39,.4)
+
+.catalog-aside--visible
+    @media screen and (max-width 576px)
+        display block
+        opacity 1
 
 .catalog-aside__title
+    position relative
+    transform translateY(-35px)
     text-transform uppercase
-
+    text-align left
+    font 22px/22px RobotoBold
+    letter-spacing 3.3px
+    @media screen and (max-width 700px)
+        font-size 20px
+        transform translateY(-40px)
+    @media screen and (max-width 576px)
+        transform translateY(0px)    
+        cursor pointer
+        display none
+        &:after
+            display block
+            
+    
+.catalog-aside__title--mob
+    position relative
+    display none
+    padding 0 30px 0 0
+    cursor pointer
+    &:after
+        content ''
+        display block
+        width 10px
+        height 10px
+        border 2px solid transparent
+        border-left-color #000
+        border-bottom-color #000
+        position absolute
+        right 0
+        top 50%
+        transform translateY(-65%) rotate(-45deg)
+        transform-origin center
+    @media screen and (max-width 576px)
+        display inline-block
+        font-size 18px
+        letter-spacing 2px
+        margin-right 15px
+    @media screen and (max-width 420px)
+        font-size 16px
+        padding 0 20px 0 0
+        letter-spacing 1px
+        &:after
+            width 8px
+            height 8px        
+         
 .catalog-aside__list
-    border-left 3px solid #000
+    border-left 6px solid #000
+    @media screen and (max-width 576px)
+        border-left none
+        padding-bottom 10px
     
 .catalog-aside__item
     display block
 
 .catalog-aside__link
     display inline-block
-    padding 10px 15px
+    padding 10px 25px
     position relative
     text-transform uppercase
+    font 16px/22px RobotoLight
     color #000
     transition .3s
     &:before
         content ''
-        border-left 20px solid orange
-        border-top 15px solid transparent
-        border-right 15px solid transparent
-        border-bottom 15px solid transparent
+        border 18px solid transparent
+        border-left 26px solid #ff702c
         position absolute
-        left -8px
+        left -12px
         top 50%
         transform translateY(-50%)
         display none
     &:hover
-        padding-left 20px
-        color orange
+        padding-left 35px
+        color #ff702c
         text-decoration none
+        font-family RobotoBold
         &:before
             display block
     &:focus
-        color orange
+        color #ff702c
+        font-family RobotoBold
         text-decoration none
+    @media screen and (max-width 700px)
+        font-size 14px
+        padding 7px 15px
+        &:hover
+            padding-left 25px
+        &:before
+            border 16px solid transparent
+            border-left 24px solid #ff702c   
+    @media screen and (max-width 576px)
+        &:hover
+            padding-left 15px
+            &:before
+                display none
+        
 
 .catalog-aside__link--active
-    padding-left 20px
-    color orange
+    padding-left 35px
+    color #ff702c
+    font-family RobotoBold
     &:before
         display block
+    @media screen and (max-width 700px)
+        padding-left 25px
+    @media screen and (max-width 576px)
+        padding-left 15px
+        &:before
+            display none
         
 .catalog-aside__item-number
-    margin-left 10px   
+    margin-left 10px
+    color #9f9f9f
+    font 14px/22px RobotoLight
+    @media screen and (max-width 700px)
+        margin-left 5px
     
-//--catalog-inner-----------------------------------------------------------------
+//--catalog-inner-------------------------------------------------------
 .catalog-inner
-    outline 1px solid blue
-    width calc( 100% - 400px )
+    width 75%
     display flex
     flex-wrap wrap
+    align-items flex-start
+    align-content flex-start
+    @media screen and (max-width 991px)
+        width calc( 100% - 230px )
+    @media screen and (max-width 700px)
+        width calc( 100% - 205px )
+    @media screen and (max-width 576px)
+        width 100%
+        & .che-full:first-child
+        & .che-medium:first-child
+            margin-top 0
+                
+.tooltipinfo
+    position relative
+    display inline-block
+    border-bottom 1px dotted #000
+    cursor pointer
+    border-radius 50%
+    border 1px solid #000
+    width 20px
+    height 20px
+    &:hover .tooltipinfotext
+        opacity 1
+        visibility visible       
+
+.tooltipinfo img
+    position absolute
+    top 45%
+    left 48%
+    transform translateX(-50%) translateY(-50%)
+    width 13px
+
+.tooltipinfo .tooltipinfotext
+    width 277px
+    background-color #000
+    color #fff
+    text-align center
+    border-radius 6px
+    padding 5px 0
+    position absolute
+    z-index 1
+    top -5px
+    right 136%
+    font-family RobotoLight
+    font-size 16px
+
+.tooltipinfotext
+    visibility hidden
+    opacity 0
+    transition opacity 1s
+    &:after
+        content ''
+        position absolute
+        top 50%
+        left 100%
+        margin-top -5px
+        border-width 5px
+        border-style solid
+        border-color transparent transparent transparent #000
 
 
-
-
-
-//-------------------------------------------------------------------------------      
-@media screen and (min-width 850px) and (max-width 980px)
-    .catalog-blocks-container__block.che-full
-        width 30%
-        
-
-@media screen and (min-width 420px) and (max-width 560px)
-    .catalog-blocks-container__block.che-full
-        width 95%
-        
-    .catalog-blocks-container__block.che-medium
-        width 45%
-        
-    .catalog-blocks-container__block.che-min
-        width 45%
-        
-    .thirdsize, .halfsize
-        display none
-        
-    .catalog-blocks-container__block.che-full, .catalog-blocks-container__block.che-medium
+.catalog-blocks-container__block.che-medium
+    @media screen and (min-width 765px) and (max-width 840px)
         &:hover 
             .catalog-blocks-container__block__bottom-inner-container
                 display none
+                
+//-------------------------------------------------------------------------------      
+
+@media screen and (min-width 840px) and (max-width 991px)
+    .catalog-blocks-container__block.che-full
+        width 48%
+        
+@media screen and (min-width 765px) and (max-width 991px)
+    .catalog-blocks-container__block.che-medium
+        width 48%
+
+@media screen and (max-width 764px)
+    .catalog-blocks-container__block.che-medium
+        width 80%
+
+    .thirdsize, .halfsize
+        display none
+        
+@media screen and (max-width 640px)
+    .catalog-blocks-container__block.che-full
+        width 90%
+                
+    .catalog-blocks-container__block.che-medium
+        width 90%
+        
+@media screen and (min-width 577px) and (max-width 640px)
+    .catalog-blocks-container__block.che-min
+        width 80%//45%    
         
 @media screen and (max-width 419px)
     .catalog-blocks-container__block.che-full
